@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 const HeroSection = ({ onBookAppointment }: { onBookAppointment?: () => void }) => {
   return (
     <section className="relative flex flex-col items-center px-16 pt-16 -mt-1.5 w-full max-md:px-5 max-md:max-w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FFA67C,#F26522,#FF8C42)] opacity-90 animate-gradient-shift"></div>
+      <div className="absolute inset-0 animate-color-shift"></div>
       <div className="relative w-full max-w-[1192px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-[42%] max-md:ml-0 max-md:w-full">
@@ -28,7 +28,7 @@ const HeroSection = ({ onBookAppointment }: { onBookAppointment?: () => void }) 
           </div>
           <div className="ml-5 w-[58%] max-md:ml-0 max-md:w-full">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e933e88ec3450e2053e7d0c56198206502bfbf85?placeholderIfAbsent=true&apiKey=003a4bc7d72843b88f405864f9e7fccf"
+              src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/image+20.png"
               className="object-contain grow w-full aspect-[1.85] max-md:mt-10 max-md:max-w-full"
               alt="Doctors team"
             />
@@ -42,21 +42,29 @@ const HeroSection = ({ onBookAppointment }: { onBookAppointment?: () => void }) 
 export default HeroSection;
 
 const styles = `
-@keyframes gradient-shift {
+@keyframes color-shift {
   0% {
-    background-position: 0% 50%;
+    background-color: #FFA67C;
   }
-  50% {
-    background-position: 100% 50%;
+  20% {
+    background-color: #FF6B6B;
+  }
+  40% {
+    background-color: #4169E1;
+  }
+  60% {
+    background-color: #1E90FF;
+  }
+  80% {
+    background-color: #FF4757;
   }
   100% {
-    background-position: 0% 50%;
+    background-color: #FFA67C;
   }
 }
 
-.animate-gradient-shift {
-  background-size: 200% 200%;
-  animation: gradient-shift 15s ease infinite;
+.animate-color-shift {
+  animation: color-shift 15s ease infinite;
 }
 `;
 
