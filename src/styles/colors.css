@@ -1,0 +1,39 @@
+:root {
+  --va-bg: #FED8C6;
+  --va-border: #F26522;
+  --va-text: #F26522;
+  --va-hover-bg: #F26522;
+  --va-hover-border: #F26522;
+  --va-hover-text: #fff;
+
+  --va-learnmore-border: #58595B;
+  --va-learnmore-text: #58595B;
+  --va-learnmore-bg: #fff;
+  --va-learnmore-hover-border: #58595B;
+  --va-learnmore-hover-text: #fff;
+  --va-learnmore-hover-bg: #58595B;
+}
+
+.va-appointment-btn {
+  background: var(--va-bg);
+  border-color: var(--va-border);
+  color: var(--va-text);
+  transition: all 0.2s;
+}
+.va-appointment-btn:hover {
+  background: var(--va-hover-bg);
+  border-color: var(--va-hover-border);
+  color: var(--va-hover-text);
+}
+
+.va-learnmore-btn {
+  background: var(--va-learnmore-bg);
+  border-color: var(--va-learnmore-border);
+  color: var(--va-learnmore-text);
+  transition: all 0.2s;
+}
+.va-learnmore-btn:hover {
+  background: var(--va-learnmore-hover-bg);
+  border-color: var(--va-learnmore-hover-border);
+  color: var(--va-learnmore-hover-text);
+} 
