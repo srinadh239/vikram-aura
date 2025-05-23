@@ -78,10 +78,10 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   // Mobile Image Component
   const MobileImage = () => (
     <div className="hidden max-md:flex justify-center items-center mb-8">
-      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 aspect-square rounded-full overflow-hidden hover:shadow-[0_8px_32px_0_rgba(242,101,34,0.7)]">
+      <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px]">
         <img
           src={imageSrc}
-          className="object-cover h-full"
+          className="object-cover w-full h-full"
           alt={name}
         />
       </div>
@@ -91,10 +91,10 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   // Desktop Image Component
   const DesktopImage = () => (
     <div className="hidden md:flex justify-center items-center">
-      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 aspect-square rounded-full overflow-hidden hover:shadow-[0_8px_32px_0_rgba(242,101,34,0.7)]">
+      <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px]">
         <img
           src={imageSrc}
-          className="object-cover h-full"
+          className="object-cover w-full h-full"
           alt={name}
         />
       </div>
