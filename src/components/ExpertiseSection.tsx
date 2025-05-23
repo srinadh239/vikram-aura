@@ -45,13 +45,11 @@ const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ doctor }) => {
         <ul className="flex flex-wrap justify-start gap-x-10 gap-y-4 text-left max-md:gap-x-4 max-md:text-[13px]">
           {doctor.areas_of_expertise.map((expertise, index) => (
             <li key={index} className="flex items-center">
-              {index !== 0 && (
                 <span
                   className="mx-3 text-[#58595B] text-[16px] font-light leading-[36px] max-md:mx-1 max-md:text-[13px] max-md:leading-6"
                 >
                   &bull;
                 </span>
-              )}
               <span
                 className="text-[#58595B] text-[16px] font-light leading-[36px] max-md:text-[13px] max-md:leading-6"
               >

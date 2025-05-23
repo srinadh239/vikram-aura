@@ -38,18 +38,16 @@ const LocationsSection: React.FC = () => {
               Locations
             </h2>
             <h3 className="self-stretch mt-5 text-xl font-semibold leading-7 max-md:text-base max-md:leading-6 max-md:mt-2">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+              Vikram Aura Hospital
             </h3>
             <address className="mt-4 text-base leading-6 not-italic max-md:text-sm max-md:leading-5">
-              Flat No. 203, Krishna Residency <br />
+              62, Mother Teresa Rd Xavier Layout , <br />
+              Victoria Layout, Richmond Rd, <br />
               behind Sacred Heart School Sacred Heart Church, <br />
-              MG Road, Indiranagar <br />
-              Bengaluru – 560038 <br />
-              Karnataka <br />
-              India
+              Richmond Town, Bengaluru, Karnataka 560047
             </address>
             <a
-              href="https://www.google.com/maps?q=12.9657136,77.6070354"
+              href="https://www.google.com/maps?q=12.9657136,77.6070354,17z"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-colors max-md:text-sm max-md:px-3 max-md:py-1.5"
@@ -62,7 +60,7 @@ const LocationsSection: React.FC = () => {
           <div className="w-full h-[350px] max-md:h-[220px]">
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps?q=12.9657136,77.6070354&z=15&output=embed"
+              src="https://www.google.com/maps?q=12.9657136,77.6070354&z=17&output=embed"
               width="100%"
               height="100%"
               className="rounded-lg w-full h-full"
