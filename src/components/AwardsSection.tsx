@@ -36,8 +36,8 @@ const AwardsSection: React.FC<AwardsSectionProps> = ({ doctor }) => {
   return (
     <section 
       ref={sectionRef}
-      className={`w-full max-w-[1046px] mt-16 mb-[100px] max-md:mt-6 max-md:mb-10 max-md:max-w-full transition-all duration-1000 ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+      className={`w-full max-w-[1046px] mt-16 mb-[100px] max-md:mt-6 max-md:mb-10 max-md:max-w-full max-md:px-4 transition-all duration-1000 max-md:duration-300 ${
+        isVisible ? 'opacity-100 md:translate-y-0' : 'opacity-0 md:translate-y-full'
       }`}
     >
       <h2 className="text-3xl leading-tight uppercase text-zinc-600 max-md:max-w-full mb-8 max-md:text-[18px] max-md:leading-6 max-md:mb-4">

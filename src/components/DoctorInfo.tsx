@@ -22,15 +22,17 @@ const DoctorInfo: React.FC<DoctorInfoProps> = ({ doctor }) => {
   return (
     <section className="w-full max-w-[1046px] max-md:max-w-full max-md:mb-10">
       <div className="flex gap-5 max-md:flex-col">
-        <div className="w-[35%] max-md:ml-0 max-md:w-full">
-          <img
-            src={doctor.imageSrc}
-            className="object-contain w-full aspect-square"
-            alt={doctor.name}
-          />
+        <div className="w-[35%] max-md:ml-0 max-md:w-full flex justify-center items-center">
+          <div className="rounded-full overflow-hidden border-[12px] border-[#B53193] hover:border-[#F26522] transition-colors duration-300 aspect-square w-full max-w-[320px]">
+            <img
+              src={doctor.imageSrc}
+              className="object-contain w-full aspect-square"
+              alt={doctor.name}
+            />
+          </div>
         </div>
         <div className="ml-5 w-[65%] max-md:ml-0 max-md:w-full">
-          <article className="flex flex-col items-start self-stretch my-auto text-base text-zinc-600 max-md:mt-4 mt-10 max-md:max-w-full">
+          <article className="flex flex-col items-start self-stretch my-auto text-base text-zinc-600 max-md:mt-4 mt-8 max-md:max-w-full">
             <h1 className="text-[#58595B] text-[50px] font-normal leading-[75px] uppercase font-sans max-md:max-w-full max-md:text-3xl max-md:leading-[38px]">
               {doctor.name}
             </h1>

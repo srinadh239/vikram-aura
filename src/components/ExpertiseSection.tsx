@@ -30,7 +30,7 @@ const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ doctor }) => {
   }, []);
 
   return (
-    <section className="w-full flex justify-center mt-[100px] max-md:mt-0">
+    <section className="w-full flex justify-center mt-[100px] max-md:mt-0 max-md:mb-6">
       <div
         ref={contentRef}
         className={`w-full max-w-6xl bg-zinc-100 rounded-none pt-[82px] pl-[79px] pb-[44px] max-md:pt-8 max-md:pl-4 max-md:pr-4 max-md:pb-6 transition-all duration-1000 ${
