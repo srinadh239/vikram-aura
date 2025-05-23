@@ -2,6 +2,7 @@
 import React from "react";
 import ActionButton from "./ActionButton";
 import { Doctor } from "./types";
+import { useNavigate, Link } from "react-router-dom";
 
 interface DoctorProfileProps {
   doctor: Doctor;
@@ -16,6 +17,7 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   sectionTitle,
   onBookAppointment,
 }) => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = React.useState(false);
   const profileRef = React.useRef<HTMLDivElement>(null);
   const [animationClass, setAnimationClass] = React.useState('');
@@ -75,11 +77,11 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
 
   // Mobile Image Component
   const MobileImage = () => (
-    <div className="hidden max-md:flex justify-center items-center w-full mb-8">
-      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 w-64 h-64 aspect-square rounded-full overflow-hidden">
+    <div className="hidden max-md:flex justify-center items-center mb-8">
+      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 aspect-square rounded-full overflow-hidden hover:shadow-[0_8px_32px_0_rgba(242,101,34,0.7)]">
         <img
           src={imageSrc}
-          className="object-cover w-full h-full"
+          className="object-cover h-full"
           alt={name}
         />
       </div>
@@ -88,11 +90,11 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
 
   // Desktop Image Component
   const DesktopImage = () => (
-    <div className="hidden md:flex justify-center items-center w-[35%]">
-      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 w-80 h-80 aspect-square rounded-full overflow-hidden">
+    <div className="hidden md:flex justify-center items-center">
+      <div className="flex items-center justify-center bg-[#FED8C6] hover:bg-[#F26522] transition-colors duration-300 aspect-square rounded-full overflow-hidden hover:shadow-[0_8px_32px_0_rgba(242,101,34,0.7)]">
         <img
           src={imageSrc}
-          className="object-cover w-full h-full"
+          className="object-cover h-full"
           alt={name}
         />
       </div>
@@ -101,33 +103,31 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
 
   // Content Component
   const Content = () => (
-    <div className="w-full md:w-[65%]">
+    <div className="flex flex-col w-full">
       <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
         {renderSectionTitle()}
-
         <h3 className="text-2xl leading-tight text-orange-500 uppercase">
           {name}
         </h3>
-
         <p className="mt-2.5 text-sm font-bold leading-5 text-zinc-600 max-md:max-w-full">
           {credentials}
         </p>
-
         <p className="self-stretch mt-5 text-base font-light leading-6 text-zinc-600 max-md:max-w-full">
           {description}
         </p>
-
-        <div className="flex gap-4 mt-8 text-base leading-8">
-          <ActionButton
-            text="LEARN MORE"
-            className="va-learnmore-btn px-7 py-2.5 border border-solid rounded-[48px] max-md:px-5 max-md:text-sm"
-          />
-          <ActionButton
-            text="BOOK AN APPOINTMENT"
-            className="va-appointment-btn px-7 py-2.5 border border-solid rounded-[48px] max-md:px-5 max-md:text-sm"
-            onClick={onBookAppointment}
-          />
-        </div>
+      </div>
+      {/* Book Appointment and Learn More buttons below content, inline with image */}
+      <div className="flex gap-4 mt-8 text-base leading-8">
+        <ActionButton
+          text="LEARN MORE"
+          className="va-learnmore-btn px-7 py-2.5 border border-solid rounded-[48px] max-md:px-5 max-md:text-sm"
+          onClick={() => navigate(`/doctor/${doctor.id}`)}
+        />
+        <ActionButton
+          text="BOOK AN APPOINTMENT"
+          className="va-appointment-btn px-7 py-2.5 border border-solid rounded-[48px] max-md:px-5 max-md:text-sm"
+          onClick={onBookAppointment}
+        />
       </div>
     </div>
   );
@@ -135,20 +135,31 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   return (
     <div 
       ref={profileRef}
-      className={`flex gap-5 max-md:flex-col items-center transition-all duration-700 transform ${
+      className={`flex gap-16 max-md:flex-col items-center transition-all duration-700 transform ${
         isVisible ? 'translate-x-0 translate-y-0 opacity-100' : animationClass
       }`}
     >
-      <MobileImage />
+      {/* Mobile image always on top in mobile view */}
+      <Link to={`/doctor/${doctor.id}`} className="md:hidden w-full group focus:outline-none">
+        <MobileImage />
+      </Link>
       {imageRight ? (
         <>
-          <Content />
-          <DesktopImage />
+          <Link to={`/doctor/${doctor.id}`} className="flex w-full md:w-[65%] group focus:outline-none">
+            <Content />
+          </Link>
+          <Link to={`/doctor/${doctor.id}`} className="hidden md:flex w-[35%] group focus:outline-none">
+            <DesktopImage />
+          </Link>
         </>
       ) : (
         <>
-          <DesktopImage />
-          <Content />
+          <Link to={`/doctor/${doctor.id}`} className="hidden md:flex w-[35%] group focus:outline-none">
+            <DesktopImage />
+          </Link>
+          <Link to={`/doctor/${doctor.id}`} className="flex w-full md:w-[65%] group focus:outline-none">
+            <Content />
+          </Link>
         </>
       )}
     </div>

@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import HeroSection from "./HeroSection";
-import SpecialtiesSection from "./SpecialtiesSection";
-import DoctorSection from "./DoctorSection";
+import HeroSection from "../components/HeroSection";
+import SpecialtiesSection from "../components/SpecialtiesSection";
+import DoctorSection from "../components/DoctorSection";
 import { doctorsBySpecialty } from "../constants/medicalData";
-import BookAppointmentModal from "./BookAppointmentModal";
+import BookAppointmentModal from "../components/BookAppointmentModal";
 
-function Option01() {
+function DoctorList() {
   // Gather all doctor names from all specialties
   const allDoctorNames = Object.values(doctorsBySpecialty).flat().map(doc => doc.name);
   const [modalOpen, setModalOpen] = useState(false);
@@ -134,4 +134,4 @@ function Option01() {
   );
 }
 
-export default Option01;
+export default DoctorList;
