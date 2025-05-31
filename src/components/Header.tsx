@@ -1,42 +1,213 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import * as React from "react";
+import { Link } from "react-router-dom";
+import BookAppointmentModal from "./BookAppointmentModal";
+import { doctorsBySpecialty } from "../constants/medicalData";
 
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/doctors", label: "Our Doctors" },
-  { to: "/about", label: "About Us" },
-];
+export const Header: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = React.useState(false);
 
-const Header = () => {
-  const location = useLocation();
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = !isMobileMenuOpen ? "hidden" : "unset";
+  };
+
+  // Gather all doctor names from all specialties
+  const doctorList = Object.values(doctorsBySpecialty).flat().map(doc => doc.name);
+
   return (
-    <header className="w-full bg-white shadow-sm mb-8">
-      <div className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/17d03a30af8e94f24ad57282588f5e1e86ca1ee5?placeholderIfAbsent=true&apiKey=003a4bc7d72843b88f405864f9e7fccf"
-            alt="Vikram Aura Logo"
-            className="h-10 w-10 rounded-full object-cover border border-orange-200"
-          />
-          <span className="font-bold text-xl text-orange-500">Vikram Aura</span>
-        </Link>
-        {/* Icons */}
-        {/* <div className="flex items-center gap-4">
-          <a href="tel:+911234567890" title="Call us" className="p-2 rounded-full hover:bg-orange-50 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-orange-500">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15 .621 0 1.125-.504 1.125-1.125v-2.625a1.125 1.125 0 0 0-1.125-1.125c-1.636 0-3.21-.26-4.687-.75a1.125 1.125 0 0 0-1.09.21l-2.25 1.8a12.042 12.042 0 0 1-5.25-5.25l1.8-2.25a1.125 1.125 0 0 0 .21-1.09c-.49-1.477-.75-3.051-.75-4.687A1.125 1.125 0 0 0 4.875 2.25H2.25A1.125 1.125 0 0 0 1.125 3.375z" />
-            </svg>
-          </a>
-          <Link to="/doctors" title="Book an appointment" className="p-2 rounded-full hover:bg-orange-50 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-orange-500">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3.75 7.5h16.5M4.5 21h15a1.5 1.5 0 0 0 1.5-1.5V7.5a1.5 1.5 0 0 0-1.5-1.5h-15A1.5 1.5 0 0 0 3 7.5v12A1.5 1.5 0 0 0 4.5 21z" />
-            </svg>
+    <header className="relative px-8 py-5 w-full bg-white shadow-[0px_1px_0px_rgba(255,255,255,0.3)] max-md:px-5 max-md:max-w-full">
+      <nav className="flex gap-5 max-md:flex-col max-md:gap-5">
+        <div className="flex justify-between items-center w-full md:w-1/5">
+          <Link to="/" aria-label="Home">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b29964cb62b437cff6665d66056a56be827b29f5?placeholderIfAbsent=true"
+              alt="Logo"
+              className="object-contain grow shrink-0 max-w-full aspect-[2.69] w-[215px]"
+            />
           </Link>
-        </div> */}
+
+          {/* Hamburger Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <div className="w-6 h-5 relative flex flex-col justify-between">
+              <span
+                className={`w-full h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+              />
+              <span
+                className={`w-full h-0.5 bg-zinc-600 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`w-full h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              />
+            </div>
+          </button>
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex w-[39%] items-center justify-center">
+          <nav className="flex gap-10 self-stretch my-auto text-base uppercase text-zinc-600">
+            <Link
+              to="/who-we-are"
+              className="grow hover:text-orange-500 transition-colors"
+            >
+              Who we are
+            </Link>
+            <Link
+              to="/doctors"
+              className="basis-auto hover:text-orange-500 transition-colors"
+            >
+              Our Doctors
+            </Link>
+            <Link
+              to="/our-investors"
+              className="basis-auto hover:text-orange-500 transition-colors"
+            >
+              Our Investors
+            </Link>
+          </nav>
+        </div>
+
+        <div className="hidden md:flex items-center w-[18%] justify-center">
+          <div className="flex gap-3.5 self-stretch my-auto text-base font-semibold uppercase text-zinc-600">
+            <a
+              href="tel:+917022400800"
+              aria-label="Call us at +91-7022 400 800"
+              className="flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 h-[50px] w-[50px] bg-white hover:bg-orange-50 transition-colors"
+            >
+              <img
+                src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg"
+                alt="Call Icon"
+                className="object-contain w-7 h-7"
+                role="presentation"
+              />
+            </a>
+            <a
+              href="tel:+917022400800"
+              className="my-auto basis-auto hover:text-orange-500 transition-colors"
+              aria-label="Call us at +91-7022 400 800"
+            >
+              +91-7022 400 800
+            </a>
+          </div>
+        </div>
+
+        <div className="hidden md:flex items-center w-[23%]">
+          <button
+            className="overflow-hidden gap-2.5 self-stretch px-8 py-2.5 my-auto w-full text-base leading-8 text-white uppercase bg-orange-500 border-orange-500 border-solid border-[length:var(--sds-size-stroke-border)] rounded-[50px] hover:bg-[#58595B] hover:border-[#58595B] transition-colors duration-300"
+            onClick={() => setModalOpen(true)}
+          >
+            Book an appointment
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 md:hidden ${
+          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={toggleMobileMenu}
+      />
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-4/5 bg-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-6 flex flex-col gap-6">
+          <div className="flex justify-end">
+            <button
+              className="p-2"
+              onClick={toggleMobileMenu}
+              aria-label="Close mobile menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-6 text-base uppercase text-zinc-600">
+            <Link
+              to="/who-we-are"
+              className="hover:text-orange-500 transition-colors"
+              onClick={toggleMobileMenu}
+            >
+              Who we are
+            </Link>
+            <Link
+              to="/doctors"
+              className="hover:text-orange-500 transition-colors"
+              onClick={toggleMobileMenu}
+            >
+              Our Doctors
+            </Link>
+            <Link
+              to="/our-investors"
+              className="hover:text-orange-500 transition-colors"
+              onClick={toggleMobileMenu}
+            >
+              Our Investors
+            </Link>
+          </nav>
+
+          <div className="flex gap-3.5 items-center text-base font-semibold uppercase text-zinc-600">
+            <a
+              href="tel:+917022400800"
+              aria-label="Call us at +91-7022 400 800"
+              className="flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 h-[50px] w-[50px] bg-white hover:bg-orange-50 transition-colors"
+            >
+              <img
+                src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg"
+                alt="Call Icon"
+                className="object-contain w-7 h-7"
+                role="presentation"
+              />
+            </a>
+            <a
+              href="tel:+917022400800"
+              className="hover:text-orange-500 transition-colors"
+              aria-label="Call us at +91-7022 400 800"
+            >
+              +91-7022 400 800
+            </a>
+          </div>
+
+          <button
+            className="w-full px-8 py-2.5 text-base leading-8 text-white uppercase bg-orange-500 border-orange-500 border-solid rounded-[50px] hover:bg-[#58595B] hover:border-[#58595B] transition-colors duration-300"
+            onClick={() => {
+              setModalOpen(true);
+              toggleMobileMenu();
+            }}
+          >
+            Book an appointment
+          </button>
+        </div>
       </div>
+      <BookAppointmentModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        doctorList={doctorList}
+      />
     </header>
   );
 };
 
-export default Header; 
+export default Header;
