@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { doctorsBySpecialty } from "../constants/medicalData";
 
 const DoctorsShowcase: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   // Get first 4 doctors from all specialties
   const doctors = Object.values(doctorsBySpecialty)
     .flat()
     .slice(0, 4);
 
   return (
-    <div className="flex flex-col items-center w-full max-w-[1199px]">
+    <div
+      ref={sectionRef}
+      className={`flex flex-col items-center w-full max-w-[1199px] transition-all duration-1000 max-md:duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="text-3xl leading-tight text-center uppercase text-zinc-600 max-md:text-2xl max-md:px-4">
         Expertise for Every Patient, Precision for Every Condition
       </div>

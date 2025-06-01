@@ -2,8 +2,32 @@
 import * as React from "react";
 
 function WhyChooseUsSection() {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="max-md:px-2 overflow-x-hidden">
+    <div
+      ref={sectionRef}
+      className={`max-md:px-2 overflow-x-hidden transition-all duration-1000 max-md:duration-700 ${
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+      }`}
+    >
       <div className="flex relative flex-col items-end py-32 pr-2.5 pl-20 w-full min-h-[727px] max-md:py-24 max-md:pl-2 max-md:max-w-full max-md:items-center">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf2daa57dfb4ca16c3e67543c0f328d0fa3c596e?placeholderIfAbsent=true"
