@@ -46,7 +46,7 @@ function HeroSection() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div className="overflow-hidden gap-2.5 self-start px-8 py-2.5 mt-10 text-base leading-8 uppercase bg-orange-500 border-orange-500 border-solid border-[length:var(--sds-size-stroke-border)] rounded-[50px] max-md:px-5">
+          <div className="overflow-hidden gap-2.5 self-start px-8 py-2.5 mt-10 text-base leading-8 uppercase bg-orange-500 border-orange-500 border-solid border-[length:var(--sds-size-stroke-border)] rounded-[50px] max-md:px-5 max-md:self-center">
             Book an appointment
           </div>
         </div>

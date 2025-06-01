@@ -9,7 +9,7 @@ import FooterImage from "../components/FooterImage";
 const Home: React.FC = () => {
   return (
     <div className="flex overflow-hidden flex-col items-center">
-      <div className="w-full bg-black max-w-[1440px] max-md:pb-24 max-md:max-w-full">
+      <div className="w-full bg-black max-w-[1440px] min-md:pb-24 max-md:max-w-full">
         <HeroSection />
       </div>
       <div className="flex flex-col items-center px-20 pt-48 pb-10 w-full bg-white max-w-[1440px] max-md:px-4 max-md:pt-16">

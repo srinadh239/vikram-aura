@@ -1,77 +1,72 @@
 import React from "react";
 
-export const FooterImage: React.FC = () => {
+const FooterImage: React.FC = () => {
   return (
-    <div className="text-white rounded-none w-full">
-      <div className="flex flex-col items-center px-20 pt-24 pb-12 w-full bg-orange-500 max-md:px-5 max-md:pt-12 max-md:pb-8 max-md:max-w-full">
-        <div className="flex flex-col items-center w-full max-w-[1024px] max-md:max-w-full">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e4041259dfcf7f35f776d7625311028e67abc20?placeholderIfAbsent=true"
-            alt="Company Logo"
-            className="object-contain max-w-full aspect-[2.69] w-[403px] max-md:w-[280px]"
-          />
-          <div className="self-stretch px-16 py-10 mt-16 text-lg bg-orange-500 rounded-2xl border border-solid border-neutral-200 border-opacity-40 shadow-[0px_0px_50px_rgba(157,64,20,1)] max-md:px-4 max-md:py-6 max-md:mt-8 max-md:text-base max-md:text-center max-md:max-w-full">
-            <span className="inline-flex items-center gap-2">
-              <div className="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] max-md:h-[40px] max-md:w-[40px]">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/location-icon.svg"
-                  alt="Location Icon"
-                  className="object-contain h-8 w-8"
-                />
-              </div>
-              #62, Richmond Road, Behind Sacred Heart Church, Mother Teresa Road, Richmond Town, Bangalore, 560025​
+    <footer className="bg-[#58595B] text-white w-full pt-12 pb-6 px-4">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-10">
+        {/* Brand & Tagline */}
+        <div className="flex-1 flex flex-col items-start max-md:items-center max-md:text-center">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e4041259dfcf7f35f776d7625311028e67abc20?placeholderIfAbsent=true" alt="Vikram Aura Logo" className="w-40 mb-4" />
+          <div className="text-lg font-semibold mb-2">Vikram Aura</div>
+          <div className="text-sm text-zinc-200 mb-4 max-w-xs">
+            Where care goes beyond treatment. Experience world-class healthcare with compassion and innovation.
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex-1 flex flex-col gap-4 max-md:items-center max-md:text-center">
+          <div className="flex items-center gap-3 max-md:justify-center">
+            <div className="bg-white rounded-full h-10 w-[137px] flex items-center justify-center">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/location-icon.svg" alt="Location" className="h-10 w-10" />
+            </div>
+            <span className="text-sm text-zinc-200">
+              #62, Richmond Road, Behind Sacred Heart Church, Mother Teresa Road, Richmond Town, Bangalore, 560025
             </span>
           </div>
-          <div className="flex flex-wrap justify-center gap-10 items-center mt-12 max-w-full text-base font-semibold max-md:mt-8 max-md:gap-6 max-md:w-full flex-row">
-            <div className="flex items-center justify-center gap-2 text-center uppercase max-md:w-full max-md:text-sm">
-              <div className="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] max-md:h-[40px] max-md:w-[40px]">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg"
-                  alt="Call Icon"
-                  className="object-contain h-7 w-7"
-                />
-              </div>
-              <a href="tel:+917022400800" className="hover:text-orange-200 transition-colors">+91-7022 400 800</a>
+          <div className="flex items-center gap-3 max-md:justify-center">
+            <div className="bg-white rounded-full h-10 w-10 flex items-center justify-center">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg" alt="Call" className="h-6 w-6" />
             </div>
-            <div className="flex gap-3.5 whitespace-nowrap items-center max-md:w-full max-md:justify-center">
-              <div className="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] max-md:h-[40px] max-md:w-[40px]">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/message-icon.svg"
-                  alt="Message Icon"
-                  className="object-contain h-7 w-7"
-                />
-              </div>
-              <div className="my-auto basis-auto max-md:text-sm">
-                info@vikramaura.com
-              </div>
+            <a href="tel:+917022400800" className="text-sm text-zinc-200 hover:text-orange-400 transition">+91-7022 400 800</a>
+          </div>
+          <div className="flex items-center gap-3 max-md:justify-center">
+            <div className="bg-white rounded-full h-10 w-10 flex items-center justify-center">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/message-icon.svg" alt="Email" className="h-6 w-6" />
             </div>
-            <div className="flex gap-4 items-center flex-row">
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/567b165fa8f0877246152b895393d5884e1db786?placeholderIfAbsent=true"
-                  alt="Instagram Icon"
-                  className="object-contain shrink-0 aspect-square w-[40px] max-md:w-[32px]"
-                />
-              </a>
-              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/twitter-icon.svg"
-                  alt="Twitter Icon"
-                  className="object-contain shrink-0 aspect-square w-[40px] max-md:w-[32px]"
-                />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/linkedin-icon.svg"
-                  alt="LinkedIn Icon"
-                  className="object-contain shrink-0 aspect-square w-[40px] max-md:w-[32px]"
-                />
-              </a>
-            </div>
+            <a href="mailto:info@vikramaura.com" className="text-sm text-zinc-200 hover:text-orange-400 transition">info@vikramaura.com</a>
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex-1 flex flex-col gap-2 max-md:items-center max-md:text-center">
+          <div className="font-semibold mb-2">Quick Links</div>
+          <a href="/" className="text-sm text-zinc-200 hover:text-orange-400 transition">Home</a>
+          <a href="/doctors" className="text-sm text-zinc-200 hover:text-orange-400 transition">Doctors</a>
+          <a href="/specialties" className="text-sm text-zinc-200 hover:text-orange-400 transition">Specialties</a>
+          <a href="/about" className="text-sm text-zinc-200 hover:text-orange-400 transition">About Us</a>
+          <a href="/contact" className="text-sm text-zinc-200 hover:text-orange-400 transition">Contact</a>
+        </div>
+
+        {/* Social Media */}
+        <div className="flex-1 flex flex-col items-start gap-2 max-md:items-center max-md:text-center">
+          <div className="font-semibold mb-2">Connect with us</div>
+          <div className="flex gap-4">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/567b165fa8f0877246152b895393d5884e1db786?placeholderIfAbsent=true" alt="Instagram" className="h-8 w-8" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/twitter-icon.svg" alt="Twitter" className="h-8 w-8" />
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/linkedin-icon.svg" alt="LinkedIn" className="h-8 w-8" />
+            </a>
           </div>
         </div>
       </div>
-    </div>
+      <div className="border-t border-zinc-600 mt-8 pt-4 text-center text-xs text-zinc-300">
+        © {new Date().getFullYear()} Vikram Aura. All rights reserved. | <a href="/privacy" className="hover:text-orange-400">Privacy Policy</a> | <a href="/terms" className="hover:text-orange-400">Terms of Service</a>
+      </div>
+    </footer>
   );
 };
 
