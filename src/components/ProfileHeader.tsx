@@ -9,12 +9,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ specialty }) => {
   const navigate = useNavigate();
 
   return (
-    <header>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/647adb39be43542e64ae7dff3333fda76e10ab86?placeholderIfAbsent=true"
-        className="object-contain w-full aspect-[7.81] max-md:max-w-full"
-        alt="Doctor profile header"
-      />
+    <>
       <div className="w-full border border-solid border-zinc-600 min-h-px max-md:max-w-full" />
       <div className="flex items-center justify-center mt-2.5 gap-2">
         <button 
@@ -33,7 +28,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ specialty }) => {
         </h2>
       </div>
       <div className="mt-2.5 w-full border border-solid border-zinc-600 min-h-px max-md:max-w-full" />
-    </header>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const LegacySection: React.FC = () => (
-  <div className="flex flex-col justify-center items-center px-20 py-32 w-full bg-neutral-200 max-w-[1440px] max-md:px-4 max-md:py-16">
+  <div id="have-more" className="flex flex-col justify-center items-center px-20 py-32 w-full bg-neutral-200 max-w-[1440px] max-md:px-4 max-md:py-16">
     <div className="flex flex-col max-w-full w-[1000px]">
       <div className="self-center text-8xl leading-tight text-center uppercase text-zinc-600 max-md:text-4xl">
         Have more

@@ -8,7 +8,7 @@ const heroImages = [
   "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/home-4.png",
 ];
 
-function HeroSection() {
+function HeroSection({ onBookAppointment }: { onBookAppointment?: () => void }) {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef<number | null>(null);
 
@@ -46,9 +46,12 @@ function HeroSection() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div className="overflow-hidden gap-2.5 self-start px-8 py-2.5 mt-10 text-base leading-8 uppercase bg-orange-500 border-orange-500 border-solid border-[length:var(--sds-size-stroke-border)] rounded-[50px] max-md:px-5 max-md:self-center">
+          <button
+            onClick={onBookAppointment}
+            className="overflow-hidden gap-2.5 self-start px-8 py-2.5 mt-10 text-base leading-8 uppercase bg-orange-500 border-orange-500 border-solid border-[length:var(--sds-size-stroke-border)] rounded-[50px] max-md:px-5 max-md:self-center"
+          >
             Book an appointment
-          </div>
+          </button>
         </div>
       </div>
     </div>

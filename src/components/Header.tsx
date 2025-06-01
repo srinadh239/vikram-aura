@@ -1,16 +1,35 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import BookAppointmentModal from "./BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [modalOpen, setModalOpen] = React.useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = !isMobileMenuOpen ? "hidden" : "unset";
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      scrollToSection(id);
+    } else {
+      navigate("/", { replace: false });
+      setTimeout(() => scrollToSection(id), 100); // Wait for navigation
+    }
+  };
+
+  const handleMobileNavClick = (e: React.MouseEvent, id: string) => {
+    handleNavClick(e, id);
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   // Gather all doctor names from all specialties
@@ -31,7 +50,7 @@ export const Header: React.FC = () => {
           {/* Hamburger Menu Button */}
           <button
             className="md:hidden p-2"
-            onClick={toggleMobileMenu}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -52,24 +71,26 @@ export const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex w-[39%] items-center justify-center">
           <nav className="flex gap-10 self-stretch my-auto text-base uppercase text-zinc-600">
-            <Link
-              to="/who-we-are"
+            <a
+              href="#why-choose-us"
               className="grow hover:text-orange-500 transition-colors"
+              onClick={e => handleNavClick(e, "why-choose-us")}
             >
               Who we are
-            </Link>
+            </a>
             <Link
               to="/doctors"
               className="basis-auto hover:text-orange-500 transition-colors"
             >
               Our Doctors
             </Link>
-            <Link
-              to="/our-investors"
+            <a
+              href="#have-more"
               className="basis-auto hover:text-orange-500 transition-colors"
+              onClick={e => handleNavClick(e, "have-more")}
             >
               Our Investors
-            </Link>
+            </a>
           </nav>
         </div>
 
@@ -112,7 +133,7 @@ export const Header: React.FC = () => {
         className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 md:hidden ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        onClick={toggleMobileMenu}
+        onClick={() => setIsMobileMenuOpen(false)}
       />
 
       {/* Mobile Menu */}
@@ -125,7 +146,10 @@ export const Header: React.FC = () => {
           <div className="flex justify-end">
             <button
               className="p-2"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document.body.style.overflow = "unset";
+              }}
               aria-label="Close mobile menu"
             >
               <svg
@@ -145,27 +169,30 @@ export const Header: React.FC = () => {
           </div>
 
           <nav className="flex flex-col gap-6 text-base uppercase text-zinc-600">
-            <Link
-              to="/who-we-are"
+            <a
+              href="#why-choose-us"
               className="hover:text-orange-500 transition-colors"
-              onClick={toggleMobileMenu}
+              onClick={e => handleMobileNavClick(e, "why-choose-us")}
             >
               Who we are
-            </Link>
+            </a>
             <Link
               to="/doctors"
               className="hover:text-orange-500 transition-colors"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document.body.style.overflow = "unset";
+              }}
             >
               Our Doctors
             </Link>
-            <Link
-              to="/our-investors"
+            <a
+              href="#have-more"
               className="hover:text-orange-500 transition-colors"
-              onClick={toggleMobileMenu}
+              onClick={e => handleMobileNavClick(e, "have-more")}
             >
               Our Investors
-            </Link>
+            </a>
           </nav>
 
           <div className="flex gap-3.5 items-center text-base font-semibold uppercase text-zinc-600">
@@ -194,7 +221,8 @@ export const Header: React.FC = () => {
             className="w-full px-8 py-2.5 text-base leading-8 text-white uppercase bg-orange-500 border-orange-500 border-solid rounded-[50px] hover:bg-[#58595B] hover:border-[#58595B] transition-colors duration-300"
             onClick={() => {
               setModalOpen(true);
-              toggleMobileMenu();
+              setIsMobileMenuOpen(false);
+              document.body.style.overflow = "unset";
             }}
           >
             Book an appointment
