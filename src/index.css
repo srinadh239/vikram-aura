@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Roterline-jEnYG.ttf');
+
+@font-face {
+  font-family: 'Roterline';
+  src: url('https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Roterline-jEnYG.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-roterline {
+  font-family: 'Roterline', cursive, sans-serif;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

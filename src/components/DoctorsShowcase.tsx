@@ -31,7 +31,7 @@ const DoctorsShowcase: React.FC = () => {
     <div
       ref={sectionRef}
       className={`flex flex-col items-center w-full max-w-[1199px] transition-all duration-1000 max-md:duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
       <div className="text-3xl leading-tight text-center uppercase text-zinc-600 max-md:text-2xl max-md:px-4">

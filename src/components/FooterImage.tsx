@@ -6,11 +6,7 @@ const FooterImage: React.FC = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-10">
         {/* Brand & Tagline */}
         <div className="flex-1 flex flex-col items-start max-md:items-center max-md:text-center">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e4041259dfcf7f35f776d7625311028e67abc20?placeholderIfAbsent=true" alt="Vikram Aura Logo" className="w-40 mb-4" />
-          <div className="text-lg font-semibold mb-2">Vikram Aura</div>
-          <div className="text-sm text-zinc-200 mb-4 max-w-xs">
-            Where care goes beyond treatment. Experience world-class healthcare with compassion and innovation.
-          </div>
+          <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg" alt="Vikram Aura Logo" className="w-40 mb-4" />
         </div>
 
         {/* Contact Info */}
@@ -51,13 +47,16 @@ const FooterImage: React.FC = () => {
         <div className="flex-1 flex flex-col items-start gap-2 max-md:items-center max-md:text-center">
           <div className="font-semibold mb-2">Connect with us</div>
           <div className="flex gap-4">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/vikramaurahospitals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/567b165fa8f0877246152b895393d5884e1db786?placeholderIfAbsent=true" alt="Instagram" className="h-8 w-8" />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/people/Vikram-Aura-Hospitals/61575206666540/" target="_blank" rel="noopener noreferrer">
+              <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/facebook-icon.svg" alt="Facebook" className="h-8 w-8" />
+            </a>
+            <a href="https://twitter.com/VikramAura" target="_blank" rel="noopener noreferrer">
               <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/twitter-icon.svg" alt="Twitter" className="h-8 w-8" />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/vikram-aura-hospitals/" target="_blank" rel="noopener noreferrer">
               <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/linkedin-icon.svg" alt="LinkedIn" className="h-8 w-8" />
             </a>
           </div>

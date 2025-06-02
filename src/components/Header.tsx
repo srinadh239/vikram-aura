@@ -36,14 +36,14 @@ export const Header: React.FC = () => {
   const doctorList = Object.values(doctorsBySpecialty).flat().map(doc => doc.name);
 
   return (
-    <header className="relative px-8 py-5 w-full bg-white shadow-[0px_1px_0px_rgba(255,255,255,0.3)] max-md:px-5 max-md:max-w-full">
+    <header className="relative px-8 w-full bg-white shadow-[0px_1px_0px_rgba(255,255,255,0.3)] max-md:px-5 max-md:max-w-full">
       <nav className="flex gap-5 max-md:flex-col max-md:gap-5">
         <div className="flex justify-between items-center w-full md:w-1/5">
           <Link to="/" aria-label="Home">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b29964cb62b437cff6665d66056a56be827b29f5?placeholderIfAbsent=true"
-              alt="Logo"
-              className="object-contain grow shrink-0 max-w-full aspect-[2.69] w-[215px]"
+              src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg"
+              alt="Vikram Aura Logo"
+              className="object-contain grow shrink-0 max-w-full aspect-[1.4] w-[215px]"
             />
           </Link>
 
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex w-[39%] items-center justify-center">
+        <div className="hidden md:flex w-[39%] items-center justify-end">
           <nav className="flex gap-10 self-stretch my-auto text-base uppercase text-zinc-600">
             <a
               href="#why-choose-us"
@@ -84,13 +84,6 @@ export const Header: React.FC = () => {
             >
               Our Doctors
             </Link>
-            <a
-              href="#have-more"
-              className="basis-auto hover:text-orange-500 transition-colors"
-              onClick={e => handleNavClick(e, "have-more")}
-            >
-              Our Investors
-            </a>
           </nav>
         </div>
 
@@ -170,7 +163,7 @@ export const Header: React.FC = () => {
 
           <nav className="flex flex-col gap-6 text-base uppercase text-zinc-600">
             <a
-              href="#why-choose-us"
+              href="#have-more"
               className="hover:text-orange-500 transition-colors"
               onClick={e => handleMobileNavClick(e, "why-choose-us")}
             >
@@ -186,13 +179,6 @@ export const Header: React.FC = () => {
             >
               Our Doctors
             </Link>
-            <a
-              href="#have-more"
-              className="hover:text-orange-500 transition-colors"
-              onClick={e => handleMobileNavClick(e, "have-more")}
-            >
-              Our Investors
-            </a>
           </nav>
 
           <div className="flex gap-3.5 items-center text-base font-semibold uppercase text-zinc-600">

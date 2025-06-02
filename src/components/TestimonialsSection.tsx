@@ -1,25 +1,59 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ReviewCard from "./ReviewCard";
+import { doctorsBySpecialty } from "../constants/medicalData";
 
-const testimonials = [
-  {
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Porta elementum a enim euismod quam justo lectus. Dis parturient montes nascetur ridiculus mus donec rhoncus.",
-    author: "Lorem ipsum dolor sit",
-  },
-  {
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Porta elementum a enim euismod quam justo lectus. Dis parturient montes nascetur ridiculus mus donec rhoncus.",
-    author: "Lorem ipsum dolor sit",
-  },
-  {
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Porta elementum a enim euismod quam justo lectus. Dis parturient montes nascetur ridiculus mus donec rhoncus.",
-    author: "Lorem ipsum dolor sit",
-  },
-];
+// Collect reviews only from the first doctor in each specialty
+const allTestimonials = Object.values(doctorsBySpecialty)[0]
+  .flatMap(doctor =>
+    (doctor.reviews || []).map(review => ({
+      text: review.description,
+      author: review.patient_name,
+    }))
+  );
+
+// Shuffle testimonials
+function shuffle(array: any[]): any[] {
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+
+const testimonials = shuffle([...allTestimonials]);
 
 const TestimonialsSection: React.FC = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(2);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const total = testimonials.length;
   const carouselRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   const prev = () => {
     setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
@@ -28,8 +62,21 @@ const TestimonialsSection: React.FC = () => {
     setCurrent((prev) => (prev === total - 1 ? 0 : prev + 1));
   };
 
+  // For desktop: 3 cards in view, center card fully visible, sides 25% visible
+  // Each card is 50% width, so 2 cards = 100%. To show 3 cards with 25% of left/right visible:
+  // Container px-[12.5%] (25% of card width on each side)
+  // translateX(calc(-current*50% + 25%))
+  // For mobile: 1 card per view, translateX(-current*100%)
+  const desktopTransform = `translateX(calc(-${current * 50}% + 5%))`;
+  const mobileTransform = `translateX(-${current * 50}vw)`;
+
   return (
-    <div className="relative flex flex-col items-center justify-center w-full mx-auto py-12">
+    <div
+      ref={sectionRef}
+      className={`relative flex flex-col items-center justify-center w-full mx-auto py-12 transition-all duration-1000 max-md:duration-700 ${
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+      }`}
+    >
       {/* Section Title and Description */}
       <div className="flex flex-wrap gap-5 justify-between self-center w-full max-w-[1200px] flex-row mb-10 max-md:flex-col max-md:items-center max-md:gap-4 max-md:px-2">
         <div className="flex flex-col text-zinc-600 max-md:text-center w-3/4 max-md:w-full">
@@ -61,25 +108,19 @@ const TestimonialsSection: React.FC = () => {
       </div>
 
       {/* Carousel and Arrows */}
-      <div className="relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2">
+      <div className={`relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2 ${!isMobile ? 'px-[12.5%]' : ''}`}>
         <div
           ref={carouselRef}
           className="flex gap-6 transition-transform duration-500"
           style={{
-            transform: window.innerWidth < 768
-              ? `translateX(-${current * 100}%)`
-              : `translateX(calc(-${current * 50}% + 25%))`,
+            transform: isMobile ? mobileTransform : desktopTransform,
           }}
         >
-          {testimonials.map((t, idx) => (
+          {testimonials.map((t: {text: string; author: string}, idx: number) => (
             <div
               key={idx}
-              className="flex-shrink-0 min-w-[50%] max-w-[50%] max-md:min-w-full max-md:max-w-full px-2"
-              style={{
-                pointerEvents: idx === current ? 'auto' : 'none',
-                minWidth: window.innerWidth < 768 ? '100%' : '50%',
-                maxWidth: window.innerWidth < 768 ? '100%' : '50%',
-              }}
+              className={`flex-shrink-0 ${isMobile ? 'w-[94vw] max-w-none min-w-0 box-border' : 'min-w-[25%] max-w-[25%] px-2'}`}
+              style={{ pointerEvents: idx === current ? 'auto' : 'none' }}
             >
               <ReviewCard text={t.text} author={t.author} />
             </div>
