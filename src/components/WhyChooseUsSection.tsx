@@ -48,7 +48,7 @@ function WhyChooseUsSection() {
               <div className="relative max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
                 <div className="flex flex-col justify-center px-16 py-6 bg-white rounded-2xl border border-solid border-neutral-200 shadow-[0px_0px_50px_rgba(242,101,34,0.2)] max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
                   <img
-                    src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/google-star.png"
+                    src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/review_4087939.png"
                     className="object-contain w-full max-w-[220px] mx-auto aspect-[1.47] max-md:max-w-[160px]"
                     alt="Google Rating"
                   />
@@ -65,7 +65,7 @@ function WhyChooseUsSection() {
             <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full max-md:box-border">
               <div className="relative grow text-zinc-600 max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/three-generations-strong.png"
+                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/three_9037218.png"
                   className="object-contain w-full max-w-full mx-auto rounded-none aspect-[1.85] max-md:max-w-[160px]"
                   alt="Three Generations"
                 />
@@ -81,7 +81,7 @@ function WhyChooseUsSection() {
             <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full max-md:box-border">
               <div className="flex relative flex-col text-zinc-600 max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/tech-powered-healing.png"
+                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/health-tech_18596135.png"
                   className="object-contain w-full max-w-full mx-auto rounded-none aspect-[1.85] max-md:max-w-[160px]"
                   alt="Tech-powered Healing"
                 />
