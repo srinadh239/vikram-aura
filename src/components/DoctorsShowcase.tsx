@@ -1,10 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { doctorsBySpecialty } from "../constants/medicalData";
+
+interface Doctor {
+  id: string;
+  name: string;
+  credentials: string;
+  description: string;
+  imageSrc: string;
+  imageRight: boolean;
+  titleWithDoctor: boolean;
+  awards: string[];
+  areas_of_expertise: string[];
+  reviews: {
+    patient_name: string;
+    description: string;
+  }[];
+}
 
 const DoctorsShowcase: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -22,10 +39,21 @@ const DoctorsShowcase: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Get first 4 doctors from all specialties
+  // Get 4 random doctors from all specialties
   const doctors = Object.values(doctorsBySpecialty)
     .flat()
+    .sort(() => Math.random() - 0.5)
     .slice(0, 4);
+
+  // Get specialty from URL path
+  const getSpecialtyFromPath = (doctorId: string) => {
+    for (const [specialty, doctors] of Object.entries(doctorsBySpecialty)) {
+      if (doctors.some(doc => doc.id === doctorId)) {
+        return specialty.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      }
+    }
+    return '';
+  };
 
   return (
     <div
@@ -60,7 +88,7 @@ const DoctorsShowcase: React.FC = () => {
                       {doctor.name}
                     </div>
                     <div className="text-sm leading-5 text-zinc-600 transition-colors duration-300 group-hover:text-white line-clamp-2">
-                      {doctor.credentials}
+                      {getSpecialtyFromPath(doctor.id)}
                     </div>
                   </div>
                 </div>

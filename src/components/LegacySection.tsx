@@ -93,9 +93,6 @@ const LegacySection: React.FC = () => {
                 />
               </div>
               <div className="w-[44%] max-md:w-full flex flex-col">
-                <div className="text-3xl leading-tight uppercase max-md:text-2xl">
-                  Our Legacy
-                </div>
                 <div className="mt-5 max-md:text-base">
                   <span className="text-zinc-600">
                     Vikram Aura is not just a network of hospitals—it's a bold {" "}</span>
@@ -126,9 +123,6 @@ const LegacySection: React.FC = () => {
               }`}
             >
               <div className="w-[44%] max-md:w-full flex flex-col">
-                <div className="text-3xl leading-9 uppercase max-md:text-2xl">
-                  the Vikram Aura experience
-                </div>
                 <div className="mt-5 max-md:text-base">
                   <span className="text-zinc-600">At Vikram Aura, every detail matters. From the </span>
                   <span className="font-bold text-zinc-600">most advanced diagnostics </span>
