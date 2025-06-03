@@ -39,11 +39,9 @@ const DoctorsShowcase: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Get 4 random doctors from all specialties
   const doctors = Object.values(doctorsBySpecialty)
     .flat()
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4);
+    .filter(doctor => ['dr-priya-chinnapa', 'dr-ramesh-santhanakrishnan', 'dr-prakash-babu', 'dr-munireddy-m-v'].includes(doctor.id));
 
   // Get specialty from URL path
   const getSpecialtyFromPath = (doctorId: string) => {

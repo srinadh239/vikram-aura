@@ -91,7 +91,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className={`hidden md:flex items-center space-x-8 text-base uppercase ${
+          <nav className={`hidden md:flex items-center space-x-8 text-base ${
             isHomePage ? (isScrolled ? 'text-zinc-600' : 'text-white') : 'text-zinc-600'
           }`}>
             <a
