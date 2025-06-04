@@ -88,7 +88,7 @@ const LegacySection: React.FC = () => {
               <div className="w-[56%] max-md:w-full">
                 <img
                   src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/founders.png"
-                  className="object-contain w-full aspect-[0.79]"
+                  className="object-contain w-full aspect-[0.9]"
                   alt="Legacy"
                 />
               </div>
@@ -144,7 +144,7 @@ const LegacySection: React.FC = () => {
               <div className="w-[56%] max-md:w-full max-md:mt-8">
                 <img
                   src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/vikram-experience.png"
-                  className="object-contain w-full aspect-[0.71]"
+                  className="object-contain w-full aspect-[0.9]"
                   alt="Experience"
                 />
               </div>

@@ -34,15 +34,15 @@ function WhyChooseUsSection() {
           className="object-cover absolute inset-0 size-full"
         />
         <div className="flex relative flex-wrap gap-10 w-full max-w-[1200px] text-zinc-600 max-md:max-w-full max-md:flex-col max-md:items-center">
-          <div className="grow shrink self-start text-3xl leading-tight uppercase w-[193px] max-md:text-center max-md:w-full max-md:mb-2">
+          <div className="grow shrink self-start text-3xl leading-tight uppercase w-[193px] max-md:text-center max-md:w-full max-md:mb-2 text-center">
             Why Choose Us
           </div>
-          <div className="grow shrink text-2xl font-light leading-9 w-[702px] max-md:max-w-full max-md:text-center max-md:w-full">
+          {/* <div className="grow shrink text-2xl font-light leading-9 w-[702px] max-md:max-w-full max-md:text-center max-md:w-full">
             Vikram Aura is built on four core values that shape everything we
             do. Here, care goes beyond treatment
-          </div>
+          </div> */}
         </div>
-        <div className="relative mt-10 mb-0 w-full max-w-[1200px] max-md:mb-2.5 max-md:max-w-full max-md:overflow-x-hidden">
+        <div className="relative mt-20 mb-0 w-full max-w-[1200px] max-md:mb-2.5 max-md:max-w-full max-md:overflow-x-hidden">
           <div className="flex gap-5 items-start max-md:flex-col max-md:gap-6 max-md:w-full">
             <div className="w-[33%] max-md:w-full max-md:box-border">
               <div className="relative max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
@@ -54,7 +54,7 @@ function WhyChooseUsSection() {
                   />
                 </div>
                 <div className="mt-8 text-2xl leading-tight uppercase text-zinc-600 max-md:mr-2.5 max-md:text-lg max-md:text-center break-words">
-                  Rated 4.9 (stars) on Google
+                  Rated <span className="font-bold font-inter">4.9</span> <span className="font-inter">(stars)</span> on Google
                 </div>
                 <div className="mt-2.5 text-lg font-bold leading-8 text-zinc-600 max-md:mr-1.5 max-md:text-base max-md:text-center break-words">
                   Our patients love us! Proof is in our Google Reviews that they

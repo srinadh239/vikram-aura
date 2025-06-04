@@ -7,6 +7,7 @@ import LegacySection from "../components/LegacySection";
 import FooterImage from "../components/FooterImage";
 import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
+import InvestorsSection from "../components/InvestorsSection";
 
 const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,6 +33,7 @@ const Home: React.FC = () => {
       <div id="why-choose-us">
         <WhyChooseUsSection />
       </div>
+      <InvestorsSection />
       <LegacySection />
       <FooterImage />
       <BookAppointmentModal

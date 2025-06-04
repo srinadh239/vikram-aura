@@ -108,10 +108,10 @@ const TestimonialsSection: React.FC = () => {
       </div>
 
       {/* Carousel and Arrows */}
-      <div className={`relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2 ${!isMobile ? 'px-[20%]' : ''}`}>
+      <div className={`relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2 ${!isMobile ? 'px-[15%]' : ''}`}>
         <div
           ref={carouselRef}
-          className="flex gap-8 transition-transform duration-500"
+          className="flex gap-6 transition-transform duration-500"
           style={{
             transform: isMobile ? mobileTransform : desktopTransform,
           }}
@@ -119,7 +119,7 @@ const TestimonialsSection: React.FC = () => {
           {testimonials.map((t: {text: string; author: string}, idx: number) => (
             <div
               key={idx}
-              className={`flex-shrink-0 ${isMobile ? 'w-[94vw] max-w-none min-w-0 box-border' : 'min-w-[22%] max-w-[22%] px-2'}`}
+              className={`flex-shrink-0 ${isMobile ? 'w-[94vw] max-w-none min-w-0 box-border' : 'min-w-[17%] max-w-[16%] px-2'}`}
               style={{ pointerEvents: idx === current ? 'auto' : 'none' }}
             >
               <ReviewCard text={t.text} author={t.author} />

@@ -110,7 +110,7 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center w-[18%] justify-center">
-            <div className={`flex gap-3.5 self-stretch my-auto text-base font-semibold uppercase ${
+            <div className={`flex gap-3.5 self-stretch my-auto text-base font-semibold ${
               isHomePage ? (isScrolled ? 'text-zinc-600' : 'text-white') : 'text-zinc-600'
             }`}>
               <a
