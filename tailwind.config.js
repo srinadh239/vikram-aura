@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roterline: ["Roterline", "cursive", "sans-serif"],
+        sans: ['Proxima Nova', 'sans-serif'],
+        roterline: ['Roterline', 'serif'],
       },
     },
   },

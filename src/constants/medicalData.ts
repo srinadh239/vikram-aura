@@ -501,7 +501,7 @@ export const doctorsBySpecialty = {
          "credentials":"MBBS, MS (Orthopaedics), Fellowship in Hip & Knee Replacements (Germany), Fellowship in Arthroscopic Surgery (India), MSc-Diploma in Sports & Exercise Medicine (UK)",
          "description":"Dr Harish Puranik is a highly skilled Orthopaedic Surgeon with 18 years of medical experience, including 14 years as a specialist. His expertise includes shoulder and knee arthroscopy, sports injury management, joint replacements, ligament reconstruction, and minimally invasive orthopaedic procedures.",
          "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Harish%20Puranik.jpeg",
-         "imageRight":false,
+         "imageRight":true,
          "awards":[
             "Trained in Hip and Knee Replacements at Puttlingen, Germany",
             "Advanced training in Shoulder Arthroscopy -- Macclesfield, Manchester, UK",
@@ -609,7 +609,7 @@ export const doctorsBySpecialty = {
          "credentials":"MBBS, MD (Pediatrics), DNB (Neonatology)",
          "description":"Dr Vindhya N is an experienced Pediatrician and Neonatologist with 13 years of medical practice, including 9 years as a specialist. She holds an MBBS, MD in Pediatrics, and DNB in Neonatology. Her clinical expertise spans neonatal intensive care, management of preterm and high-risk newborns, general pediatric care, newborn screening, developmental follow-up, and preventive child health through timely vaccinations.​",
          "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Vindhya%20N.jpeg",
-         "imageRight":false,
+         "imageRight":true,
          "awards":[
             "Recognized for excellence in newborn care and pediatric health management"
          ],
@@ -715,7 +715,7 @@ export const doctorsBySpecialty = {
          "credentials":"MBBS, MD (General Medicine), DM (Nephrology)",
          "description":"Dr Hari Prasad is a dedicated Nephrologist with 15 years of overall medical experience, including 7 years as a specialist in kidney care. He holds an MBBS, MD in General Medicine, and DM in Nephrology. His expertise covers the management of chronic kidney disease (CKD) and acute kidney injury (AKI), hemodialysis and hemodiafiltration (HDF), kidney stone treatment, renal angioplasty and stenting, ureteroscopy (URS), along with comprehensive care in general nephrology and hypertension management.​",
          "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr. Hari Prasad.jpeg",
-         "imageRight":false,
+         "imageRight":true,
          "awards":[
             "MD and DM from PGIMER, Chandigarh -- one of India's premier institutes",
             "Member of the Medical Council of India (MCI)",
@@ -855,7 +855,7 @@ export const doctorsBySpecialty = {
          "credentials":"MBBS, MD (Internal Medicine), DM (Neurology), Fellowship in Stroke and Neurointervention",
          "description":"Dr Anirudh Kulkarni is a skilled Neurologist with 17 years of overall experience, including 7 years as a specialist. He holds an MBBS, MD in Internal Medicine, DM in Neurology, and a Fellowship in Stroke and Neurointervention. His expertise lies in stroke management and rehabilitation, mechanical thrombectomy, carotid artery stenting, aneurysm coiling, AVM and dAVF embolization, spinal angiography, and other interventional and minimally invasive neurological procedures.​",
          "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Anirudh%20Kulkarni.jpeg",
-         "imageRight":false,
+         "imageRight":true,
          "awards":[
             "Member -- American Academy of Neurology",
             "Member -- Indian Academy of Neurology",

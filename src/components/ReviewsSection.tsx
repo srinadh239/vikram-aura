@@ -37,7 +37,7 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ doctor }) => {
   return (
     <section 
       ref={sectionRef}
-      className={`transition-all duration-1000 max-md:duration-300 max-md:mb-10 ${
+      className={`transition-all duration-1000 max-md:duration-300 max-md:mb-10 mt-16 ${
         isVisible ? 'opacity-100 md:translate-y-0' : 'opacity-0 md:translate-y-full'
       }`}
     >

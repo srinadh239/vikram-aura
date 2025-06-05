@@ -7,7 +7,7 @@ interface BookAppointmentModalProps {
   defaultDoctor?: string;
 }
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzpmukEt_Izt7K8Pycye7gwgMWXeWnpT25GHYBnCaZLRZj71jRkwqhekLXrlezMMJ3Ew/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwO9tpu-ZZhRR95FavJ3UJow5EFQhLtowE05RvfdxzRC6MD4shx_NASfuF9uCjoI_A_SA/exec";
 
 const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ open, onClose, doctorList, defaultDoctor }) => {
   const [name, setName] = useState("");
@@ -35,7 +35,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ open, onClo
       const res = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "text/plain;charset=utf-8"
+          "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify({
           name,

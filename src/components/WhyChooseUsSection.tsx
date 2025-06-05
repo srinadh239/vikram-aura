@@ -2,95 +2,51 @@
 import * as React from "react";
 
 function WhyChooseUsSection() {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const sectionRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={sectionRef}
-      className={`max-md:px-2 overflow-x-hidden transition-all duration-1000 max-md:duration-700 ${
-        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-      }`}
-    >
-      <div className="flex relative flex-col items-end py-32 pr-2.5 pl-20 w-full min-h-[727px] max-md:py-24 max-md:pl-2 max-md:max-w-full max-md:items-center">
+    <div>
+      <div className="flex relative flex-col justify-center items-center px-20 py-28 w-full min-h-[610px] max-md:px-5 max-md:py-24 max-md:max-w-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf2daa57dfb4ca16c3e67543c0f328d0fa3c596e?placeholderIfAbsent=true"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/20a1ccfcc909367851a76ef670d4248120c4cd8b?placeholderIfAbsent=true"
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex relative flex-wrap gap-10 w-full max-w-[1200px] text-zinc-600 max-md:max-w-full max-md:flex-col max-md:items-center">
-          <div className="grow shrink self-start text-3xl leading-tight uppercase w-[193px] max-md:text-center max-md:w-full max-md:mb-2 text-center">
+        <div className="flex relative flex-col items-center mb-0 w-full max-w-[1075px] max-md:mb-2.5 max-md:max-w-full">
+          <div className="text-3xl leading-tight text-center uppercase text-zinc-600">
             Why Choose Us
           </div>
-          {/* <div className="grow shrink text-2xl font-light leading-9 w-[702px] max-md:max-w-full max-md:text-center max-md:w-full">
-            Vikram Aura is built on four core values that shape everything we
-            do. Here, care goes beyond treatment
-          </div> */}
-        </div>
-        <div className="relative mt-20 mb-0 w-full max-w-[1200px] max-md:mb-2.5 max-md:max-w-full max-md:overflow-x-hidden">
-          <div className="flex gap-5 items-start max-md:flex-col max-md:gap-6 max-md:w-full">
-            <div className="w-[33%] max-md:w-full max-md:box-border">
-              <div className="relative max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
-                <div className="flex flex-col justify-center px-16 py-6 bg-white rounded-2xl border border-solid border-neutral-200 shadow-[0px_0px_50px_rgba(242,101,34,0.2)] max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
-                  <img
-                    src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/review_4087939.png"
-                    className="object-contain w-full max-w-[220px] mx-auto aspect-[1.47] max-md:max-w-[160px]"
-                    alt="Google Rating"
-                  />
-                </div>
-                <div className="mt-8 text-2xl leading-tight uppercase text-zinc-600 max-md:mr-2.5 max-md:text-lg max-md:text-center break-words">
-                  Rated <span className="font-bold font-inter">4.9</span> <span className="font-inter">(stars)</span> on Google
-                </div>
-                <div className="mt-2.5 text-lg font-bold leading-8 text-zinc-600 max-md:mr-1.5 max-md:text-base max-md:text-center break-words">
-                  Our patients love us! Proof is in our Google Reviews that they
-                  leave for us
+          <div className="mt-9 max-w-full w-[799px]">
+            <div className="flex gap-5 max-md:flex-col max-md:">
+              <div className="w-[33%] max-md:ml-0 max-md:w-full flex flex-col justify-center items-center">
+                    <img
+                      src="/star-rating.svg"
+                      alt="Star Rating"
+                      className="w-[200px] h-[200px] mb-4"
+                    />
+                <div className="self-center mt-1 text-lg font-bold text-center leading-[50px] text-zinc-600">
+                  Rated 4.9 (stars) on Google
                 </div>
               </div>
-            </div>
-            <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full max-md:box-border">
-              <div className="relative grow text-zinc-600 max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/three_9037218.png"
-                  className="object-contain w-full max-w-full mx-auto rounded-none aspect-[1.85] max-md:max-w-[160px]"
-                  alt="Three Generations"
-                />
-                <div className="mt-8 mr-6 text-2xl leading-tight uppercase max-md:mr-2.5 max-md:text-lg max-md:text-center break-words">
+              <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full flex flex-col justify-center items-center">
+                    <img
+                      src="/three-generations.svg"
+                      alt="Three Generations"
+                      className="w-[200px] h-[200px] mb-4"
+                    />
+                <div className="self-center mt-1 text-lg font-bold text-center leading-[50px] text-zinc-600">
                   Three Generations Strong
                 </div>
-                <div className="mt-2.5 text-lg font-bold leading-8 max-md:mr-1.5 max-md:text-base max-md:text-center break-words">
-                  Backed by clinical expertise spanning over 3 generations, we
-                  certainly know how to be a true partner in healing
-                </div>
               </div>
-            </div>
-            <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full max-md:box-border">
-              <div className="flex relative flex-col text-zinc-600 max-md:px-2 max-md:py-4 max-md:w-full max-md:box-border">
-                <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/health-tech_18596135.png"
-                  className="object-contain w-full max-w-full mx-auto rounded-none aspect-[1.85] max-md:max-w-[160px]"
-                  alt="Tech-powered Healing"
-                />
-                <div className="mt-8 text-2xl leading-tight uppercase max-md:text-lg max-md:text-center break-words">
-                  Tech-powered Healing
-                </div>
-                <div className="mt-2.5 text-lg font-bold leading-8 max-md:mr-1.5 max-md:text-base max-md:text-center break-words">
-                  We harness the power of AI and advanced technology to make
-                  seamless care possible
+              <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full flex flex-col justify-center items-center">
+                <div className="flex flex-col grow max-md:mt-10">
+                  <div className="flex flex-col justify-center items-center rounded-full aspect-square bg-zinc-100 w-[200px] h-[200px] mb-4">
+                    <img
+                      src="/tech-power.svg"
+                      alt="Tech Power"
+                      className="w-[200px] h-[200px]"
+                    />
+                  </div>
+                  <div className="self-center mt-1 text-lg font-bold text-center leading-[50px] text-zinc-600">
+                    Tech-powered Healing
+                  </div>
                 </div>
               </div>
             </div>
