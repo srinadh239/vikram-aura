@@ -5,6 +5,7 @@ import SpecialtiesSection from "../components/SpecialtiesSection";
 import DoctorSection from "../components/DoctorSection";
 import { doctorsBySpecialty } from "../constants/medicalData";
 import BookAppointmentModal from "../components/BookAppointmentModal";
+import FooterImage from "../components/FooterImage";
 
 function DoctorList() {
   // Gather all doctor names from all specialties
@@ -119,11 +120,7 @@ function DoctorList() {
         onBookAppointment={handleSectionBookClick}
       />
 
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a722308c11345390a402d360293163c0d120789?placeholderIfAbsent=true&apiKey=003a4bc7d72843b88f405864f9e7fccf"
-        className="object-contain w-full aspect-[3.97] max-md:max-w-full"
-        alt="Footer banner"
-      />
+      <FooterImage />
       <BookAppointmentModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}

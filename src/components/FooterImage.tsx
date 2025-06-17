@@ -10,8 +10,8 @@ const FooterImage: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex-1 flex flex-col gap-4 max-md:items-center max-md:text-center">
-          <div className="flex items-center gap-3 max-md:justify-center">
+        <div className="flex-1 flex flex-col gap-4">
+          <div className="flex items-center gap-3">
             <div className="bg-white rounded-full h-10 w-[137px] flex items-center justify-center">
               <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/location-icon.svg" alt="Location" className={`flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 bg-white h-[50px] w-[50px] hover:bg-orange-50 transition-colors`} />
             </div>
@@ -19,13 +19,13 @@ const FooterImage: React.FC = () => {
               #62, Richmond Road, Behind Sacred Heart Church, Mother Teresa Road, Richmond Town, Bangalore, 560025
             </span>
           </div>
-          <div className="flex items-center gap-3 max-md:justify-center">
+          <div className="flex items-center gap-3">
             <div className={`flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 bg-white h-[50px] w-[50px] hover:bg-orange-50 transition-colors`}>
               <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg" alt="Call" className="h-6 w-6" />
             </div>
             <a href="tel:+917022400800" className="text-sm text-black hover:text-orange-400 transition">+91-7022 400 800</a>
           </div>
-          <div className="flex items-center gap-3 max-md:justify-center">
+          <div className="flex items-center gap-3">
             <div className={`flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 bg-white h-[50px] w-[50px] hover:bg-orange-50 transition-colors`}>
               <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/message-icon.svg" alt="Email" className="h-6 w-6" />
             </div>

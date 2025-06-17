@@ -9,6 +9,7 @@ import AwardsSection from "../components/AwardsSection";
 import ReviewsSection from "../components/ReviewsSection";
 import LocationsSection from "../components/LocationsSection";
 import { doctorsBySpecialty } from "../constants/medicalData";
+import FooterImage from "../components/FooterImage";
 
 const DoctorProfile: React.FC = () => {
   const { id } = useParams();
@@ -51,7 +52,7 @@ const DoctorProfile: React.FC = () => {
     <div className="flex overflow-hidden flex-col bg-white">
       <ProfileHeader specialty={specialty} />
 
-      <div className="flex flex-col items-start self-center mt-16 px-4 w-full max-w-[1175px] max-md:mt-10 max-md:max-w-full">
+      <div className="flex flex-col items-start self-center mt-16 mb-16 px-4 w-full max-w-[1175px] max-md:mt-10 max-md:max-w-full">
         <DoctorInfo doctor={doctor} />
         
         {/* Only show ExpertiseSection if areas_of_expertise exists and has items */}
@@ -73,13 +74,9 @@ const DoctorProfile: React.FC = () => {
 
         
         <LocationsSection />
+        
       </div>
-
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c21eb8f2a50205ff40dc6a5a9990317c10462b85?placeholderIfAbsent=true"
-        className="object-contain mt-24 w-full aspect-[3.97] max-md:mt-10 max-md:max-w-full"
-        alt="Footer image"
-      />
+      <FooterImage />
     </div>
   );
 };

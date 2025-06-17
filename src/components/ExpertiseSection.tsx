@@ -33,12 +33,12 @@ const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ doctor }) => {
     <section className="w-full flex justify-center mt-[100px] max-md:mt-0 max-md:mb-6">
       <div
         ref={contentRef}
-        className={`w-full max-w-6xl bg-zinc-100 rounded-none pt-[82px] pl-[79px] pb-[44px] max-md:pt-8 max-md:pl-4 max-md:pr-4 max-md:pb-6 transition-all duration-1000 ${
+        className={`w-full max-w-6xl bg-zinc-100 rounded-lg pt-[62px] pl-[79px] pb-[44px] max-md:pt-8 max-md:pl-4 max-md:pr-4 max-md:pb-6 transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
         }`}
       >
         <h2
-          className="mb-8 tracking-wide text-[#58595B] text-left uppercase text-[30px] font-normal leading-[36px] max-md:text-[18px] max-md:leading-6 max-md:mb-4"
+          className="mb-4 tracking-wide text-[#58595B] text-left uppercase text-[30px] font-normal leading-[36px] max-md:text-[18px] max-md:leading-6 max-md:mb-4"
         >
           Areas of Expertise
         </h2>
