@@ -3,13 +3,10 @@ import ReviewCard from "./ReviewCard";
 import { doctorsBySpecialty } from "../constants/medicalData";
 
 // Collect reviews only from the first doctor in each specialty
-const allTestimonials = Object.values(doctorsBySpecialty)[0]
-  .flatMap(doctor =>
-    (doctor.reviews || []).map(review => ({
+const allTestimonials = Object.values(doctorsBySpecialty)[0][0].reviews.map(review => ({
       text: review.description,
       author: review.patient_name,
-    }))
-  );
+    }));
 
 // Shuffle testimonials
 function shuffle(array: any[]): any[] {
@@ -67,7 +64,7 @@ const TestimonialsSection: React.FC = () => {
   // Container px-[12.5%] (25% of card width on each side)
   // translateX(calc(-current*50% + 25%))
   // For mobile: 1 card per view, translateX(-current*100%)
-  const desktopTransform = `translateX(calc(-${current * 50}% + 5%))`;
+  const desktopTransform = `translateX(calc(-${current * 18}% + .1%))`;
   const mobileTransform = `translateX(-${current * 50}vw)`;
 
   return (
@@ -108,7 +105,7 @@ const TestimonialsSection: React.FC = () => {
       </div>
 
       {/* Carousel and Arrows */}
-      <div className={`relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2 ${!isMobile ? 'px-[15%]' : ''}`}>
+      <div className={`relative w-full overflow-x-hidden flex justify-center mt-11 max-md:mt-8 max-md:px-2 ${!isMobile ? 'px-[20%]' : ''}`}>
         <div
           ref={carouselRef}
           className="flex gap-6 transition-transform duration-500"
@@ -119,7 +116,7 @@ const TestimonialsSection: React.FC = () => {
           {testimonials.map((t: {text: string; author: string}, idx: number) => (
             <div
               key={idx}
-              className={`flex-shrink-0 ${isMobile ? 'w-[94vw] max-w-none min-w-0 box-border' : 'min-w-[17%] max-w-[16%] px-2'}`}
+              className={`flex-shrink-0 ${isMobile ? 'w-[94vw] max-w-none min-w-0 box-border' : 'min-w-[35%] max-w-[35%] px-2'}`}
               style={{ pointerEvents: idx === current ? 'auto' : 'none' }}
             >
               <ReviewCard text={t.text} author={t.author} />

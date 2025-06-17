@@ -47,7 +47,7 @@ const LocationsSection: React.FC = () => {
               Richmond Town, Bengaluru, Karnataka 560047
             </address>
             <a
-              href="https://www.google.com/maps?q=12.9657136,77.6070354,17z"
+              href="https://www.google.com/maps/place/Vikram+Aura+Hospital/@12.9657136,77.6070354,904m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae142ac1c81093:0xa2fc9609c496d0c4!8m2!3d12.9657136!4d77.6096103!16s%2Fg%2F11bw6dhq9c!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-colors max-md:text-sm max-md:px-3 max-md:py-1.5"
@@ -58,12 +58,21 @@ const LocationsSection: React.FC = () => {
         </div>
         <div className="ml-5 w-[68%] max-md:ml-0 max-md:w-full flex items-center">
           <div className="w-full h-[350px] max-md:h-[220px]">
-            <iframe
+            {/* <iframe
               title="Google Map"
               src="https://www.google.com/maps?q=12.9657136,77.6070354&z=17&output=embed"
               width="100%"
               height="100%"
               className="rounded-lg w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.7221701208123!2d77.60703537513417!3d12.965713587349054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae142ac1c81093%3A0xa2fc9609c496d0c4!2sVikram%20Aura%20Hospital!5e1!3m2!1sen!2sin!4v1750151086672!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

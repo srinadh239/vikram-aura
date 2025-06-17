@@ -30,9 +30,9 @@ const Home: React.FC = () => {
           <TestimonialsSection />
         </div>
       </div>
-      <div id="why-choose-us">
+      {/* <div id="why-choose-us">
         <WhyChooseUsSection />
-      </div>
+      </div> */}
       <InvestorsSection />
       <LegacySection />
       <FooterImage />
