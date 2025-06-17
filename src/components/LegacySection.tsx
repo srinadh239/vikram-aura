@@ -85,7 +85,14 @@ const LegacySection: React.FC = () => {
                 legacyBlockVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
               }`}
             >
-              <div className="w-[56%] max-md:w-full">
+              <div className="flex flex-col gap-4 md:hidden mb-4">
+                <img
+                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/founders.png"
+                  className="object-contain w-full aspect-[0.9]"
+                  alt="Legacy"
+                />
+              </div>
+              <div className="w-[56%] max-md:hidden">
                 <img
                   src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/founders.png"
                   className="object-contain w-full aspect-[0.9]"
@@ -122,6 +129,13 @@ const LegacySection: React.FC = () => {
                 experienceBlockVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
               }`}
             >
+              <div className="flex flex-col gap-4 md:hidden mb-4">
+                <img
+                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/vikram-experience.png"
+                  className="object-contain w-full aspect-[0.9]"
+                  alt="Experience"
+                />
+              </div>
               <div className="w-[44%] max-md:w-full flex flex-col">
                 <div className="mt-5 max-md:text-base">
                   <span className="text-zinc-600">At Vikram Aura, every detail matters. From the </span>
@@ -141,7 +155,7 @@ const LegacySection: React.FC = () => {
                   <span className="font-bold text-zinc-600">Hospitals where innovation meets compassion, and excellence feels personal.</span>
                 </div>
               </div>
-              <div className="w-[56%] max-md:w-full max-md:mt-8">
+              <div className="w-[56%] max-md:hidden max-md:mt-8">
                 <img
                   src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/vikram-experience.png"
                   className="object-contain w-full aspect-[0.9]"
