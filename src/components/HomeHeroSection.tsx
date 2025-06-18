@@ -26,7 +26,7 @@ function HeroSection({ onBookAppointment }: { onBookAppointment?: () => void }) 
   return (
      <VideoBackground
       videoUrl="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Brand+Video.mp4"
-      className="min-h-[600px] lg:min-h-[800px] w-full max-w-[1440px] mx-auto"
+      className="min-h-[250px] md:min-h-[600px] lg:min-h-[800px] w-full max-w-[1440px] mx-auto"
     >
     </VideoBackground>
   );

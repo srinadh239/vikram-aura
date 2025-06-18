@@ -106,9 +106,11 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
     <div className="flex flex-col w-full">
       <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
         {renderSectionTitle()}
-        <h3 className="text-2xl leading-tight text-orange-500 uppercase">
-          {name}
-        </h3>
+        <Link to={`/doctor/${doctor.id}`} className="hover:text-orange-600 transition-colors">
+          <h3 className="text-2xl leading-tight text-orange-500 uppercase">
+            {name}
+          </h3>
+        </Link>
         <p className="mt-2.5 text-sm font-bold leading-5 text-zinc-600 max-md:max-w-full">
           {credentials}
         </p>
@@ -145,9 +147,9 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
       </Link>
       {imageRight ? (
         <>
-          <Link to={`/doctor/${doctor.id}`} className="flex w-full md:w-[65%] group focus:outline-none">
+          <div className="flex w-full md:w-[65%] group focus:outline-none">
             <Content />
-          </Link>
+          </div>
           <Link to={`/doctor/${doctor.id}`} className="hidden md:flex w-[35%] group focus:outline-none">
             <DesktopImage />
           </Link>
@@ -157,9 +159,9 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
           <Link to={`/doctor/${doctor.id}`} className="hidden md:flex w-[35%] group focus:outline-none">
             <DesktopImage />
           </Link>
-          <Link to={`/doctor/${doctor.id}`} className="flex w-full md:w-[65%] group focus:outline-none">
+          <div className="flex w-full md:w-[65%] group focus:outline-none">
             <Content />
-          </Link>
+          </div>
         </>
       )}
     </div>

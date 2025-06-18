@@ -15,8 +15,20 @@ export const VideoBackground = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
+  const [videoAspectRatio, setVideoAspectRatio] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-   useEffect(() => {
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
     const video = videoRef.current;
     if (video) {
       const handleLoad = () => {
@@ -24,6 +36,10 @@ export const VideoBackground = ({
         video.play().catch(error => {
           console.log("Autoplay failed:", error);
         });
+        
+        // Calculate aspect ratio
+        const aspectRatio = video.videoWidth / video.videoHeight;
+        setVideoAspectRatio(aspectRatio);
       };
       video.addEventListener('loadeddata', handleLoad);
       return () => video.removeEventListener('loadeddata', handleLoad);
@@ -47,10 +63,17 @@ export const VideoBackground = ({
   };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div 
+      className={`relative overflow-hidden ${className}`}
+      style={{
+        height: isMobile && videoAspectRatio 
+          ? `${window.innerWidth / videoAspectRatio}px`
+          : undefined
+      }}
+    >
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover"
         src={videoUrl}
         loop
         autoPlay
