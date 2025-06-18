@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
 import SpecialtiesSection from "../components/SpecialtiesSection";
 import DoctorSection from "../components/DoctorSection";
-import { doctorsBySpecialty } from "../constants/medicalData";
+import { doctorsBySpecialty, specialties } from "../constants/medicalData";
 import BookAppointmentModal from "../components/BookAppointmentModal";
 import FooterImage from "../components/FooterImage";
 
@@ -30,95 +30,21 @@ function DoctorList() {
       <HeroSection onBookAppointment={handleTopBookClick} />
       <SpecialtiesSection />
 
-      {/* Diabetology & Endocrinology Section */}
-      <DoctorSection
-        id="diabetology-endocrinology"
-        title="Diabetology & Endocrinology"
-        backgroundColor="bg-zinc-100"
-        doctors={doctorsBySpecialty["diabetology-endocrinology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Dermatology Section */}
-      <DoctorSection
-        id="dermatology"
-        title="Dermatology"
-        backgroundColor="bg-white"
-        doctors={doctorsBySpecialty["dermatology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* General Surgery Section */}
-      <DoctorSection
-        id="general-surgery"
-        title="General Surgery"
-        backgroundColor="bg-zinc-100"
-        doctors={doctorsBySpecialty["general-surgery"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Gynaecology & Obstetrics Section */}
-      <DoctorSection
-        id="gynaecology-obstetrics"
-        title="Gynaecology & Obstetrics"
-        backgroundColor="bg-white"
-        doctors={doctorsBySpecialty["gynaecology-obstetrics"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Internal Medicine Section */}
-      <DoctorSection
-        id="internal-medicine"
-        title="Internal Medicine"
-        backgroundColor="bg-zinc-100"
-        doctors={doctorsBySpecialty["internal-medicine"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Oncology Section */}
-      <DoctorSection
-        id="oncology"
-        title="ONCOLOGY"
-        backgroundColor="bg-white"
-        doctors={doctorsBySpecialty["oncology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Orthopaedics Section */}
-      <DoctorSection
-        id="orthopaedics"
-        title="Orthopaedics"
-        backgroundColor="bg-zinc-100"
-        doctors={doctorsBySpecialty["orthopaedics"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Paediatrics & Neonatology Section */}
-      <DoctorSection
-        id="paediatrics-neonatology"
-        title="Paediatrics & Neonatology"
-        backgroundColor="bg-white"
-        doctors={doctorsBySpecialty["paediatrics-neonatology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Pulmonology Section */}
-      <DoctorSection
-        id="pulmonology"
-        title="Pulmonology"
-        backgroundColor="bg-zinc-100"
-        doctors={doctorsBySpecialty["pulmonology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
-
-      {/* Urology-Nephrology Section */}
-      <DoctorSection
-        id="urology-nephrology"
-        title="Urology-Nephrology"
-        backgroundColor="bg-white"
-        doctors={doctorsBySpecialty["urology-nephrology"]}
-        onBookAppointment={handleSectionBookClick}
-      />
+      {specialties.map((specialty, index) => {
+        const doctors = doctorsBySpecialty[specialty.sectionId as keyof typeof doctorsBySpecialty];
+        if (!doctors || doctors.length === 0) return null;
+        
+        return (
+          <DoctorSection
+            key={specialty.sectionId}
+            id={specialty.sectionId}
+            title={specialty.name}
+            backgroundColor={index % 2 === 0 ? "bg-zinc-100" : "bg-white"}
+            doctors={doctors}
+            onBookAppointment={handleSectionBookClick}
+          />
+        );
+      })}
 
       <FooterImage />
       <BookAppointmentModal

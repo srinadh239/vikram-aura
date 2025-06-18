@@ -4,21 +4,7 @@ import SpecialtyIcon from "./SpecialtyIcon";
 import { specialties } from "../constants/medicalData";
 
 const SpecialtiesSection = () => {
-  const specialtyToSectionId: Record<string, string> = {
-    "Diabetology & Endocrinology": "diabetology-endocrinology",
-    "Dermatology": "dermatology",
-    "General Surgery": "general-surgery",
-    "Gynaecology & Obstetrics": "gynaecology-obstetrics",
-    "Internal Medicine": "internal-medicine",
-    "Oncology": "oncology",
-    "Orthopaedics": "orthopaedics",
-    "Paediatrics & Neonatology": "paediatrics-neonatology",
-    "Pulmonology": "pulmonology",
-    "Urology-Nephrology": "urology-nephrology",
-  };
-
-  const handleSpecialtyClick = (specialtyName: string) => {
-    const sectionId = specialtyToSectionId[specialtyName];
+  const handleSpecialtyClick = (sectionId: string) => {
     if (sectionId) {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -47,7 +33,7 @@ const SpecialtiesSection = () => {
                 name={specialty.name}
                 iconSrc={specialty.iconSrc}
                 highlighted={specialty.highlighted}
-                onClick={() => handleSpecialtyClick(specialty.name)}
+                onClick={() => handleSpecialtyClick(specialty.sectionId)}
               />
             </div>
           ))}

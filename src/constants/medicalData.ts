@@ -6,40 +6,46 @@ export const specialties = [
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Gynaecology+%26+Obstetrics-1.svg",
     highlighted: false,
+    sectionId: "diabetology-endocrinology",
   },
-  { name: "Dermatology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Dermatology.svg", highlighted: false },
+  { name: "Dermatology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Dermatology.svg", highlighted: false, sectionId: "dermatology" },
   {
     name: "General Surgery",
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/General+Surgery.svg",
     highlighted: false,
+    sectionId: "general-surgery",
   },
   {
     name: "Gynaecology & Obstetrics",
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Gynaecology+%26+Obstetrics.svg",
     highlighted: false,
+    sectionId: "gynaecology-obstetrics",
   },
   {
     name: "Internal Medicine",
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Urology-Nephrology.svg",
     highlighted: false,
+    sectionId: "internal-medicine",
   },
-  { name: "Oncology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Oncology.svg", highlighted: false },
-  { name: "Orthopaedics", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Orthopaedics.svg", highlighted: false },
+  { name: "Oncology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Oncology.svg", highlighted: false, sectionId: "oncology" },
+  { name: "Orthopaedics", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics" },
   {
     name: "Paediatrics & Neonatology",
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Paediatrics+%26+Neonatology.svg",
     highlighted: false,
+    sectionId: "paediatrics-neonatology",
   },
-  { name: "Pulmonology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Pulmonology.svg", highlighted: false },
+  { name: "Pulmonology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Pulmonology.svg", highlighted: false, sectionId: "pulmonology" },
   {
     name: "Urology-Nephrology",
     iconSrc:
       "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Urology-Nephrology-1.svg",
     highlighted: false,
+    sectionId: "urology-nephrology",
   },
 ];
 
