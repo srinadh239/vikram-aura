@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FooterImage: React.FC = () => {
   return (
@@ -6,7 +7,9 @@ const FooterImage: React.FC = () => {
       <div className="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-10">
         {/* Brand & Tagline */}
         <div className="flex-1 flex flex-col items-start max-md:items-center max-md:text-center">
-          <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg" alt="Vikram Aura Logo" className="w-60 mb-4" />
+          <Link to="/">
+            <img src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg" alt="Vikram Aura Logo" className="w-60 mb-4" />
+          </Link>
         </div>
 
         {/* Contact Info */}
@@ -36,8 +39,9 @@ const FooterImage: React.FC = () => {
         {/* Quick Links */}
         <div className="flex-1 flex flex-col gap-2 max-md:items-center max-md:text-center">
           <div className="font-semibold mb-2 text-black">Quick Links</div>
-          <a href="/" className="text-sm text-black hover:text-orange-400 transition">Home</a>
-          <a href="/doctors" className="text-sm text-black hover:text-orange-400 transition">Doctors</a>
+          <Link to="/" className="text-sm text-black hover:text-orange-400 transition">Home</Link>
+          <Link to="/doctors" className="text-sm text-black hover:text-orange-400 transition">Doctors</Link>
+          <Link to="/privacy-policy" className="text-sm text-black hover:text-orange-400 transition">Privacy Policy</Link>
         </div>
 
         {/* Social Media */}
@@ -60,7 +64,7 @@ const FooterImage: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-zinc-600 mt-8 pt-4 text-center text-xs text-black">
-        © {new Date().getFullYear()} Vikram Aura. All rights reserved. | <a href="/privacy" className="hover:text-orange-400">Privacy Policy</a> | <a href="/terms" className="hover:text-orange-400">Terms of Service</a>
+        © {new Date().getFullYear()} Vikram Aura. All rights reserved. | <Link to="/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link>
       </div>
     </footer>
   );
