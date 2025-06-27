@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -6,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import DoctorList from "./pages/DoctorList";
 import DoctorProfile from "./pages/DoctorProfile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => (
@@ -18,6 +18,7 @@ const App = () => (
       <Route path="/about" element={<AboutUs />} />
       <Route path="/doctor/:id" element={<DoctorProfile />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-service" element={<TermsOfService />} />
     </Routes>
   </Router>
 );

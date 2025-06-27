@@ -42,6 +42,7 @@ const FooterImage: React.FC = () => {
           <Link to="/" className="text-sm text-black hover:text-orange-400 transition">Home</Link>
           <Link to="/doctors" className="text-sm text-black hover:text-orange-400 transition">Doctors</Link>
           <Link to="/privacy-policy" className="text-sm text-black hover:text-orange-400 transition">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="text-sm text-black hover:text-orange-400 transition">Terms of Service</Link>
         </div>
 
         {/* Social Media */}
@@ -64,7 +65,7 @@ const FooterImage: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-zinc-600 mt-8 pt-4 text-center text-xs text-black">
-        © {new Date().getFullYear()} Vikram Aura. All rights reserved. | <Link to="/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link>
+        © {new Date().getFullYear()} Vikram Aura. All rights reserved. | <Link to="/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link> | <Link to="/terms-of-service" className="hover:text-orange-400">Terms of Service</Link>
       </div>
     </footer>
   );

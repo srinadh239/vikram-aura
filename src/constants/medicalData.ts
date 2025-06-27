@@ -338,35 +338,35 @@ export const doctorsBySpecialty = {
          ]
       }
    ],
-   "internal-medicine":[
-      {
-         "id": "dr-anita-maria-dias",
-         "name":"DR ANITA MARIA DIAS",
-         "credentials":"MBBS, MD (Internal Medicine), Fellowship in Critical Care",
-         "description":"Dr Anita Maria Dias is a seasoned Internal Medicine Specialist with over 25 years of experience in diagnosing and managing a wide range of medical conditions. She specializes in infectious diseases, diabetes management, thyroid disorders, critical care medicine, and preventive healthcare. With a patient-centric approach, Dr Anita provides comprehensive and personalized medical care to ensure optimal health outcomes.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Anita Maria Dias.webp",
-         "imageRight":true,
-         "titleWithDoctor":true,
-         "awards":[
-            "Specialized training in Critical Care at Lilavati Hospital, Mumbai"
-         ],
-         "areas_of_expertise":[
-            "Infectious Diseases",
-            "Diabetes Management",
-            "Thyroid Disorders",
-            "Critical Care Medicine",
-            "Preventive Healthcare"
-         ],
-         "reviews":[{ patient_name: 'Amit P.', description: 'Going through treatment at Vikram Aura was easier because of the supportive doctors and well-managed care. Everything was well-coordinated.' },
-  { patient_name: 'Smriti Gupta', description: 'The staff is kind, the hospital is clean, and everything runs efficiently. I felt well cared for at every step.' },
-  { patient_name: 'Rami Reddy', description: 'I am diabetic patient since 5 years. I met the doctor for treatment and she advised me with diet plans and good treatment. Thank u doctor and hospital staff!' },
-  { patient_name: 'Samyukta G', description: 'Excellent hospital with caring doctors. The doctor answered all our questions patiently.' },
-  { patient_name: 'Deepak N', description: 'Doctor explained the treatment options clearly and suggested the best one for me. Happy with the hospital\'s level of care.' }
+  //  "internal-medicine":[
+  //     {
+  //        "id": "dr-anita-maria-dias",
+  //        "name":"DR ANITA MARIA DIAS",
+  //        "credentials":"MBBS, MD (Internal Medicine), Fellowship in Critical Care",
+  //        "description":"Dr Anita Maria Dias is a seasoned Internal Medicine Specialist with over 25 years of experience in diagnosing and managing a wide range of medical conditions. She specializes in infectious diseases, diabetes management, thyroid disorders, critical care medicine, and preventive healthcare. With a patient-centric approach, Dr Anita provides comprehensive and personalized medical care to ensure optimal health outcomes.",
+  //        "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Anita Maria Dias.webp",
+  //        "imageRight":true,
+  //        "titleWithDoctor":true,
+  //        "awards":[
+  //           "Specialized training in Critical Care at Lilavati Hospital, Mumbai"
+  //        ],
+  //        "areas_of_expertise":[
+  //           "Infectious Diseases",
+  //           "Diabetes Management",
+  //           "Thyroid Disorders",
+  //           "Critical Care Medicine",
+  //           "Preventive Healthcare"
+  //        ],
+  //        "reviews":[{ patient_name: 'Amit P.', description: 'Going through treatment at Vikram Aura was easier because of the supportive doctors and well-managed care. Everything was well-coordinated.' },
+  // { patient_name: 'Smriti Gupta', description: 'The staff is kind, the hospital is clean, and everything runs efficiently. I felt well cared for at every step.' },
+  // { patient_name: 'Rami Reddy', description: 'I am diabetic patient since 5 years. I met the doctor for treatment and she advised me with diet plans and good treatment. Thank u doctor and hospital staff!' },
+  // { patient_name: 'Samyukta G', description: 'Excellent hospital with caring doctors. The doctor answered all our questions patiently.' },
+  // { patient_name: 'Deepak N', description: 'Doctor explained the treatment options clearly and suggested the best one for me. Happy with the hospital\'s level of care.' }
 
             
-         ]
-      }
-   ],
+  //        ]
+  //     }
+  //  ],
    "oncology":[
       {
          "id": "dr-niti-raizada",
