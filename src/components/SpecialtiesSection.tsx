@@ -14,7 +14,7 @@ const SpecialtiesSection = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center px-20 py-32 w-full bg-white max-md:px-5 max-md:py-24 max-md:max-w-full">
+    <section className="flex flex-col justify-center items-center px-20 py-32 w-full bg-white max-md:px-5 max-md:py-16 max-md:max-w-full">
       <div className="flex flex-col -mb-6 w-full max-w-[1200px] max-md:mb-2.5 max-md:max-w-full">
         <h2 className="self-start text-3xl leading-tight uppercase text-zinc-600 max-md:max-w-full">
           Browse Medical Specialties

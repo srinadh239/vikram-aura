@@ -77,7 +77,7 @@ const LegacySection: React.FC = () => {
         >
           who we are?
         </div>
-        <div className="mt-12 max-md:mt-16">
+        <div className="mt-12 max-md:mt-8">
           <div className="flex gap-5 max-md:flex-col">
             <div
               ref={legacyBlockRef}

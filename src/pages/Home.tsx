@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <DoctorsShowcase />
       </div>
       <div className="self-stretch w-full">
-        <div className="flex flex-col py-32 w-full bg-neutral-200 max-md:py-16">
+        <div className="flex flex-col py-32 w-full bg-neutral-200 max-md:py-4">
           <TestimonialsSection />
         </div>
       </div>

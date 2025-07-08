@@ -77,8 +77,8 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
 
   // Mobile Image Component
   const MobileImage = () => (
-    <div className="hidden max-md:flex justify-center items-center mb-8">
-      <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px]">
+    <div className="hidden max-md:flex justify-center items-center mb-8 max-md:mb-0">
+      <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px] max-md:w-[300px] max-md:h-[300px] max-md:min-w-[300px] max-md:min-h-[300px]">
         <img
           src={imageSrc}
           className="object-cover w-full h-full"
@@ -137,7 +137,7 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   return (
     <div 
       ref={profileRef}
-      className={`flex gap-16 max-md:flex-col items-center transition-all duration-700 transform ${
+      className={`flex gap-16 max-md:gap-0 max-md:flex-col items-center transition-all duration-700 transform ${
         isVisible ? 'translate-x-0 translate-y-0 opacity-100' : animationClass
       }`}
     >

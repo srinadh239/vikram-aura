@@ -36,7 +36,7 @@ const DoctorSection: React.FC<DoctorSectionProps> = ({
   return (
     <section
       id={id}
-      className={`flex flex-col justify-center items-center px-20 py-28 w-full ${backgroundColor} max-md:px-5 max-md:pt-24 max-md:max-w-full`}
+      className={`flex flex-col justify-center items-center px-20 py-28 w-full ${backgroundColor} max-md:px-5 max-md:py-16 max-md:max-w-full`}
     >
       <div className="w-full max-w-[1046px] max-md:max-w-full">
         {/* Section Title */}
