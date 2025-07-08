@@ -211,7 +211,7 @@ export const doctorsBySpecialty = {
          "name":"DR JAYASHREE NAGRAJ BHASGI",
          "credentials":"MBBS, MD - Obstetrics & GynaecologyObstetrician, Gynecologist, Laparoscopic Surgeon (Obs & Gyn)",
          "description":"Dr Jayashree is a highly experienced OB-GYN specialist with 36 years of medical expertise, including 33 years as a specialist. She specializes in complicated pregnancies, fertility-conserving procedures, laparoscopic gynecology, and infertility treatments such as IUI and fertilization.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Jayashree.jpeg",
+         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr+Jayashree+.jpeg",
          "imageRight":true,
          "titleWithDoctor":true,
          "awards":[

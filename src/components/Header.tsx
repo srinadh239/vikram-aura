@@ -57,16 +57,16 @@ export const Header: React.FC = () => {
         ? (isScrolled ? 'bg-white shadow-md sm:absolute' : 'bg-transparent') 
         : 'bg-white shadow-md'
     } ${
-      isHomePage ? (isScrolled ? 'md:fixed' : 'fixed') : 'relative'
+      isHomePage ? 'fixed' : 'relative'
     } top-0 left-0 right-0 z-50 transition-all duration-300`}>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-between items-center ${isHomePage ? 'max-md:h-[75px]' : ''}`}>
+        <div className={`flex justify-between items-center`}>
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
                 src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg"
                 alt="Vikram Aura Logo"
-                className={`object-contain grow shrink-0 max-w-full aspect-[1.4] w-[215px] transition-opacity duration-300 ${
+                className={`object-contain grow shrink-0 max-w-full aspect-[1.8] w-[215px] transition-opacity duration-300 ${
                   isHomePage ? (isScrolled ? 'opacity-100' : 'opacity-0') : 'opacity-100'
                 }`}
               />
