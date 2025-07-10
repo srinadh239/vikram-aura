@@ -87,14 +87,14 @@ const LegacySection: React.FC = () => {
             >
               <div className="flex flex-col gap-4 md:hidden mb-4">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/founders.png"
+                  src="https://website-va.s3.ap-south-1.amazonaws.com/founders.png"
                   className="object-contain w-full aspect-[0.9]"
                   alt="Legacy"
                 />
               </div>
               <div className="w-[56%] max-md:hidden">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/founders.png"
+                  src="https://website-va.s3.ap-south-1.amazonaws.com/founders.png"
                   className="object-contain w-full aspect-[0.9]"
                   alt="Legacy"
                 />
@@ -131,7 +131,7 @@ const LegacySection: React.FC = () => {
             >
               <div className="flex flex-col gap-4 md:hidden mb-4">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/vikram-experience.png"
+                  src="https://website-va.s3.ap-south-1.amazonaws.com/vikram-experience.png"
                   className="object-contain w-full aspect-[0.9]"
                   alt="Experience"
                 />
@@ -157,7 +157,7 @@ const LegacySection: React.FC = () => {
               </div>
               <div className="w-[56%] max-md:hidden max-md:mt-8">
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram%2Baura/vikram-experience.png"
+                  src="https://website-va.s3.ap-south-1.amazonaws.com/vikram-experience.png"
                   className="object-contain w-full aspect-[0.9]"
                   alt="Experience"
                 />

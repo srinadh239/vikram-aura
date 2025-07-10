@@ -17,7 +17,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ specialty }) => {
           className="hover:opacity-80 transition-opacity"
         >
           <img
-            src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/left-arrow.svg"
+            src="https://website-va.s3.ap-south-1.amazonaws.com/left-arrow.svg"
             alt="Back"
             className="w-6 h-6 object-contain"
             style={{ filter: 'invert(48%) sepia(67%) saturate(2619%) hue-rotate(346deg) brightness(99%) contrast(91%)' }}

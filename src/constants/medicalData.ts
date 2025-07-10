@@ -4,46 +4,46 @@ export const specialties = [
   {
     name: "Diabetology & Endocrinology",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Gynaecology+%26+Obstetrics-1.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics-1.svg",
     highlighted: false,
     sectionId: "diabetology-endocrinology",
   },
-  { name: "Dermatology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Dermatology.svg", highlighted: false, sectionId: "dermatology" },
+  { name: "Dermatology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Dermatology.svg", highlighted: false, sectionId: "dermatology" },
   {
     name: "General Surgery",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/General+Surgery.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/General+Surgery.svg",
     highlighted: false,
     sectionId: "general-surgery",
   },
   {
     name: "Gynaecology & Obstetrics",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Gynaecology+%26+Obstetrics.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics.svg",
     highlighted: false,
     sectionId: "gynaecology-obstetrics",
   },
   {
     name: "Internal Medicine",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Urology-Nephrology.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/Urology-Nephrology.svg",
     highlighted: false,
     sectionId: "internal-medicine",
   },
-  { name: "Oncology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Oncology.svg", highlighted: false, sectionId: "oncology" },
-  { name: "Orthopaedics", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics" },
+  { name: "Oncology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Oncology.svg", highlighted: false, sectionId: "oncology" },
+  { name: "Orthopaedics", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics" },
   {
     name: "Paediatrics & Neonatology",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Paediatrics+%26+Neonatology.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/Paediatrics+%26+Neonatology.svg",
     highlighted: false,
     sectionId: "paediatrics-neonatology",
   },
-  { name: "Pulmonology", iconSrc: "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Pulmonology.svg", highlighted: false, sectionId: "pulmonology" },
+  { name: "Pulmonology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Pulmonology.svg", highlighted: false, sectionId: "pulmonology" },
   {
     name: "Urology-Nephrology",
     iconSrc:
-      "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Urology-Nephrology-1.svg",
+      "https://website-va.s3.ap-south-1.amazonaws.com/Urology-Nephrology-1.svg",
     highlighted: false,
     sectionId: "urology-nephrology",
   },
@@ -57,7 +57,7 @@ export const doctorsBySpecialty = {
          "name":"DR PRIYA CHINNAPA",
          "credentials":"MBBS, Diplomate of American Board of Internal Medicine (Internal Medicine), Internal Medicine, Special Interest in Diabetology",
          "description":"Dr Priya is a highly experienced specialist with 29 years of medical expertise, including 24 years as an endocrinologist. She specializes in diabetes, thyroid disorders, PCOS, osteoporosis, and adrenal and pituitary gland disorders etc.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Priya Chinappa.avif",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Priya Chinappa.avif",
          "imageRight":false,
          "titleWithDoctor":true,
          "awards":[
@@ -84,7 +84,7 @@ export const doctorsBySpecialty = {
          "name":"DR K V HARISH",
          "credentials":"MBBS, Diplomate of American Board of Internal Medicine (Internal Medicine), Internal Medicine, Special Interest in Diabetology",
          "description":"Dr K V Harish is a highly experienced Internal Medicine specialist with over 29 years of clinical expertise, including 22 years as a specialist. He holds an MBBS, MD in Internal Medicine, and is a Fellow of the Cardiological Society of India (FCSI). His key areas of focus include preventive medicine, diabetes and endocrinology, hypertension, cardiac care, lifestyle disorders, and general internal medicine.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr K V Harish.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr K V Harish.jpeg",
          "imageRight":true,
          "awards":[
             "Conducted numerous CME programs",
@@ -118,7 +118,7 @@ export const doctorsBySpecialty = {
          "name":"DR ROHINI KRISHNAMOORTHY",
          "credentials":"MBBS, MD (Dermatology)",
          "description":"Dr Rohini Krishnamoorthy is a senior dermatologist with over 39 years of medical experience, including 33 years as a specialist in dermatology. She holds an MBBS and MD in Dermatology, with expertise spanning clinical and aesthetic dermatology, skin allergies, autoimmune skin disorders, acne, pigmentation, hair loss treatments, and advanced anti-aging and skin rejuvenation procedures.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr. Rohini Krishnamoorthy.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Rohini Krishnamoorthy.jpeg",
          "imageRight":false,
          "titleWithDoctor":true,
          "awards":[
@@ -148,7 +148,7 @@ export const doctorsBySpecialty = {
          "name":"DR PRAKASH BABU",
          "credentials":"MBBS, MS - General Surgery and Laparoscopic Surgeon",
          "description":"Dr Prakash Babu is a highly experienced surgeon with 29 years of medical expertise, including 23 years as a specialist. He specializes in thyroid, abdominal, colorectal, and complex gastrointestinal surgeries, along with laparoscopic hepatobiliary procedures for high-risk patients. He is also skilled in advanced laser treatments for hemorrhoids, fistula, and sinus conditions.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Prakash Babu.jpg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Prakash Babu.jpg",
          "imageRight":true,
          "titleWithDoctor":true,
          "awards":[
@@ -176,7 +176,7 @@ export const doctorsBySpecialty = {
          "name":"DR MOKSHA GOWDA",
          "credentials":"MBBS, DNB (General Surgery)",
          "description":"Dr Moksha Gowda is a skilled General Surgeon with over 17 years of experience in performing laparoscopic, minimally invasive, and complex surgical procedures. She specializes in gastrointestinal & hepatobiliary surgeries, hernia & abdominal wall surgeries, surgical oncology, trauma, and emergency surgeries. With expertise in high-risk cases and post-surgical pain management, Dr Moksha ensures precise, patient-focused surgical care.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Moksha Gowda.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Moksha Gowda.jpeg",
          "imageRight":false,
          "awards":[
             "Mahadevan Award (2014) -- 2nd Prize for Best Paper at KSC ASICON, Manipal",
@@ -211,7 +211,7 @@ export const doctorsBySpecialty = {
          "name":"DR JAYASHREE NAGRAJ BHASGI",
          "credentials":"MBBS, MD - Obstetrics & GynaecologyObstetrician, Gynecologist, Laparoscopic Surgeon (Obs & Gyn)",
          "description":"Dr Jayashree is a highly experienced OB-GYN specialist with 36 years of medical expertise, including 33 years as a specialist. She specializes in complicated pregnancies, fertility-conserving procedures, laparoscopic gynecology, and infertility treatments such as IUI and fertilization.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr+Jayashree+.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr+Jayashree+.jpeg",
          "imageRight":true,
          "titleWithDoctor":true,
          "awards":[
@@ -247,7 +247,7 @@ export const doctorsBySpecialty = {
          "name":"DR RUBINA SHANAWAZ",
          "credentials":"MBBS, MS - Obstetrics & Gynaecology, FICSInfertility Specialist",
          "description":"Dr Rubina is a skilled gynecologist specializing in the full spectrum of women's health treatments, including urinary leakage, uterine prolapse, bleeding abnormalities, irregular periods, PCOD, fibroids, and endometriosis. She is dedicated to providing personalized care for gynecological health and wellness.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Rubina Shahnawaz.jpg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Rubina Shahnawaz.jpg",
          "imageRight":false,
          "awards":[
             "Secured the state IIIrd rank in science in Tamil Nadu",
@@ -282,7 +282,7 @@ export const doctorsBySpecialty = {
          "name":"DR SUNITA DSOUZA LOBO",
          "credentials":"MBBS, DGO - Gynecologist, Obstetrician, Laparoscopic Surgeon (Obs & Gyn)",
          "description":"Dr Sunita is a highly experienced OB-GYN specialist with 33 years of medical expertise, including 29 years as a specialist. She specializes in prenatal care, pregnancy management, and the treatment of reproductive disorders, along with preventive care, Pap test screenings, and STD detection, ensuring comprehensive women's health care.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/DrSunita-Dsouza-Lobo.jpg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/DrSunita-Dsouza-Lobo.jpg",
          "imageRight":true,
          "awards":[
             
@@ -309,7 +309,7 @@ export const doctorsBySpecialty = {
          "name":"DR ARWA MOHSIN",
          "credentials":"MD DNB (Obstetrics & Gynaecology)",
          "description":"Dr Arwa Mohsin is a highly experienced Obstetrician & Gynaecologist with over 32 years of expertise. She specializes in high-risk pregnancy management, gynaecological surgeries, endoscopic procedures (laparoscopy & hysteroscopy), and abnormal uterine bleeding treatment. Dr Arwa also provides comprehensive care for PCOS, menstrual & menopausal health, infertility treatment, and preventive contraception guidance, ensuring personalized and advanced women's healthcare.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Arwa Mohsin.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Arwa Mohsin.jpeg",
          "imageRight":false,
          "awards":[
             "Recognized for excellence in Obstetrics & Gynaecology across leading hospitals in Bengaluru",
@@ -344,7 +344,7 @@ export const doctorsBySpecialty = {
   //        "name":"DR ANITA MARIA DIAS",
   //        "credentials":"MBBS, MD (Internal Medicine), Fellowship in Critical Care",
   //        "description":"Dr Anita Maria Dias is a seasoned Internal Medicine Specialist with over 25 years of experience in diagnosing and managing a wide range of medical conditions. She specializes in infectious diseases, diabetes management, thyroid disorders, critical care medicine, and preventive healthcare. With a patient-centric approach, Dr Anita provides comprehensive and personalized medical care to ensure optimal health outcomes.",
-  //        "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Anita Maria Dias.webp",
+  //        "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Anita Maria Dias.webp",
   //        "imageRight":true,
   //        "titleWithDoctor":true,
   //        "awards":[
@@ -373,7 +373,7 @@ export const doctorsBySpecialty = {
          "name":"DR NITI RAIZADA",
          "credentials":"MD DNB DM (Medical Oncology), ECMO MRCP (UK), EMPH (US)",
          "description":"Dr Niti Raizada is a highly accomplished Medical Oncologist with 28 years of experience, including 17 years as a specialist. Dr Niti specializes in Thoracic, Gastrointestinal, Breast, and Gynecological Oncology, as well as Medical and Hemato Oncology.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Niti Raizada.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Niti Raizada.jpeg",
          "imageRight":true,
          "titleWithDoctor":true,
          "awards":[
@@ -408,7 +408,7 @@ export const doctorsBySpecialty = {
          "name":"DR SARAT CHANDRA PINGALI",
          "credentials":"MBBS, MS (General Surgery), MCH (Surgical Oncology)",
          "description":"Dr Sarat Chandra Pingali is a highly experienced Surgical Oncologist with 22 years of overall medical experience, including 12 years as a cancer surgery specialist. He holds an MBBS, MS in General Surgery, and MCh in Surgical Oncology. His areas of expertise include head and neck cancer surgery, gastrointestinal and colorectal oncology, breast and gynecologic cancers, urologic and thoracic oncology, as well as minimally invasive and advanced surgical oncology techniques.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Sarath%20chandra.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Sarath%20chandra.jpeg",
          "imageRight":false,
          "awards":[
             "Recognized for clinical excellence in managing complex cancer surgeries across specialties"
@@ -436,7 +436,7 @@ export const doctorsBySpecialty = {
          "name":"DR SAI KRISHNA B NAIDU",
          "credentials":"MBBS, MRCS (UK), FRCS (Ortho), MCh (Ortho), Diploma SICOT (European Board for Trauma)",
          "description":"Dr Sai Krishna B Naidu is a renowned Orthopedic Surgeon with 23 years of experience, including 11 years as a specialist. Dr Sai Krishna specializes in Joint Replacement Surgery (Knee and Hip) and Sports Injuries",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Sai Krishna B Naidu.jpg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Sai Krishna B Naidu.jpg",
          "imageRight":true,
          "titleWithDoctor":true,
          "awards":[
@@ -474,7 +474,7 @@ export const doctorsBySpecialty = {
          "name":"DR SUBODH M SHETTY",
          "credentials":"MBBS, MS (Orthopaedics)",
          "description":"Dr Subodh M Shetty is a renowned Orthopaedic Surgeon with over 33 years of medical experience, including 27 years as a spine surgery specialist. He holds an MBBS and MS in Orthopaedics and is widely recognized for his expertise in advanced spine care. His areas of specialization include minimally invasive spine surgery, revision spine procedures for failed back surgeries, pediatric spine surgery, deformity correction, slipped disc management (neck and lower back), hunchback treatment, as well as traumatic, infectious, and degenerative spine disorders.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Subodh%20Shetty.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Subodh%20Shetty.jpeg",
          "imageRight":false,
          "awards":[
             "Specialized training in Minimally Invasive Spine Surgery -- Fujita Health University, Japan",
@@ -506,7 +506,7 @@ export const doctorsBySpecialty = {
          "name":"DR HARISH PURANIK",
          "credentials":"MBBS, MS (Orthopaedics), Fellowship in Hip & Knee Replacements (Germany), Fellowship in Arthroscopic Surgery (India), MSc-Diploma in Sports & Exercise Medicine (UK)",
          "description":"Dr Harish Puranik is a highly skilled Orthopaedic Surgeon with 18 years of medical experience, including 14 years as a specialist. His expertise includes shoulder and knee arthroscopy, sports injury management, joint replacements, ligament reconstruction, and minimally invasive orthopaedic procedures.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Harish%20Puranik.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Harish%20Puranik.jpeg",
          "imageRight":true,
          "awards":[
             "Trained in Hip and Knee Replacements at Puttlingen, Germany",
@@ -570,7 +570,7 @@ export const doctorsBySpecialty = {
          "name":"DR RAMESH SANTHANAKRISHNAN",
          "credentials":"MBBS, MS (General Surgery), DNB (General Surgery), MCh (Pediatric Surgery), DNB (Pediatric Surgery)",
          "description":"Dr Ramesh Santhanakrishnan is a highly experienced Pediatric Surgeon with over 29 years of expertise in performing advanced and complex surgeries for newborns and children. He specializes in pediatric minimal access surgery (laparoscopy, thoracoscopy, bronchoscopy, endo-urology, neuroendoscopy), neonatal surgery, pediatric urology, hepatobiliary, gastrointestinal, colorectal, and thoracic procedures.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Ramesh Santhanakrishnan.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Ramesh Santhanakrishnan.jpeg",
          "imageRight":false,
          "awards":[
             "Dr. D.G. Benakappa Memorial Endowment Oration -- Bangalore Pediatric Society, Indian Academy of Pediatrics",
@@ -614,7 +614,7 @@ export const doctorsBySpecialty = {
          "name":"DR VINDHYA N",
          "credentials":"MBBS, MD (Pediatrics), DNB (Neonatology)",
          "description":"Dr Vindhya N is an experienced Pediatrician and Neonatologist with 13 years of medical practice, including 9 years as a specialist. She holds an MBBS, MD in Pediatrics, and DNB in Neonatology. Her clinical expertise spans neonatal intensive care, management of preterm and high-risk newborns, general pediatric care, newborn screening, developmental follow-up, and preventive child health through timely vaccinations.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Vindhya%20N.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Vindhya%20N.jpeg",
          "imageRight":true,
          "awards":[
             "Recognized for excellence in newborn care and pediatric health management"
@@ -685,7 +685,7 @@ export const doctorsBySpecialty = {
          "name":"DR RAVISH I R",
          "credentials":"MBBS, MS (General Surgery), MCH (Urology), Fellowship in Pediatric Urology",
          "description":"Dr Ravish I R is a distinguished Urologist with 28 years of experience, including 22 years as a specialist. His expertise spans Urology, Pediatric Urology, Laparoscopic Surgery, and Reconstructive Urology.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr Ravish IR.avif",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Ravish IR.avif",
          "imageRight":false,
          "awards":[
             "Completed a fellowship in Pediatric Urology in Minnesota, USA",
@@ -720,7 +720,7 @@ export const doctorsBySpecialty = {
          "name":"DR HARI PRASAD",
          "credentials":"MBBS, MD (General Medicine), DM (Nephrology)",
          "description":"Dr Hari Prasad is a dedicated Nephrologist with 15 years of overall medical experience, including 7 years as a specialist in kidney care. He holds an MBBS, MD in General Medicine, and DM in Nephrology. His expertise covers the management of chronic kidney disease (CKD) and acute kidney injury (AKI), hemodialysis and hemodiafiltration (HDF), kidney stone treatment, renal angioplasty and stenting, ureteroscopy (URS), along with comprehensive care in general nephrology and hypertension management.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr. Hari Prasad.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Hari Prasad.jpeg",
          "imageRight":true,
          "awards":[
             "MD and DM from PGIMER, Chandigarh -- one of India's premier institutes",
@@ -753,7 +753,7 @@ export const doctorsBySpecialty = {
          "name":"DR MUNIREDDY M V",
          "credentials":"MBBS, MS (General Surgery), DNB (General Surgery), Fellowship in Gastroenterology",
          "description":"Dr. Munireddy MV is a trusted Surgical Gastroenterologist with 20 years of experience, including 9 years as a specialist. He is skilled in Gastrointestinal & HPB Oncosurgery, Laparoscopic Surgery, Endoscopy, and a range of abdominal procedures including hernia, gallbladder, and anorectal surgeries. He has completed advanced fellowships in Gastroenterology and Laparoscopic Surgery and has served as a consultant at leading hospitals in Bangalore. Known for his ethical, patient-first approach, Dr. Munireddy is also recognized for his expertise in painless endoscopic procedures.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr.%20Munireddy.M.V.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr.%20Munireddy.M.V.jpeg",
          "imageRight":false,
          "awards":[
             "Consultant Surgical Gastroenterologist at leading hospitals in Bangalore",
@@ -785,7 +785,7 @@ export const doctorsBySpecialty = {
          "name":"DR NEHA CHAUHAN",
          "credentials":"MBBS (Gold Medalist), MS (General Surgery), MCh (Plastic Surgery), Fellowship in Cosmetic Surgery (Ethicon, 2012), Fellowships in Lasers (2018) and Rhinoplasty (2020)",
          "description":"Dr Neha Chauhan is a distinguished Plastic and Cosmetic Surgeon with 19 years of overall medical experience, including 11 years as a specialist. A gold medalist in MBBS, she holds an MS in General Surgery and MCh in Plastic Surgery, along with fellowships in cosmetic surgery, lasers, and rhinoplasty. Her areas of expertise include aesthetic and cosmetic surgery, pediatric plastic surgery, post-breast cancer reconstruction, general plastic surgery, as well as microsurgery and burn care.",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Neha%20Chouhan.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Neha%20Chouhan.jpeg",
          "imageRight":false,
          "awards":[
             "Gold Medalist -- MBBS, Aligarh Muslim University",
@@ -820,7 +820,7 @@ export const doctorsBySpecialty = {
          "name":"DR PRASHANTH REDDY",
          "credentials":"MBBS, MS - ENT, Fellowship in Rhinoplasty, MBA\nENT/ Otorhinolaryngologist",
          "description":"Dr. Prashanth Reddy is a distinguished ENT specialist with 18 years of experience. His expertise spans zero-scar nasal and throat surgeries, treatment of sinusitis, allergic rhinitis, snoring, sleep apnea, and ENT-related headaches. Internationally trained in Rhinoplasty, he is recognized for pioneering scar-free ENT procedures and advancing holistic surgical care in Otolaryngology.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Prashanth%20Reddy.jpg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Prashanth%20Reddy.jpg",
          "imageRight":false,
          "awards":[
             "Recognized as a pioneer in nasal metabolic surgeries, revolutionizing ENT care",
@@ -860,7 +860,7 @@ export const doctorsBySpecialty = {
          "name":"DR ANIRUDH KULKARNI",
          "credentials":"MBBS, MD (Internal Medicine), DM (Neurology), Fellowship in Stroke and Neurointervention",
          "description":"Dr Anirudh Kulkarni is a skilled Neurologist with 17 years of overall experience, including 7 years as a specialist. He holds an MBBS, MD in Internal Medicine, DM in Neurology, and a Fellowship in Stroke and Neurointervention. His expertise lies in stroke management and rehabilitation, mechanical thrombectomy, carotid artery stenting, aneurysm coiling, AVM and dAVF embolization, spinal angiography, and other interventional and minimally invasive neurological procedures.​",
-         "imageSrc":"https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/doctors/Dr%20Anirudh%20Kulkarni.jpeg",
+         "imageSrc":"https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Anirudh%20Kulkarni.jpeg",
          "imageRight":true,
          "awards":[
             "Member -- American Academy of Neurology",

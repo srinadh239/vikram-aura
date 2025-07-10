@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
-                src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VAH+Logo+Symbol+final+(1)_page-0001.jpg"
+                src="https://website-va.s3.ap-south-1.amazonaws.com/VAH+Logo+Symbol+final+(1)_page-0001.jpg"
                 alt="Vikram Aura Logo"
                 className={`object-contain grow shrink-0 max-w-full aspect-[1.8] w-[215px] transition-opacity duration-300 ${
                   isHomePage ? (isScrolled ? 'opacity-100' : 'opacity-0') : 'opacity-100'
@@ -121,7 +121,7 @@ export const Header: React.FC = () => {
                 } h-[50px] w-[50px] hover:bg-orange-50 transition-colors`}
               >
                 <img
-                  src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg"
+                  src="https://website-va.s3.ap-south-1.amazonaws.com/call-icon.svg"
                   alt="Call Icon"
                   className="object-contain w-7 h-7"
                   role="presentation"
@@ -217,7 +217,7 @@ export const Header: React.FC = () => {
               className="flex items-center justify-center shrink-0 rounded-full border border-solid border-zinc-600 h-[50px] w-[50px] bg-white hover:bg-orange-50 transition-colors"
             >
               <img
-                src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/call-icon.svg"
+                src="https://website-va.s3.ap-south-1.amazonaws.com/call-icon.svg"
                 alt="Call Icon"
                 className="object-contain w-7 h-7"
                 role="presentation"

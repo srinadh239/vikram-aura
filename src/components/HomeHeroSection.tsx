@@ -4,10 +4,10 @@ import { VideoBackground } from "./VideoBackground";
 import ActionButton from "./ActionButton";
 
 const heroImages = [
-  "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/home-1.jpg",
-  "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/home-2.png",
-  "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/home-3.png",
-  "https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/home-4.png",
+  "https://website-va.s3.ap-south-1.amazonaws.com/home-1.jpg",
+  "https://website-va.s3.ap-south-1.amazonaws.com/home-2.png",
+  "https://website-va.s3.ap-south-1.amazonaws.com/home-3.png",
+  "https://website-va.s3.ap-south-1.amazonaws.com/home-4.png",
 ];
 
 function HeroSection({ onBookAppointment }: { onBookAppointment?: () => void }) {
@@ -25,8 +25,8 @@ function HeroSection({ onBookAppointment }: { onBookAppointment?: () => void }) 
 
   return (
      <VideoBackground
-      videoUrl="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Brand+Video.mp4"
-      mobileVideoUrl="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/VA+brand+video+vertical.mp4"
+      videoUrl="https://website-va.s3.ap-south-1.amazonaws.com/Brand+Video.mp4"
+      mobileVideoUrl="https://website-va.s3.ap-south-1.amazonaws.com/VA+brand+video+vertical.mp4"
       className="min-h-[250px] md:min-h-[600px] lg:min-h-[800px] w-full max-w-[1440px] mx-auto"
     >
     </VideoBackground>

@@ -50,7 +50,7 @@ const AwardsSection: React.FC<AwardsSectionProps> = ({ doctor }) => {
             className="flex items-center bg-transparent rounded-lg"
           >
             <img
-              src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/award.svg"
+              src="https://website-va.s3.ap-south-1.amazonaws.com/award.svg"
               alt="Award Icon"
               className="w-7 h-7 mr-4 flex-shrink-0 max-md:w-5 max-md:h-5 max-md:mr-2"
               style={{ filter: 'invert(48%) sepia(67%) saturate(2619%) hue-rotate(346deg) brightness(99%) contrast(91%)' }}

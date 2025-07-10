@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Roterline-jEnYG.ttf');
+@import url('https://website-va.s3.ap-south-1.amazonaws.com/Roterline-jEnYG.ttf');
 
 @font-face {
   font-family: 'Roterline';
-  src: url('https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/Roterline-jEnYG.ttf') format('truetype');
+  src: url('https://website-va.s3.ap-south-1.amazonaws.com/Roterline-jEnYG.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

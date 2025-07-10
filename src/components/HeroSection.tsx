@@ -28,7 +28,7 @@ const HeroSection = ({ onBookAppointment }: { onBookAppointment?: () => void }) 
           </div>
           <div className="ml-5 w-[58%] max-md:ml-0 max-md:w-full">
             <img
-              src="https://ayu-images.s3.ap-south-1.amazonaws.com/vikram+aura/image+20.png"
+              src="https://website-va.s3.ap-south-1.amazonaws.com/image+20.png"
               className="object-contain grow w-full aspect-[1.85] max-md:mt-10 max-md:max-w-full"
               alt="Doctors team"
             />
