@@ -3,12 +3,14 @@ import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 interface VideoBackgroundProps {
   videoUrl: string;
+  mobileVideoUrl?: string;
   children?: React.ReactNode;
   className?: string;
 }
 
 export const VideoBackground = ({
   videoUrl,
+  mobileVideoUrl,
   children,
   className = "",
 }: VideoBackgroundProps) => {
@@ -74,7 +76,7 @@ export const VideoBackground = ({
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-contain md:object-cover"
-        src={videoUrl}
+        src={isMobile && mobileVideoUrl ? mobileVideoUrl : videoUrl}
         loop
         autoPlay
         muted={isMuted}

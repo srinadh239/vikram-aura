@@ -76,11 +76,20 @@ const DoctorsShowcase: React.FC = () => {
             >
               <div className="grow text-center h-full">
                 <div className="bg-white rounded-xl shadow-[0px_0px_50px_rgba(242,101,34,0.1)] transition-all duration-300 hover:shadow-[0px_0px_50px_rgba(242,101,34,0.3)] hover:bg-orange-500 h-full flex flex-col">
-                  <img
-                    src={doctor.imageSrc}
-                    className="object-contain w-full rounded-t-xl aspect-square"
-                    alt={doctor.name}
-                  />
+                  <div className="p-6 flex justify-center md:p-0 md:block">
+                    <div className="md:hidden rounded-full overflow-hidden aspect-square w-full max-w-[200px]">
+                      <img
+                        src={doctor.imageSrc}
+                        className="object-contain w-full aspect-square"
+                        alt={doctor.name}
+                      />
+                    </div>
+                    <img
+                      src={doctor.imageSrc}
+                      className="hidden md:block object-contain w-full rounded-t-xl aspect-square"
+                      alt={doctor.name}
+                    />
+                  </div>
                   <div className="px-6 py-3.5 rounded-b-xl flex-grow flex flex-col justify-between">
                     <div className="text-lg leading-relaxed text-orange-500 uppercase transition-colors duration-300 group-hover:text-white">
                       {doctor.name}
