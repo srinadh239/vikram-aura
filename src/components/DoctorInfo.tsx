@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Doctor } from "./types";
+import DoctorImage from "./DoctorImage";
 
 interface DoctorInfoProps {
   doctor: Doctor;
@@ -24,7 +25,7 @@ const DoctorInfo: React.FC<DoctorInfoProps> = ({ doctor }) => {
       <div className="flex gap-5 max-md:flex-col">
         <div className="w-[35%] max-md:ml-0 max-md:w-full flex justify-center items-center">
           <div className="rounded-full overflow-hidden border-[12px] border-[#B53193] hover:border-[#F26522] transition-colors duration-300 aspect-square w-full max-w-[320px]">
-            <img
+            <DoctorImage
               src={doctor.imageSrc}
               className="object-contain w-full aspect-square"
               alt={doctor.name}

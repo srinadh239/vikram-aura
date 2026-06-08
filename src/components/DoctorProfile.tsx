@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ActionButton from "./ActionButton";
+import DoctorImage from "./DoctorImage";
 import { Doctor } from "./types";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -79,7 +80,7 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   const MobileImage = () => (
     <div className="hidden max-md:flex justify-center items-center mb-8 max-md:mb-0">
       <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px] max-md:w-[300px] max-md:h-[300px] max-md:min-w-[300px] max-md:min-h-[300px]">
-        <img
+        <DoctorImage
           src={imageSrc}
           className="object-cover w-full h-full"
           alt={name}
@@ -92,7 +93,7 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   const DesktopImage = () => (
     <div className="hidden md:flex justify-center items-center">
       <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px]">
-        <img
+        <DoctorImage
           src={imageSrc}
           className="object-cover w-full h-full"
           alt={name}
