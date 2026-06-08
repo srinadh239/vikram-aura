@@ -42,7 +42,7 @@ const DoctorsShowcase: React.FC = () => {
 
   const doctors = Object.values(doctorsBySpecialty)
     .flat()
-    .filter(doctor => ['dr-k-v-harish', 'dr-ramesh-santhanakrishnan', 'dr-prakash-babu', 'dr-rohini-krishnamoorthy'].includes(doctor.id));
+    .filter(doctor => ['dr-k-v-harish', 'dr-ramesh-santhanakrishnan', 'dr-prakash-babu', 'dr-rohini-krishnamoorthy', 'dr-sunita-dsouza-lobo'].includes(doctor.id));
 
   // Get specialty from URL path
   const getSpecialtyFromPath = (doctorId: string) => {

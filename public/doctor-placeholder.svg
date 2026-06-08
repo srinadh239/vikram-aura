@@ -3,5 +3,4 @@
   <circle cx="200" cy="140" r="52" fill="#B53193" opacity="0.35"/>
   <path d="M200 210c-62 0-112 38-112 85v45h224v-45c0-47-50-85-112-85z" fill="#B53193" opacity="0.35"/>
   <rect x="148" y="248" width="104" height="92" rx="8" fill="#F26522" opacity="0.25"/>
-  <path d="M176 280h48M200 256v48" stroke="#F26522" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
 </svg>
