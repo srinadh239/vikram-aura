@@ -174,7 +174,7 @@ export const doctorsBySpecialty = {
       "name": "DR VIJAY WADHWA",
       "credentials": "MBBS, MS – General Surgery",
       "description": "Dr Vijay Wadhwa is a highly experienced General and Laparoscopic Surgeon with 46 years of medical expertise. He brings decades of surgical knowledge to a wide range of general and laparoscopic surgical procedures.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1OHcpdswBlHMUTsm0ANHSpphGKzo1Y0nT&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
