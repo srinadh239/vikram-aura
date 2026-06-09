@@ -116,7 +116,7 @@ export const doctorsBySpecialty = {
       "imageRight": true,
       "titleWithDoctor": true,
       "awards": [
-        "Training in Laprascopy - Bangalore Endoscopic Surgery Training Institute & Research Centre, 2003",
+        "Training in Laparoscopy - Bangalore Endoscopic Surgery Training Institute & Research Centre, 2003",
         "Training Programme on Laparoscopic Solid Organ Surgery - Ethicon Institute Of Surgical Education 2009"
       ],
       "areas_of_expertise": [
@@ -159,7 +159,7 @@ export const doctorsBySpecialty = {
       "name": "DR G H RAJU",
       "credentials": "MS – General Surgery, FMAS, FIAGES, FALS (Robotics)",
       "description": "Dr G H Raju is a highly experienced General and Laparoscopic Surgeon with 27 years of medical expertise. He specializes in general surgery, laparoscopic surgery, and bariatric surgery, bringing advanced minimally invasive techniques and robotic surgery skills to complex cases.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1R8Z7QZwh7gIWWClz1_PGNv4PMFxKnIQZ/view?usp=drive_link",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -209,7 +209,7 @@ export const doctorsBySpecialty = {
       "name": "DR MOHINI S JADWANI",
       "credentials": "MBBS, DNB – Obstetrics & Gynecology",
       "description": "Dr Mohini S Jadwani is a highly experienced Gynecologist, Obstetrician, and Laparoscopic Surgeon with 40 years of medical expertise. She provides comprehensive women's healthcare across obstetrics, gynecology, and minimally invasive surgical procedures.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/16a9C-229tKwiPSNXDbSrQqTJjQ6voOxA/view?usp=drive_link",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -224,7 +224,7 @@ export const doctorsBySpecialty = {
       "name": "DR SHOBHA RANI RAO",
       "credentials": "MBBS, DGO, MD – Obstetrics & Gynecology",
       "description": "Dr Shobha Rani Rao is an exceptionally experienced Obstetrician, Gynecologist, and Laparoscopic Surgeon with 51 years of medical expertise. She brings unparalleled clinical experience to comprehensive women's healthcare.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1BfdKa-HhAy7N9l33KRy2nV8wDLADCp8x/view?usp=drive_link",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -239,7 +239,7 @@ export const doctorsBySpecialty = {
       "name": "DR PRAKRUTHI S",
       "credentials": "MBBS, MS, DNB (Obstetrics & Gynaecology), Dip. Urogynaecology, FMAS",
       "description": "Dr Prakruthi S is a specialist in advanced gynaecology, urogynaecology, and minimally invasive surgery with 6 years of experience. She focuses on hysteroscopic surgeries, pelvic floor rehabilitation, and preventive oncology, providing comprehensive and patient-centered women's healthcare.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/193N2B8hKOKBAlC1F7cWbcPadS3_A6XtC/view?usp=drive_link",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -260,7 +260,7 @@ export const doctorsBySpecialty = {
       "name": "DR BUSHRA BAHJAT",
       "credentials": "MBBS, MD – General Medicine, PGME, PGDMH from Harvard Medical School, Boston USA",
       "description": "Dr Bushra Bahjat is a skilled Internal Medicine Consultant Physician with 11 years of medical experience. She holds advanced postgraduate training including a PGDMH from Harvard Medical School, Boston, bringing an evidence-based and patient-centric approach to the diagnosis and management of a wide range of medical conditions.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1eVzY_AFUdNvqUbnikiEaPIpXxR8Kf7K2/view?usp=drive_link",
       "imageRight": false,
       "awards": [
         "PGDMH from Harvard Medical School, Boston USA"
@@ -333,7 +333,7 @@ export const doctorsBySpecialty = {
       "name": "DR RAGHA MIDHUN PONNAM",
       "credentials": "MBBS, MS – Orthopaedics",
       "description": "Dr Ragha Midhun Ponnam is a specialist in Spine Surgery and Minimally Invasive Spine Surgery with 9 years of experience. He focuses on advanced spinal procedures using the latest minimally invasive techniques to ensure optimal patient outcomes.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1jkeSoWzEYiHlCu49ZbXY2TCC_yQd9D9q/view?usp=drive_link",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -347,7 +347,7 @@ export const doctorsBySpecialty = {
       "name": "DR MITHUN N OSWAL",
       "credentials": "MBBS, MS – Orthopaedics",
       "description": "Dr Mithun N Oswal is a specialist in Joint Replacement, Arthroscopy, and Sports Injury with 10 years of experience. He provides comprehensive orthopaedic care with expertise in joint replacement surgery and sports medicine.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1POWP9CHLl4UEvPH38bLqJSKZv4hHBCnl/view?usp=drive_link",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -362,7 +362,7 @@ export const doctorsBySpecialty = {
       "name": "DR ABHIJIT R",
       "credentials": "MBBS, MS – Orthopaedics",
       "description": "Dr Abhijit R is an Orthopaedic and Joint Replacement specialist with 9 years of experience. He provides expert care in orthopaedic conditions and joint replacement surgeries.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1YUR4ZRLK8L9ryC_Nvmjc1cR7oSy-ogVh/view?usp=drive_link",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -465,7 +465,7 @@ export const doctorsBySpecialty = {
       "name": "DR VISHRUTH K",
       "credentials": "MBBS, MS – General Surgery, MCh – Urology",
       "description": "Dr Vishruth K is a Urologist and Andrologist with 15 years of experience. He provides comprehensive urological care with a focus on urology and andrology.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/file/d/1rL3zkAQR8Qgub8voiJNmtn-03ikXrY1Z/view?usp=drive_link",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -667,3 +667,4 @@ export const doctorsBySpecialty = {
     }
   ]
 };
+
