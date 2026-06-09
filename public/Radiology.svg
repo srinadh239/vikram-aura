@@ -1,0 +1,21 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- X-ray film frame -->
+  <rect x="14" y="10" width="54" height="62" rx="3" stroke="black" stroke-width="2"/>
+  <!-- Corner marks -->
+  <path d="M14 20H22" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 20H68" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M14 62H22" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 62H68" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Chest / ribcage silhouette inside -->
+  <path d="M41 22V48" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Left ribs -->
+  <path d="M41 28C37 26 30 28 28 34" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M41 34C37 32 29 34 27 40" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M41 40C37 38 30 40 28 46" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Right ribs -->
+  <path d="M41 28C45 26 52 28 54 34" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M41 34C45 32 53 34 55 40" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M41 40C45 38 52 40 54 46" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pelvis hint -->
+  <path d="M30 52C32 56 38 58 41 58C44 58 50 56 52 52" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

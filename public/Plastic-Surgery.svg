@@ -1,0 +1,15 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Face outline -->
+  <path d="M41 14C30 14 22 22 22 34C22 44 26 52 32 58C34 60 36 64 41 64C46 64 48 60 50 58C56 52 60 44 60 34C60 22 52 14 41 14Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Left eye -->
+  <path d="M30 34C30 32 32 30 34 30C36 30 38 32 38 34" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right eye -->
+  <path d="M44 34C44 32 46 30 48 30C50 30 52 32 52 34" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M41 36L39 44H43" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Smile -->
+  <path d="M33 50C36 54 46 54 49 50" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Surgical marks / dotted lines on cheek -->
+  <path d="M24 40L20 44" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <path d="M26 46L22 50" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+</svg>

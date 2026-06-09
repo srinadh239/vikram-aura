@@ -41,6 +41,60 @@ export const specialties = [
     highlighted: false,
     sectionId: "urology-nephrology",
   },
+  {
+    name: "Cardiology",
+    iconSrc: "/Cardiology.svg",
+    highlighted: false,
+    sectionId: "cardiology",
+  },
+  {
+    name: "Gastroenterology",
+    iconSrc: "/Gastroenterology.svg",
+    highlighted: false,
+    sectionId: "gastroenterology",
+  },
+  {
+    name: "Neurology",
+    iconSrc: "/Neurology.svg",
+    highlighted: false,
+    sectionId: "neurology",
+  },
+  {
+    name: "Neurosurgery",
+    iconSrc: "/Neurosurgery.svg",
+    highlighted: false,
+    sectionId: "neurosurgery",
+  },
+  {
+    name: "ENT",
+    iconSrc: "/ENT.svg",
+    highlighted: false,
+    sectionId: "ent",
+  },
+  {
+    name: "Plastic Surgery",
+    iconSrc: "/Plastic-Surgery.svg",
+    highlighted: false,
+    sectionId: "plastic-surgery",
+  },
+  {
+    name: "Radiology",
+    iconSrc: "/Radiology.svg",
+    highlighted: false,
+    sectionId: "radiology",
+  },
+  {
+    name: "Psychology",
+    iconSrc: "/Psychology.svg",
+    highlighted: false,
+    sectionId: "psychology",
+  },
+  {
+    name: "Dental",
+    iconSrc: "/Dental.svg",
+    highlighted: false,
+    sectionId: "dental",
+  },
 ];
 
 const defaultReviews = [

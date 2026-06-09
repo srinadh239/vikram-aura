@@ -1,0 +1,15 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head silhouette -->
+  <path d="M41 12C30 12 22 20 22 30C22 38 26 44 32 48L32 56C32 58 34 60 36 60H46C48 60 50 58 50 56L50 48C56 44 60 38 60 30C60 20 52 12 41 12Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Neck -->
+  <path d="M34 60L34 66H48L48 60" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Brain fold inside head -->
+  <path d="M30 26C32 22 38 21 41 24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M52 26C50 22 44 21 41 24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M28 34C30 30 36 29 39 32" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M54 34C52 30 46 29 43 32" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Thought / mind symbol -->
+  <circle cx="63" cy="20" r="4" stroke="black" stroke-width="1.5"/>
+  <circle cx="57" cy="28" r="2.5" stroke="black" stroke-width="1.5"/>
+  <circle cx="52" cy="14" r="2" stroke="black" stroke-width="1.5"/>
+</svg>

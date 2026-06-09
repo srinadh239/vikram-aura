@@ -1,0 +1,12 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ear outer shape -->
+  <path d="M50 16C36 16 24 26 24 40C24 52 32 62 40 68C44 72 48 72 50 68C52 64 50 60 48 58C46 56 44 52 46 48C48 44 54 44 56 40C58 34 56 26 50 16Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Inner ear -->
+  <path d="M46 28C40 30 36 36 38 44C39 48 43 50 46 48" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Ear canal dot -->
+  <circle cx="46" cy="42" r="2.5" fill="black"/>
+  <!-- Nose outline (small, bottom-left area) -->
+  <path d="M20 56C20 56 16 60 18 64C20 66 23 65 25 63" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M30 56C30 56 34 60 32 64C30 66 27 65 25 63" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20 56C22 48 28 48 30 56" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tooth outer shape -->
+  <path d="M28 14C22 14 16 20 16 28C16 34 18 38 20 42C21 46 22 54 24 60C25 64 26 68 30 68C34 68 34 60 36 56C38 52 40 52 42 52C44 52 46 52 48 56C50 60 50 68 54 68C58 68 59 64 60 60C62 54 63 46 64 42C66 38 68 34 68 28C68 20 62 14 56 14C52 14 49 16 46 18C44 20 40 20 38 18C36 16 32 14 28 14Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Root divide -->
+  <path d="M42 52L42 68" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+  <!-- Enamel line across top -->
+  <path d="M22 32C28 28 36 28 42 32C48 36 56 36 62 32" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Small shine marks -->
+  <path d="M32 22L30 26" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M38 20L37 24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

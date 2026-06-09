@@ -1,0 +1,14 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brain left lobe -->
+  <path d="M41 20C41 20 32 18 26 24C20 30 20 38 24 44C26 48 24 52 26 56C28 60 34 62 38 60C40 62 42 62 44 60C48 62 54 60 56 56C58 52 56 48 58 44C62 38 62 30 56 24C50 18 41 20 41 20Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Brain center divide -->
+  <path d="M41 20L41 60" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <!-- Left lobe folds -->
+  <path d="M28 32C30 28 35 27 38 30" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26 42C29 38 34 37 37 40" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right lobe folds -->
+  <path d="M54 32C52 28 47 27 44 30" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M56 42C53 38 48 37 45 40" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Brain stem -->
+  <path d="M38 60C38 66 44 66 44 60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>
