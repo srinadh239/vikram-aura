@@ -224,7 +224,7 @@ export const doctorsBySpecialty = {
       "name": "DR SHOBHA RANI RAO",
       "credentials": "MBBS, DGO, MD – Obstetrics & Gynecology",
       "description": "Dr Shobha Rani Rao is an exceptionally experienced Obstetrician, Gynecologist, and Laparoscopic Surgeon with 51 years of medical expertise. She brings unparalleled clinical experience to comprehensive women's healthcare.",
-      "imageSrc": "https://drive.google.com/file/d/1BfdKa-HhAy7N9l33KRy2nV8wDLADCp8x/view?usp=drive_link",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1BfdKa-HhAy7N9l33KRy2nV8wDLADCp8x&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
