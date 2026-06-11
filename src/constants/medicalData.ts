@@ -347,7 +347,26 @@ export const doctorsBySpecialty = {
         "Minimally Invasive and Advanced Surgical Oncology"
       ],
       "reviews": defaultReviews
-    }
+    },
+    {
+  "id": "dr-sunil-navalgund",
+  "urlId": "dr-sunil-navalgund",
+  "name": "DR SUNIL NAVALGUND",
+  "credentials": "MBBS, MS (General Surgery), MCh (Surgical Oncology)",
+  "description": "Dr Sunil Navalgund is a Surgical Oncologist with 19 years of experience, including 8 years as a specialist. He specializes in minimally invasive cancer surgeries, VATS thoracic surgeries, hepatobiliary and pancreatic surgeries, and organ-preserving cancer treatments, delivering comprehensive and advanced surgical oncology care.",
+  "imageSrc": "https://drive.google.com/thumbnail?id=1aEiwl1ozmCiKTlRbar1TpltOoHZJ8LuV&sz=w1000",
+  "imageRight": false,
+  "awards": [],
+  "areas_of_expertise": [
+    "Surgical Oncology",
+    "Minimally Invasive Onco Surgeries",
+    "VATS Thoracic Surgeries",
+    "Hepatobiliary & Pancreatic Surgeries",
+    "Organ & Function-Preserving Cancer Surgeries"
+  ],
+  "reviews": defaultReviews
+}
+
   ],
 
   "orthopaedics": [
@@ -424,7 +443,25 @@ export const doctorsBySpecialty = {
         "Joint Replacement"
       ],
       "reviews": defaultReviews
-    }
+    },
+    {
+  "id": "dr-shashidhar-b-k",
+  "urlId": "dr-shashidhar-b-k",
+  "name": "DR SHASHIDHAR B K",
+  "credentials": "MBBS, MS – Orthopaedics, DNB – Orthopedics/Orthopedic Surgery, FNB – Spine Surgery",
+  "description": "Dr Shashidhar B K is a Spine Surgeon and Spine & Pain Specialist with 14 years of experience. He specializes in minimally invasive spine surgery, endoscopic spine surgery, and advanced spine care. His expertise includes the treatment of slip disc, sciatica, chronic back pain, cervical spondylitis, and spinal deformities, with a strong focus on faster recovery, pain relief, and long-term mobility restoration.",
+  "imageSrc": "https://drive.google.com/thumbnail?id=11jOUb93BEmPli2ZHPtJCfcu3I0z0736P&sz=w1000",
+  "imageRight": false,
+  "awards": [],
+  "areas_of_expertise": [
+    "Spine Surgery",
+    "Minimally Invasive Spine Surgery",
+    "Endoscopic Spine Surgery",
+    "Spine & Pain Management",
+    "Interventional Pain Procedures"
+  ],
+  "reviews": defaultReviews
+}
   ],
 
   "paediatrics-neonatology": [
@@ -527,7 +564,30 @@ export const doctorsBySpecialty = {
         "Andrology"
       ],
       "reviews": defaultReviews
-    }
+    },
+    {
+  "id": "dr-cherin-josi-champannoor",
+  "urlId": "dr-cherin-josi-champannoor",
+  "name": "DR CHERIN JOSI CHAMPANNOOR",
+  "credentials": "MBBS, DNB – General Medicine, DNB – Nephrology",
+  "description": "Dr Cherin Josi Champannoor is a Nephrologist with extensive experience in kidney care, renal transplantation, and interventional nephrology. He specializes in chronic kidney disease, acute kidney injury, dialysis access procedures, renal transplantation, and advanced nephrology interventions, providing comprehensive and evidence-based care for patients with kidney disorders.",
+  "imageSrc": "https://drive.google.com/thumbnail?id=1OIknbiyMlEXmn2A662u1N9NPdc8xBOVq&sz=w1000",
+  "imageRight": false,
+  "awards": [],
+  "areas_of_expertise": [
+    "Nephrology",
+    "Interventional Nephrology",
+    "Renal Transplantation",
+    "Chronic Kidney Disease",
+    "Acute Kidney Injury",
+    "Dialysis Access Procedures",
+    "AV Fistula Creation",
+    "Fistuloplasty",
+    "Kidney Biopsy",
+    "Critical Care Nephrology"
+  ],
+  "reviews": defaultReviews
+}
   ],
 
   "gastroenterology": [
@@ -537,7 +597,7 @@ export const doctorsBySpecialty = {
       "name": "DR CHANDRAKANT K",
       "credentials": "MBBS, MD – General Medicine, DNB – Medical Gastroenterology",
       "description": "Dr Chandrakant K is a Medical Gastroenterologist specializing in Advanced Endoscopy with 15 years of experience. He provides expert care in medical gastroenterology and performs advanced endoscopic procedures for diagnosis and treatment of gastrointestinal conditions.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1WZgfbY_rmxprrA9-oBvyrsEeBKvRBbBy&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -581,7 +641,7 @@ export const doctorsBySpecialty = {
       "name": "DR DEEVISH N D",
       "credentials": "MBBS, MS – General Surgery, MCh – Plastic Surgery, DNB – Plastic Surgery",
       "description": "Dr Deevish N D is a Plastic, Cosmetic, and Reconstructive Surgeon with 16 years of experience. He specializes in plastic surgery, cosmetic surgery, burn care, diabetic foot management, and reconstructive procedures.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=112_auuE0a1Wl7WgfjTKC3MefDJe_034h&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -602,7 +662,7 @@ export const doctorsBySpecialty = {
       "name": "DR CHAITRA SHANKAR",
       "credentials": "MBBS, DLO, DNB – Otorhinolaryngology",
       "description": "Dr Chaitra Shankar is an Ear, Nose, and Throat Surgeon and Allergy Specialist with 10 years of experience. She provides comprehensive ENT care with a focus on allergy management.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=19J6DaSBSUg6tEJWCeQM2Zbe0b2GmQKZG&sz=w1000",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -623,7 +683,7 @@ export const doctorsBySpecialty = {
       "name": "DR SUNDEEP V K",
       "credentials": "MBBS, MS – General Surgery, MCh – Neurosurgery",
       "description": "Dr Sundeep V K is a Neurosurgeon specializing in Neurosurgery, Neurointerventional Surgery, and Spine Surgery with 13 years of experience. He provides advanced neurosurgical care using the latest techniques.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1tMDqqljaptqKG8YAKMQSwQpS884Fm7CI&sz=w1000",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -639,7 +699,7 @@ export const doctorsBySpecialty = {
       "name": "DR TEJESH SHAVI",
       "credentials": "MBBS, DrNB – Neurosurgery, FINR (SNVI)",
       "description": "Dr Tejesh Shavi is an Interventional Neurosurgeon with 8 years of experience. He specializes in advanced interventional neurosurgical procedures.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1_0dU2RTkFyb2gwSTfyAknCOcfsuxlNFF&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -659,7 +719,7 @@ export const doctorsBySpecialty = {
       "name": "DR MOHAN MURALI J",
       "credentials": "MBBS, DNB, Interventional and Medical Cardiologist",
       "description": "Dr Mohan Murali J is a Cardiologist with 15 years of experience specializing in interventional and medical cardiology. He provides comprehensive cardiac care including advanced interventional procedures.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1y9gw0oiVQHK2_PGJjhxbBczgoWBP0f4O&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -674,7 +734,7 @@ export const doctorsBySpecialty = {
       "name": "DR ABHIJIT VILAS KULKARNI",
       "credentials": "MBBS, MD – General Medicine, DM – Cardiology",
       "description": "Dr Abhijit Vilas Kulkarni is an Interventional Cardiologist with 23 years of experience. He specializes in cardiology and interventional cardiology, providing advanced cardiac care.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1fo2SBx0zVBLdJO6J56Eu_XvG1NukFH8p&sz=w1000",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
@@ -692,7 +752,7 @@ export const doctorsBySpecialty = {
       "name": "DR ANJANA KOTHAMACHU",
       "credentials": "MSc – Counselling Psychology",
       "description": "Dr Anjana Kothamachu is a Counselling Psychologist specializing in Expressive Arts Therapy and Psychodrama. She provides compassionate psychological support and therapy using creative and experiential approaches.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1JbOk1iju3NU9GP5zGLQuPZH2Hbe5hqHs&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
@@ -711,7 +771,7 @@ export const doctorsBySpecialty = {
       "name": "DR ARUN MURALIDHARAN",
       "credentials": "BDS, Rajiv Gandhi University of Health Sciences, Bangalore",
       "description": "Dr Arun Muralidharan is a Dental Surgeon with 16 years of experience, providing comprehensive dental care to patients.",
-      "imageSrc": "",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1h0vNzGleE3L8R3eQd6uUOXxjAA16Evdn&sz=w1000",
       "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
