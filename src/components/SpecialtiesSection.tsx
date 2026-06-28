@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom";
 import SpecialtyIcon from "./SpecialtyIcon";
 import { specialties } from "../constants/medicalData";
 
 const SpecialtiesSection = () => {
-  const handleSpecialtyClick = (sectionId: string) => {
-    if (sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
+  const handleScrollClick = (sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -27,16 +26,39 @@ const SpecialtiesSection = () => {
         </p>
 
         <div className="grid grid-cols-5 gap-8 items-start mt-16 max-md:mt-10 max-md:max-w-full max-md:grid-cols-3 max-sm:grid-cols-2">
-          {specialties.map((specialty, index) => (
-            <div key={index} className="w-full">
+          {specialties.map((specialty, index) => {
+            const icon = (
               <SpecialtyIcon
                 name={specialty.name}
                 iconSrc={specialty.iconSrc}
                 highlighted={specialty.highlighted}
-                onClick={() => handleSpecialtyClick(specialty.sectionId)}
+                onClick={
+                  specialty.procedurePageSlug
+                    ? undefined
+                    : () => handleScrollClick(specialty.sectionId)
+                }
               />
-            </div>
-          ))}
+            );
+
+            if (specialty.procedurePageSlug) {
+              return (
+                <Link
+                  key={index}
+                  to={`/specialties/${specialty.procedurePageSlug}`}
+                  className="w-full block"
+                  aria-label={`View ${specialty.name} procedures`}
+                >
+                  {icon}
+                </Link>
+              );
+            }
+
+            return (
+              <div key={index} className="w-full">
+                {icon}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

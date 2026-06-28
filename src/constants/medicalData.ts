@@ -6,94 +6,109 @@ export const specialties = [
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics-1.svg",
     highlighted: false,
     sectionId: "diabetology-endocrinology",
+    procedurePageSlug: null,
   },
-  { name: "Dermatology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Dermatology.svg", highlighted: false, sectionId: "dermatology" },
+  { name: "Dermatology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Dermatology.svg", highlighted: false, sectionId: "dermatology", procedurePageSlug: null },
   {
     name: "General Surgery",
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/General+Surgery.svg",
     highlighted: false,
     sectionId: "general-surgery",
+    procedurePageSlug: "general-surgery",
   },
   {
     name: "Gynaecology & Obstetrics",
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics.svg",
     highlighted: false,
     sectionId: "gynaecology-obstetrics",
+    procedurePageSlug: "obg-gynaecology",
   },
   {
     name: "Internal Medicine",
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Urology-Nephrology.svg",
     highlighted: false,
     sectionId: "internal-medicine",
+    procedurePageSlug: null,
   },
-  { name: "Oncology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Oncology.svg", highlighted: false, sectionId: "oncology" },
-  { name: "Orthopaedics", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics" },
+  { name: "Oncology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Oncology.svg", highlighted: false, sectionId: "oncology", procedurePageSlug: "oncology" },
+  { name: "Orthopaedics", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics", procedurePageSlug: "orthopaedics" },
   {
     name: "Paediatrics & Neonatology",
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Paediatrics+%26+Neonatology.svg",
     highlighted: false,
     sectionId: "paediatrics-neonatology",
+    procedurePageSlug: null,
   },
-  { name: "Pulmonology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Pulmonology.svg", highlighted: false, sectionId: "pulmonology" },
+  { name: "Pulmonology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Pulmonology.svg", highlighted: false, sectionId: "pulmonology", procedurePageSlug: "pulmonology" },
   {
     name: "Urology-Nephrology",
     iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Urology-Nephrology-1.svg",
     highlighted: false,
     sectionId: "urology-nephrology",
+    procedurePageSlug: "urology",
   },
   {
     name: "Cardiology",
     iconSrc: "/Cardiology.svg",
     highlighted: false,
     sectionId: "cardiology",
+    procedurePageSlug: "cardiology",
   },
   {
     name: "Gastroenterology",
     iconSrc: "/Gastroenterology.svg",
     highlighted: false,
     sectionId: "gastroenterology",
+    procedurePageSlug: "medical-gastroenterology",
   },
   {
     name: "Neurology",
     iconSrc: "/Neurology.svg",
     highlighted: false,
     sectionId: "neurology",
+    procedurePageSlug: null,
   },
   {
     name: "Neurosurgery",
     iconSrc: "/Neurosurgery.svg",
     highlighted: false,
     sectionId: "neurosurgery",
+    procedurePageSlug: "neurosurgery",
   },
   {
     name: "ENT",
     iconSrc: "/ENT.svg",
     highlighted: false,
     sectionId: "ent",
+    procedurePageSlug: "ent",
   },
   {
     name: "Plastic Surgery",
     iconSrc: "/Plastic-Surgery.svg",
     highlighted: false,
     sectionId: "plastic-surgery",
+    procedurePageSlug: null,
   },
   {
     name: "Radiology",
     iconSrc: "/Radiology.svg",
     highlighted: false,
     sectionId: "radiology",
+    procedurePageSlug: "interventional-radiology",
   },
   {
     name: "Psychology",
     iconSrc: "/Psychology.svg",
     highlighted: false,
     sectionId: "psychology",
+    procedurePageSlug: "psychology",
   },
   {
     name: "Dental",
     iconSrc: "/Dental.svg",
     highlighted: false,
     sectionId: "dental",
+    procedurePageSlug: null,
   },
 ];
 
@@ -143,7 +158,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MD (Dermatology)",
       "description": "Dr Rohini Krishnamoorthy is a senior dermatologist with over 40 years of medical experience, including 33 years as a specialist in dermatology. She holds an MBBS and MD in Dermatology, with expertise spanning clinical and aesthetic dermatology, skin allergies, autoimmune skin disorders, acne, pigmentation, hair loss treatments, and advanced anti-aging and skin rejuvenation procedures.",
       "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Rohini Krishnamoorthy.jpeg",
-      "imageRight": false,
+      "imageRight": true,
       "titleWithDoctor": true,
       "awards": [
         "Widely respected for her clinical acumen and ethical dermatological practice",
@@ -264,7 +279,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, DNB – Obstetrics & Gynecology",
       "description": "Dr Mohini S Jadwani is a highly experienced Gynecologist, Obstetrician, and Laparoscopic Surgeon with 40 years of medical expertise. She provides comprehensive women's healthcare across obstetrics, gynecology, and minimally invasive surgical procedures.",
       "imageSrc": "https://drive.google.com/thumbnail?id=16a9C-229tKwiPSNXDbSrQqTJjQ6voOxA&sz=w1000",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
         "Obstetrics & Gynecology",
@@ -279,7 +294,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, DGO, MD – Obstetrics & Gynecology",
       "description": "Dr Shobha Rani Rao is an exceptionally experienced Obstetrician, Gynecologist, and Laparoscopic Surgeon with 51 years of medical expertise. She brings unparalleled clinical experience to comprehensive women's healthcare.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1BfdKa-HhAy7N9l33KRy2nV8wDLADCp8x&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Obstetrics & Gynecology",
@@ -294,7 +309,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS, DNB (Obstetrics & Gynaecology), Dip. Urogynaecology, FMAS",
       "description": "Dr Prakruthi S is a specialist in advanced gynaecology, urogynaecology, and minimally invasive surgery with 6 years of experience. She focuses on hysteroscopic surgeries, pelvic floor rehabilitation, and preventive oncology, providing comprehensive and patient-centered women's healthcare.",
       "imageSrc": "https://drive.google.com/thumbnail?id=193N2B8hKOKBAlC1F7cWbcPadS3_A6XtC&sz=w1000",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
         "Advanced Gynaecology",
@@ -315,7 +330,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MD – General Medicine, PGME, PGDMH from Harvard Medical School, Boston USA",
       "description": "Dr Bushra Bahjat is a skilled Internal Medicine Consultant Physician with 11 years of medical experience. She holds advanced postgraduate training including a PGDMH from Harvard Medical School, Boston, bringing an evidence-based and patient-centric approach to the diagnosis and management of a wide range of medical conditions.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1eVzY_AFUdNvqUbnikiEaPIpXxR8Kf7K2&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [
         "PGDMH from Harvard Medical School, Boston USA"
       ],
@@ -335,7 +350,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS (General Surgery), MCH (Surgical Oncology)",
       "description": "Dr Sarat Chandra Pingali is a highly experienced Surgical Oncologist with 22 years of overall medical experience, including 12 years as a cancer surgery specialist. He holds an MBBS, MS in General Surgery, and MCh in Surgical Oncology. His areas of expertise include head and neck cancer surgery, gastrointestinal and colorectal oncology, breast and gynecologic cancers, urologic and thoracic oncology, as well as minimally invasive and advanced surgical oncology techniques.",
       "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Sarath%20chandra.jpeg",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [
         "Recognized for clinical excellence in managing complex cancer surgeries across specialties"
       ],
@@ -451,7 +466,7 @@ export const doctorsBySpecialty = {
   "credentials": "MBBS, MS – Orthopaedics, DNB – Orthopedics/Orthopedic Surgery, FNB – Spine Surgery",
   "description": "Dr Shashidhar B K is a Spine Surgeon and Spine & Pain Specialist with 14 years of experience. He specializes in minimally invasive spine surgery, endoscopic spine surgery, and advanced spine care. His expertise includes the treatment of slip disc, sciatica, chronic back pain, cervical spondylitis, and spinal deformities, with a strong focus on faster recovery, pain relief, and long-term mobility restoration.",
   "imageSrc": "https://drive.google.com/thumbnail?id=11jOUb93BEmPli2ZHPtJCfcu3I0z0736P&sz=w1000",
-  "imageRight": false,
+  "imageRight": true,
   "awards": [],
   "areas_of_expertise": [
     "Spine Surgery",
@@ -512,7 +527,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS (General Surgery), MCh – Urology, Fellowship in Pediatric Urology",
       "description": "Dr Ravish I R is a distinguished Urologist with 29 years of experience, including 22 years as a specialist. His expertise spans Urology, Pediatric Urology, Laparoscopic Surgery, and Reconstructive Urology.",
       "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Ravish IR.avif",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [
         "Completed a fellowship in Pediatric Urology in Minnesota, USA",
         "38 international and national publications",
@@ -533,7 +548,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MD – Medicine, DM – Nephrology",
       "description": "Dr Hari Prasad is a dedicated Nephrologist with 15 years of overall medical experience, including 7 years as a specialist in kidney care. His expertise covers the management of chronic kidney disease (CKD) and acute kidney injury (AKI), hemodialysis and hemodiafiltration (HDF), kidney stone treatment, renal angioplasty and stenting, ureteroscopy (URS), along with comprehensive care in general nephrology and hypertension management.",
       "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Hari Prasad.jpeg",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [
         "MD and DM from PGIMER, Chandigarh -- one of India's premier institutes",
         "Member of the Medical Council of India (MCI)",
@@ -557,7 +572,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS – General Surgery, MCh – Urology",
       "description": "Dr Vishruth K is a Urologist and Andrologist with 15 years of experience. He provides comprehensive urological care with a focus on urology and andrology.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1rL3zkAQR8Qgub8voiJNmtn-03ikXrY1Z&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Urology",
@@ -598,7 +613,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MD – General Medicine, DNB – Medical Gastroenterology",
       "description": "Dr Chandrakant K is a Medical Gastroenterologist specializing in Advanced Endoscopy with 15 years of experience. He provides expert care in medical gastroenterology and performs advanced endoscopic procedures for diagnosis and treatment of gastrointestinal conditions.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1WZgfbY_rmxprrA9-oBvyrsEeBKvRBbBy&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Medical Gastroenterology",
@@ -613,7 +628,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS (Gold Medalist), MS (General Surgery), MCh (Plastic Surgery), Fellowship in Cosmetic Surgery (Ethicon, 2012), Fellowships in Lasers (2018) and Rhinoplasty (2020)",
       "description": "Dr Neha Chauhan is a distinguished Plastic and Cosmetic Surgeon with 20 years of overall medical experience, including 11 years as a specialist. A gold medalist in MBBS, she holds an MS in General Surgery and MCh in Plastic Surgery, along with fellowships in cosmetic surgery, lasers, and rhinoplasty.",
       "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Neha%20Chouhan.jpeg",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [
         "Gold Medalist -- MBBS, Aligarh Muslim University",
         "Best Student of the Year -- UP Chapter, Association of Surgeons of India (2007)",
@@ -642,7 +657,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS – General Surgery, MCh – Plastic Surgery, DNB – Plastic Surgery",
       "description": "Dr Deevish N D is a Plastic, Cosmetic, and Reconstructive Surgeon with 16 years of experience. He specializes in plastic surgery, cosmetic surgery, burn care, diabetic foot management, and reconstructive procedures.",
       "imageSrc": "https://drive.google.com/thumbnail?id=112_auuE0a1Wl7WgfjTKC3MefDJe_034h&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Plastic Surgery",
@@ -720,7 +735,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, DNB, Interventional and Medical Cardiologist",
       "description": "Dr Mohan Murali J is a Cardiologist with 15 years of experience specializing in interventional and medical cardiology. He provides comprehensive cardiac care including advanced interventional procedures.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1y9gw0oiVQHK2_PGJjhxbBczgoWBP0f4O&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Cardiology",
@@ -735,7 +750,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MD – General Medicine, DM – Cardiology",
       "description": "Dr Abhijit Vilas Kulkarni is an Interventional Cardiologist with 23 years of experience. He specializes in cardiology and interventional cardiology, providing advanced cardiac care.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1fo2SBx0zVBLdJO6J56Eu_XvG1NukFH8p&sz=w1000",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
         "Cardiology",
@@ -753,7 +768,7 @@ export const doctorsBySpecialty = {
       "credentials": "MSc – Counselling Psychology",
       "description": "Dr Anjana Kothamachu is a Counselling Psychologist specializing in Expressive Arts Therapy and Psychodrama. She provides compassionate psychological support and therapy using creative and experiential approaches.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1JbOk1iju3NU9GP5zGLQuPZH2Hbe5hqHs&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "Counselling Psychology",
