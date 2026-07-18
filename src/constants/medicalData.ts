@@ -121,7 +121,7 @@ const defaultReviews = [
 ];
 
 // Doctors data for each section
-export const doctorsBySpecialty = export const doctorsBySpecialty = {
+export const doctorsBySpecialty = {
  "diabetology-endocrinology": [
    {
      "id": "dr-k-v-harish",
