@@ -335,7 +335,7 @@ export const doctorsBySpecialty = {
      "credentials": "MBBS, MD – General Medicine, PGME, PGDMH from Harvard Medical School, Boston USA",
      "description": "Dr Bushra Bahjat is a skilled Internal Medicine Consultant Physician with 11 years of medical experience. She holds advanced postgraduate training including a PGDMH from Harvard Medical School, Boston, bringing an evidence-based and patient-centric approach to the diagnosis and management of a wide range of medical conditions.",
      "imageSrc": "https://drive.google.com/thumbnail?id=1RG1T94fbMxvfKRDMRSJIjuDyac7wrEmO&sz=w1000",
-     "imageRight": true,
+     "imageRight": false,
      "awards": [
        "PGDMH from Harvard Medical School, Boston USA"
      ],
