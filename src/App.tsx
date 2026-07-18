@@ -9,6 +9,8 @@ import TermsOfService from "./pages/TermsOfService";
 import SpecialtyPage from "./pages/SpecialtyPage";
 import ProcedurePage from "./pages/ProcedurePage";
 import SurgeryDetailPage from "./pages/SurgeryDetailPage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => (
@@ -25,6 +27,8 @@ const App = () => (
       <Route path="/specialties/:specialtySlug" element={<SpecialtyPage />} />
       <Route path="/specialties/:specialtySlug/:procedureSlug" element={<ProcedurePage />} />
       <Route path="/surgery/details/:slug" element={<SurgeryDetailPage />} />
+      <Route path="/blog" element={<BlogListPage />} />
+      <Route path="/blog/:slug" element={<BlogPostPage />} />
     </Routes>
   </Router>
 );
