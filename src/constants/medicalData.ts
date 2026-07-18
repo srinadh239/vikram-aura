@@ -229,7 +229,7 @@ export const doctorsBySpecialty = {
       "credentials": "MS – General Surgery, FMAS, FIAGES, FALS (Robotics)",
       "description": "Dr G H Raju is a highly experienced General and Laparoscopic Surgeon with 27 years of medical expertise. He specializes in general surgery, laparoscopic surgery, and bariatric surgery, bringing advanced minimally invasive techniques and robotic surgery skills to complex cases.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1R8Z7QZwh7gIWWClz1_PGNv4PMFxKnIQZ&sz=w1000",
-      "imageRight": true,
+      "imageRight": false,
       "awards": [],
       "areas_of_expertise": [
         "General Surgery",
@@ -244,7 +244,7 @@ export const doctorsBySpecialty = {
       "credentials": "MBBS, MS – General Surgery",
       "description": "Dr Vijay Wadhwa is a highly experienced General and Laparoscopic Surgeon with 46 years of medical expertise. He brings decades of surgical knowledge to a wide range of general and laparoscopic surgical procedures.",
       "imageSrc": "https://drive.google.com/thumbnail?id=1OHcpdswBlHMUTsm0ANHSpphGKzo1Y0nT&sz=w1000",
-      "imageRight": false,
+      "imageRight": true,
       "awards": [],
       "areas_of_expertise": [
         "General Surgery",
