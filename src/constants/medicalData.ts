@@ -627,7 +627,7 @@ export const doctorsBySpecialty = {
       "name": "DR NEHA CHAUHAN",
       "credentials": "MBBS (Gold Medalist), MS (General Surgery), MCh (Plastic Surgery), Fellowship in Cosmetic Surgery (Ethicon, 2012), Fellowships in Lasers (2018) and Rhinoplasty (2020)",
       "description": "Dr Neha Chauhan is a distinguished Plastic and Cosmetic Surgeon with 20 years of overall medical experience, including 11 years as a specialist. A gold medalist in MBBS, she holds an MS in General Surgery and MCh in Plastic Surgery, along with fellowships in cosmetic surgery, lasers, and rhinoplasty.",
-      "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Neha%20Chouhan.jpeg",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1KrhSFwazskg1tXZZbebTc8lAfPLeDO2z&sz=w1000",
       "imageRight": false,
       "awards": [
         "Gold Medalist -- MBBS, Aligarh Muslim University",
@@ -749,7 +749,7 @@ export const doctorsBySpecialty = {
       "name": "DR ABHIJIT VILAS KULKARNI",
       "credentials": "MBBS, MD – General Medicine, DM – Cardiology",
       "description": "Dr Abhijit Vilas Kulkarni is an Interventional Cardiologist with 23 years of experience. He specializes in cardiology and interventional cardiology, providing advanced cardiac care.",
-      "imageSrc": "https://drive.google.com/thumbnail?id=1fo2SBx0zVBLdJO6J56Eu_XvG1NukFH8p&sz=w1000",
+      "imageSrc": "https://drive.google.com/thumbnail?id=1PCikpb3Lm2XcA0vRwP0iucyWdbh7bfHL&sz=w1000",
       "imageRight": false,
       "awards": [],
       "areas_of_expertise": [

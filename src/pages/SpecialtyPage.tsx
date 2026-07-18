@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { specialtyProcedures } from "../constants/specialtyData";
+import { details as surgeryDetails } from "../constants/surgeryData";
+import { toSurgerySlug } from "./SurgeryDetailPage";
 import FooterImage from "../components/FooterImage";
 import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
 
 const HOSPITAL_NAME = "Vikram Aura Hospital";
 const HOSPITAL_CITY = "Bangalore";
-const SITE_URL = "https://vikramaurahospitals.com/";
+const SITE_URL = "https://vikramaurahospitals.com";
+
+// Surgeries grouped by specialty slug
+const SURGERIES_BY_SPECIALTY: Record<string, string[]> = {
+  "urology":         ["9", "1", "7", "15"],
+  "cardiology":      ["11", "6"],
+  "general-surgery": ["2", "3", "4", "5", "10", "14"],
+  "orthopaedics":    ["8", "13", "16", "17", "18", "19", "20", "28"],
+  "obg-gynaecology": ["21", "22", "23", "26"],
+  "neurosurgery":    ["29"],
+  "vascular-surgery":["30"],
+};
 
 const SpecialtyPage: React.FC = () => {
   const { specialtySlug } = useParams<{ specialtySlug: string }>();
@@ -203,6 +216,43 @@ const SpecialtyPage: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* Related Surgery Guides */}
+        {specialtySlug && SURGERIES_BY_SPECIALTY[specialtySlug]?.length > 0 && (
+          <section className="max-w-6xl mx-auto px-4 pb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Surgery & Condition Guides</h2>
+            <p className="text-gray-500 text-sm mb-6">
+              In-depth information on common {specialtyData.name} conditions — causes, diagnosis and treatment options.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {SURGERIES_BY_SPECIALTY[specialtySlug].map((surgId) => {
+                const sd = surgeryDetails[surgId as keyof typeof surgeryDetails];
+                if (!sd) return null;
+                return (
+                  <Link
+                    key={surgId}
+                    to={`/surgery/details/${toSurgerySlug(sd.surgery, surgId)}`}
+                    className="group flex items-start gap-3 p-4 rounded-xl border border-gray-200 hover:border-orange-300 hover:shadow-sm transition-all bg-white"
+                  >
+                    <div className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-0.5" style={{ background: "#FFF0E8" }}>
+                      <svg className="w-4 h-4" style={{ color: "#F26522" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors leading-snug">
+                        {sd.surgery}
+                      </h3>
+                      <span className="text-xs text-gray-400 mt-1 block">
+                        {sd.questionsList?.length ?? 0} sections · Detailed guide
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="w-full py-14 px-4" style={{ background: "#F26522" }}>
