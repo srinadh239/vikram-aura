@@ -183,7 +183,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR PRAKASH BABU",
      "credentials": "MBBS, MS - General Surgery and Laparoscopic Surgeon",
      "description": "Dr Prakash Babu is a highly experienced surgeon with 29 years of medical expertise, including 23 years as a specialist. He specializes in thyroid, abdominal, colorectal, and complex gastrointestinal surgeries, along with laparoscopic hepatobiliary procedures for high-risk patients. He is also skilled in advanced laser treatments for hemorrhoids, fistula, and sinus conditions.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Prakash Babu.jpg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1pJ8dDAaROHhkPyi3aok8dtcT0J9ipz_a&sz=w1000",
      "imageRight": true,
      "titleWithDoctor": true,
      "awards": [
@@ -204,7 +204,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR G H RAJU",
      "credentials": "MS – General Surgery, FMAS, FIAGES, FALS (Robotics)",
      "description": "Dr G H Raju is a highly experienced General and Laparoscopic Surgeon with 27 years of medical expertise. He specializes in general surgery, laparoscopic surgery, and bariatric surgery, bringing advanced minimally invasive techniques and robotic surgery skills to complex cases.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1R8Z7QZwh7gIWWClz1_PGNv4PMFxKnIQZ&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1QcTL5VxmKSsss5WmgM-7I4jWyszTvp6S&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -219,7 +219,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR VIJAY WADHWA",
      "credentials": "MBBS, MS – General Surgery",
      "description": "Dr Vijay Wadhwa is a highly experienced General and Laparoscopic Surgeon with 46 years of medical expertise. He brings decades of surgical knowledge to a wide range of general and laparoscopic surgical procedures.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1OHcpdswBlHMUTsm0ANHSpphGKzo1Y0nT&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1fYXW2gud8lN9X8USqRJJG7HNm66NQmDX&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -255,7 +255,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR MOHINI S JADWANI",
      "credentials": "MBBS, DNB – Obstetrics & Gynecology",
      "description": "Dr Mohini S Jadwani is a highly experienced Gynecologist, Obstetrician, and Laparoscopic Surgeon with 40 years of medical expertise. She provides comprehensive women's healthcare across obstetrics, gynecology, and minimally invasive surgical procedures.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=16a9C-229tKwiPSNXDbSrQqTJjQ6voOxA&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1F2jwmJRenpZG5LW6D768DSbJ1BFFTMlO&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -270,7 +270,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR SHOBHA RANI RAO",
      "credentials": "MBBS, DGO, MD – Obstetrics & Gynecology",
      "description": "Dr Shobha Rani Rao is an exceptionally experienced Obstetrician, Gynecologist, and Laparoscopic Surgeon with 51 years of medical expertise. She brings unparalleled clinical experience to comprehensive women's healthcare.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1BfdKa-HhAy7N9l33KRy2nV8wDLADCp8x&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1q4e5-KmiQP5RoZEM8GMSepxsr-Soiq-F&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -285,7 +285,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR PRAKRUTHI S",
      "credentials": "MBBS, MS, DNB (Obstetrics & Gynaecology), Dip. Urogynaecology, FMAS",
      "description": "Dr Prakruthi S is a specialist in advanced gynaecology, urogynaecology, and minimally invasive surgery with 6 years of experience. She focuses on hysteroscopic surgeries, pelvic floor rehabilitation, and preventive oncology, providing comprehensive and patient-centered women's healthcare.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=193N2B8hKOKBAlC1F7cWbcPadS3_A6XtC&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1KfiZs2fjemm-25udO82j1gcC49rGdg3D&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -305,7 +305,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
 {
      "id": "dr-raja-selvarajan",
      "name": "Dr. Raja Selvarajan",
-     "credentials": "MBBS, MD – Internal Medicine, FID, FRCP",            "imageSrc":"https://drive.google.com/file/d/1n0u1VrnZt7alI5GyySf3BNh_h5h-Ers_/view?usp=drive_link",
+     "credentials": "MBBS, MD – Internal Medicine, FID, FRCP",            "imageSrc":"https://drive.google.com/thumbnail?id=1n0u1VrnZt7alI5GyySf3BNh_h5h-Ers_&sz=w1000",
      "imageRight": true,
 "description": "Dr. Raja Selvarajan is a Senior Consultant Physician and Diabetologist with over 20 years of experience in Internal Medicine and Diabetes Care. An alumnus of M.S. Ramaiah Medical College, Bengaluru, he completed his MD in Internal Medicine and further specialized in Diabetology. He has served at leading institutions including BGS Global Hospital, Global Hospital & Health City, Chennai, Apollo Hospitals, and Apollo Sugar Clinic. With a patient-centric and evidence-based approach, he specializes in the comprehensive management of diabetes, metabolic disorders, and a wide range of medical conditions.",
      "awards": [
@@ -334,7 +334,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR BUSHRA BAHJAT",
      "credentials": "MBBS, MD – General Medicine, PGME, PGDMH from Harvard Medical School, Boston USA",
      "description": "Dr Bushra Bahjat is a skilled Internal Medicine Consultant Physician with 11 years of medical experience. She holds advanced postgraduate training including a PGDMH from Harvard Medical School, Boston, bringing an evidence-based and patient-centric approach to the diagnosis and management of a wide range of medical conditions.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1eVzY_AFUdNvqUbnikiEaPIpXxR8Kf7K2&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1RG1T94fbMxvfKRDMRSJIjuDyac7wrEmO&sz=w1000",
      "imageRight": true,
      "awards": [
        "PGDMH from Harvard Medical School, Boston USA"
@@ -355,7 +355,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR SARAT CHANDRA PINGALI",
      "credentials": "MBBS, MS (General Surgery), MCH (Surgical Oncology)",
      "description": "Dr Sarat Chandra Pingali is a highly experienced Surgical Oncologist with 22 years of overall medical experience, including 12 years as a cancer surgery specialist. He holds an MBBS, MS in General Surgery, and MCh in Surgical Oncology. His areas of expertise include head and neck cancer surgery, gastrointestinal and colorectal oncology, breast and gynecologic cancers, urologic and thoracic oncology, as well as minimally invasive and advanced surgical oncology techniques.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr%20Sarath%20chandra.jpeg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1Z_epmR_8ipF95cJlcB8CCCm5QX9eBRxm&sz=w1000",
      "imageRight": true,
      "awards": [
        "Recognized for clinical excellence in managing complex cancer surgeries across specialties"
@@ -375,7 +375,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
  "name": "DR SUNIL NAVALGUND",
  "credentials": "MBBS, MS (General Surgery), MCh (Surgical Oncology)",
  "description": "Dr Sunil Navalgund is a Surgical Oncologist with 19 years of experience, including 8 years as a specialist. He specializes in minimally invasive cancer surgeries, VATS thoracic surgeries, hepatobiliary and pancreatic surgeries, and organ-preserving cancer treatments, delivering comprehensive and advanced surgical oncology care.",
- "imageSrc": "https://drive.google.com/thumbnail?id=1aEiwl1ozmCiKTlRbar1TpltOoHZJ8LuV&sz=w1000",
+ "imageSrc": "https://drive.google.com/thumbnail?id=1SHDAmcVfSs4PuvfwNMzjJzRs40RWvwUj&sz=w1000",
  "imageRight": false,
  "awards": [],
  "areas_of_expertise": [
@@ -398,7 +398,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR SAI KRISHNA B NAIDU",
      "credentials": "MBBS, MRCS (UK), Dip SICOT, FRCS (UK), MCh – Orthopaedics",
      "description": "Dr Sai Krishna B Naidu is a renowned Orthopedic Surgeon with 26 years of experience, including 11 years as a specialist. Dr Sai Krishna specializes in Joint Replacement Surgery (Knee and Hip) and Sports Injuries.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Sai Krishna B Naidu.jpg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1uyhD0-MZ4fYroqv83yI78kR5ht2DqUHJ&sz=w1000",
      "imageRight": true,
      "titleWithDoctor": true,
      "awards": [
@@ -429,7 +429,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR RAGHA MIDHUN PONNAM",
      "credentials": "MBBS, MS – Orthopaedics",
      "description": "Dr Ragha Midhun Ponnam is a specialist in Spine Surgery and Minimally Invasive Spine Surgery with 9 years of experience. He focuses on advanced spinal procedures using the latest minimally invasive techniques to ensure optimal patient outcomes.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1jkeSoWzEYiHlCu49ZbXY2TCC_yQd9D9q&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1emjNJ6DyR_tENUiG6nsE_Nhe798ewBOb&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -443,7 +443,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR MITHUN N OSWAL",
      "credentials": "MBBS, MS – Orthopaedics",
      "description": "Dr Mithun N Oswal is a specialist in Joint Replacement, Arthroscopy, and Sports Injury with 10 years of experience. He provides comprehensive orthopaedic care with expertise in joint replacement surgery and sports medicine.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1POWP9CHLl4UEvPH38bLqJSKZv4hHBCnl&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1nnHgtyp6EDYRJdyYHhDXrNwsC5K5DzQo&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -458,7 +458,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR ABHIJIT R",
      "credentials": "MBBS, MS – Orthopaedics",
      "description": "Dr Abhijit R is an Orthopaedic and Joint Replacement specialist with 9 years of experience. He provides expert care in orthopaedic conditions and joint replacement surgeries.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1YUR4ZRLK8L9ryC_Nvmjc1cR7oSy-ogVh&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1PCikpb3Lm2XcA0vRwP0iucyWdbh7bfHL&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -499,7 +499,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR PADMA SUNDARAM",
      "credentials": "MBBS, MD (Tuberculosis & Respiratory Diseases/Medicine), DNB (Respiratory Medicine)",
      "description": "Dr Padma Sundaram is a highly skilled and experienced Respiratory Medicine Specialist with over 33 years of medical practice, including 30 years as a specialist in her field.",
-     "imageSrc": "https://cdn.builder.io/api/v1/image/assets/TEMP/b10cb6b1f926aa7d8575031b8edfa0ed65dd15cf?placeholderIfAbsent=true&apiKey=003a4bc7d72843b88f405864f9e7fccf",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1iefB4_qIhlZNMa1V2a2Cyt-FP4TQomBL&sz=w1000",
      "imageRight": true,
      "titleWithDoctor": true,
      "awards": [
@@ -537,7 +537,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR RAVISH I R",
      "credentials": "MBBS, MS (General Surgery), MCh – Urology, Fellowship in Pediatric Urology",
      "description": "Dr Ravish I R is a distinguished Urologist with 29 years of experience, including 22 years as a specialist. His expertise spans Urology, Pediatric Urology, Laparoscopic Surgery, and Reconstructive Urology.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Ravish IR.avif",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1B3cauMjKw6bnva5h7yyvM-sQppn0LEbG&sz=w1000",
      "imageRight": true,
      "awards": [
        "Completed a fellowship in Pediatric Urology in Minnesota, USA",
@@ -558,7 +558,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR HARI PRASAD",
      "credentials": "MBBS, MD – Medicine, DM – Nephrology",
      "description": "Dr Hari Prasad is a dedicated Nephrologist with 15 years of overall medical experience, including 7 years as a specialist in kidney care. His expertise covers the management of chronic kidney disease (CKD) and acute kidney injury (AKI), hemodialysis and hemodiafiltration (HDF), kidney stone treatment, renal angioplasty and stenting, ureteroscopy (URS), along with comprehensive care in general nephrology and hypertension management.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Hari Prasad.jpeg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1Rz_aOYQ8P66QthE5I9R5TAx4qC8RmfuW&sz=w1000",
      "imageRight": false,
      "awards": [
        "MD and DM from PGIMER, Chandigarh -- one of India's premier institutes",
@@ -582,7 +582,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR VISHRUTH K",
      "credentials": "MBBS, MS – General Surgery, MCh – Urology",
      "description": "Dr Vishruth K is a Urologist and Andrologist with 15 years of experience. He provides comprehensive urological care with a focus on urology and andrology.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1rL3zkAQR8Qgub8voiJNmtn-03ikXrY1Z&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1FR7VtmnV3bCA4zFf1EkIQWHrX9kmqZoy&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -597,7 +597,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
  "name": "DR CHERIN JOSI CHAMPANNOOR",
  "credentials": "MBBS, DNB – General Medicine, DNB – Nephrology",
  "description": "Dr Cherin Josi Champannoor is a Nephrologist with extensive experience in kidney care, renal transplantation, and interventional nephrology. He specializes in chronic kidney disease, acute kidney injury, dialysis access procedures, renal transplantation, and advanced nephrology interventions, providing comprehensive and evidence-based care for patients with kidney disorders.",
- "imageSrc": "https://drive.google.com/thumbnail?id=1OIknbiyMlEXmn2A662u1N9NPdc8xBOVq&sz=w1000",
+ "imageSrc": "https://drive.google.com/thumbnail?id=1HqqDYPEuKEfsD6oZ87nP0634BAJOncbL&sz=w1000",
  "imageRight": false,
  "awards": [],
  "areas_of_expertise": [
@@ -643,7 +643,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR DEEVISH N D",
      "credentials": "MBBS, MS – General Surgery, MCh – Plastic Surgery, DNB – Plastic Surgery",
      "description": "Dr Deevish N D is a Plastic, Cosmetic, and Reconstructive Surgeon with 16 years of experience. He specializes in plastic surgery, cosmetic surgery, burn care, diabetic foot management, and reconstructive procedures.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=112_auuE0a1Wl7WgfjTKC3MefDJe_034h&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1k5AsLP8zxlptKcUUQw8yyWbFqiJ4SH5L&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -691,7 +691,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR CHAITRA SHANKAR",
      "credentials": "MBBS, DLO, DNB – Otorhinolaryngology",
      "description": "Dr Chaitra Shankar is an Ear, Nose, and Throat Surgeon and Allergy Specialist with 10 years of experience. She provides comprehensive ENT care with a focus on allergy management.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=19J6DaSBSUg6tEJWCeQM2Zbe0b2GmQKZG&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1BezyKB05Emx2sdaPUfHVYO6UrHmc4hMO&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -714,7 +714,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR SUNDEEP V K",
      "credentials": "MBBS, MS – General Surgery, MCh – Neurosurgery",
      "description": "Dr Sundeep V K is a Neurosurgeon specializing in Neurosurgery, Neurointerventional Surgery, and Spine Surgery with 13 years of experience. He provides advanced neurosurgical care using the latest techniques.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1tMDqqljaptqKG8YAKMQSwQpS884Fm7CI&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1HhhB7jUHgSa9lYdq9gQC-SDPvXXanlEJ&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -730,7 +730,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR TEJESH SHAVI",
      "credentials": "MBBS, DrNB – Neurosurgery, FINR (SNVI)",
      "description": "Dr Tejesh Shavi is an Interventional Neurosurgeon with 8 years of experience. He specializes in advanced interventional neurosurgical procedures.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1_0dU2RTkFyb2gwSTfyAknCOcfsuxlNFF&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1GcLlwsbOky_ECOiVDykHIMSDCAyBA2_r&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -752,7 +752,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR MOHAN MURALI J",
      "credentials": "MBBS, DNB, Interventional and Medical Cardiologist",
      "description": "Dr Mohan Murali J is a Cardiologist with 15 years of experience specializing in interventional and medical cardiology. He provides comprehensive cardiac care including advanced interventional procedures.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1y9gw0oiVQHK2_PGJjhxbBczgoWBP0f4O&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1XDILotcJKsRK8MCPOuwKCAWMM45aUda_&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -767,7 +767,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR ABHIJIT VILAS KULKARNI",
      "credentials": "MBBS, MD – General Medicine, DM – Cardiology",
      "description": "Dr Abhijit Vilas Kulkarni is an Interventional Cardiologist with 23 years of experience. He specializes in cardiology and interventional cardiology, providing advanced cardiac care.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1PCikpb3Lm2XcA0vRwP0iucyWdbh7bfHL&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1RFt9AapnuYlTFSrsb3Miq1QAJZJTrwWm&sz=w1000",
      "imageRight": false,
      "awards": [],
      "areas_of_expertise": [
@@ -786,7 +786,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR ANJANA KOTHAMACHU",
      "credentials": "MSc – Counselling Psychology",
      "description": "Dr Anjana Kothamachu is a Counselling Psychologist specializing in Expressive Arts Therapy and Psychodrama. She provides compassionate psychological support and therapy using creative and experiential approaches.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1JbOk1iju3NU9GP5zGLQuPZH2Hbe5hqHs&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=139hE0d70-Soe9vIIPJLXPhlUoA2F6wvU&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -806,7 +806,7 @@ export const doctorsBySpecialty = export const doctorsBySpecialty = {
      "name": "DR ARUN MURALIDHARAN",
      "credentials": "BDS, Rajiv Gandhi University of Health Sciences, Bangalore",
      "description": "Dr Arun Muralidharan is a Dental Surgeon with 16 years of experience, providing comprehensive dental care to patients.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1h0vNzGleE3L8R3eQd6uUOXxjAA16Evdn&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1vcaGCu-seEZ3NpfQjSTMx1NGzPjDwREi&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
