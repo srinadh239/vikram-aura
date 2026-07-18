@@ -197,32 +197,32 @@ export const doctorsBySpecialty = {
       ],
       "reviews": defaultReviews
     },
-    {
-      "id": "dr-moksha-gowda",
-      "name": "DR MOKSHA GOWDA",
-      "credentials": "MBBS, DNB (General Surgery)",
-      "description": "Dr Moksha Gowda is a skilled General Surgeon with over 19 years of experience in performing laparoscopic, minimally invasive, and complex surgical procedures. She specializes in gastrointestinal & hepatobiliary surgeries, hernia & abdominal wall surgeries, surgical oncology, trauma, and emergency surgeries. With expertise in high-risk cases and post-surgical pain management, Dr Moksha ensures precise, patient-focused surgical care.",
-      "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Moksha Gowda.jpeg",
-      "imageRight": false,
-      "awards": [
-        "Mahadevan Award (2014) -- 2nd Prize for Best Paper at KSC ASICON, Manipal",
-        "Millennium Gold Medal Award (2016) -- CSEP, Bangalore",
-        "Published Work -- Laparoscopic Subtotal Cholecystectomy: An Alternative Approach in Difficult Gall Bladder (Journal of Gastroenterology and Hepatology, 2017)",
-        "Extensive Paper & Poster Presentations at major national & state-level surgical conferences, including ASICON, KSC ASICON, and Bangalore Surgical Society",
-        "Sub-Investigator in Multiple Clinical Research Studies, including trials on COVID-19 treatment, Hepatitis management, and Non-Alcoholic Fatty Liver Disease",
-        "Speaker at National & International Conferences on advancements in laparoscopic and gastrointestinal surgeries"
-      ],
-      "areas_of_expertise": [
-        "Laparoscopic & Minimally Invasive Surgeries",
-        "Gastrointestinal & Hepatobiliary Surgeries",
-        "Hernia & Abdominal Wall Surgeries",
-        "Surgical Oncology",
-        "High-Risk & Complex Surgical Procedures",
-        "Trauma & Emergency Surgeries",
-        "Post-Surgical Pain Management"
-      ],
-      "reviews": defaultReviews
-    },
+    // {
+    //   "id": "dr-moksha-gowda",
+    //   "name": "DR MOKSHA GOWDA",
+    //   "credentials": "MBBS, DNB (General Surgery)",
+    //   "description": "Dr Moksha Gowda is a skilled General Surgeon with over 19 years of experience in performing laparoscopic, minimally invasive, and complex surgical procedures. She specializes in gastrointestinal & hepatobiliary surgeries, hernia & abdominal wall surgeries, surgical oncology, trauma, and emergency surgeries. With expertise in high-risk cases and post-surgical pain management, Dr Moksha ensures precise, patient-focused surgical care.",
+    //   "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr Moksha Gowda.jpeg",
+    //   "imageRight": false,
+    //   "awards": [
+    //     "Mahadevan Award (2014) -- 2nd Prize for Best Paper at KSC ASICON, Manipal",
+    //     "Millennium Gold Medal Award (2016) -- CSEP, Bangalore",
+    //     "Published Work -- Laparoscopic Subtotal Cholecystectomy: An Alternative Approach in Difficult Gall Bladder (Journal of Gastroenterology and Hepatology, 2017)",
+    //     "Extensive Paper & Poster Presentations at major national & state-level surgical conferences, including ASICON, KSC ASICON, and Bangalore Surgical Society",
+    //     "Sub-Investigator in Multiple Clinical Research Studies, including trials on COVID-19 treatment, Hepatitis management, and Non-Alcoholic Fatty Liver Disease",
+    //     "Speaker at National & International Conferences on advancements in laparoscopic and gastrointestinal surgeries"
+    //   ],
+    //   "areas_of_expertise": [
+    //     "Laparoscopic & Minimally Invasive Surgeries",
+    //     "Gastrointestinal & Hepatobiliary Surgeries",
+    //     "Hernia & Abdominal Wall Surgeries",
+    //     "Surgical Oncology",
+    //     "High-Risk & Complex Surgical Procedures",
+    //     "Trauma & Emergency Surgeries",
+    //     "Post-Surgical Pain Management"
+    //   ],
+    //   "reviews": defaultReviews
+    // },
     {
       "id": "dr-gh-raju",
       "name": "DR G H RAJU",
