@@ -128,7 +128,7 @@ export const doctorsBySpecialty = {
      "name": "DR K V HARISH",
      "credentials": "MD, DM, MRCP (SCE – Gastroenterology & Hepatology)",
      "description": "Dr K V Harish is a highly experienced Internal Medicine specialist with over 29 years of clinical expertise, including 22 years as a specialist. He holds an MBBS, MD in Internal Medicine, and is a Fellow of the Cardiological Society of India (FCSI). His key areas of focus include preventive medicine, diabetes and endocrinology, hypertension, cardiac care, lifestyle disorders, and general internal medicine.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr K V Harish.jpeg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1yeUIFKCigJbMs0fwfjDJEDRc_Q7qUowz&sz=w1000",
      "imageRight": true,
      "awards": [
        "Conducted numerous CME programs",
@@ -158,7 +158,7 @@ export const doctorsBySpecialty = {
      "name": "DR ROHINI KRISHNAMOORTHY",
      "credentials": "MBBS, MD (Dermatology)",
      "description": "Dr Rohini Krishnamoorthy is a senior dermatologist with over 40 years of medical experience, including 33 years as a specialist in dermatology. She holds an MBBS and MD in Dermatology, with expertise spanning clinical and aesthetic dermatology, skin allergies, autoimmune skin disorders, acne, pigmentation, hair loss treatments, and advanced anti-aging and skin rejuvenation procedures.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/Dr. Rohini Krishnamoorthy.jpeg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=1wYCnKok9HvcJqvT8GtePsSpM2ubjF3U7&sz=w1000",
      "imageRight": true,
      "titleWithDoctor": true,
      "awards": [
