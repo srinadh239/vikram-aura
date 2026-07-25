@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Doctor } from "./types";
 import DoctorImage from "./DoctorImage";
+import { getScheduleByName, formatOpdSummary } from "../constants/doctorSchedules";
 
 interface DoctorInfoProps {
   doctor: Doctor;
@@ -10,6 +11,7 @@ const DoctorInfo: React.FC<DoctorInfoProps> = ({ doctor }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showReadMore, setShowReadMore] = useState(false);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
+  const schedule = getScheduleByName(doctor.name);
 
   useEffect(() => {
     if (descriptionRef.current) {
@@ -40,22 +42,53 @@ const DoctorInfo: React.FC<DoctorInfoProps> = ({ doctor }) => {
             <p className="self-stretch text-sm font-bold leading-5 max-md:max-w-full">
               {doctor.credentials}
             </p>
+
+            {schedule && (
+              <div className="mt-5 w-full rounded-xl border border-orange-100 bg-orange-50 px-4 py-3">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-orange-500 mb-1.5">
+                      OPD Schedule
+                    </p>
+                    <ul className="space-y-1">
+                      {formatOpdSummary(schedule).map((line) => (
+                        <li key={line} className="text-sm text-zinc-700 font-medium">
+                          {line}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-zinc-500 mt-1">{schedule.department}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-orange-500 mb-1">
+                      Consultation Fee
+                    </p>
+                    <p className="text-lg font-bold text-orange-600">
+                      {schedule.fee !== null
+                        ? `₹${schedule.fee.toLocaleString("en-IN")}`
+                        : "On request"}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <h2 className="mt-6 font-bold">ABOUT ME</h2>
             <div className="relative w-full">
-              <p 
+              <p
                 ref={descriptionRef}
                 className={`self-stretch mt-2 font-light leading-6 max-md:max-w-full transition-all duration-300 ${
-                  !isExpanded ? 'line-clamp-3' : ''
+                  !isExpanded ? "line-clamp-3" : ""
                 }`}
               >
                 {doctor.description}
               </p>
               {showReadMore && (
-                <button 
+                <button
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="mt-2.5 leading-8 text-orange-500 hover:text-orange-600 transition-colors"
                 >
-                  {isExpanded ? 'Show Less' : 'Read More'}
+                  {isExpanded ? "Show Less" : "Read More"}
                 </button>
               )}
             </div>

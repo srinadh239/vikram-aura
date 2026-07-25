@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import BookAppointmentModal from "./BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
+import { doctorSchedules } from "../constants/doctorSchedules";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -36,9 +37,6 @@ export const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
     document.body.style.overflow = "unset";
   };
-
-  // Gather all doctor names from all specialties
-  const doctorList = Object.values(doctorsBySpecialty).flat().map(doc => doc.name);
 
   useEffect(() => {
     if (!isHomePage) return;
@@ -247,7 +245,7 @@ export const Header: React.FC = () => {
       <BookAppointmentModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        doctorList={doctorList}
+        doctorSchedules={doctorSchedules}
       />
     </header>
   );

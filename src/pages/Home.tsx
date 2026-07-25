@@ -10,13 +10,13 @@ import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorsBySpecialty, specialties } from "../constants/medicalData";
 import InvestorsSection from "../components/InvestorsSection";
 import { getFeaturedPosts } from "../constants/blogData";
+import { doctorSchedules } from "../constants/doctorSchedules";
 
 const SITE_URL = "https://vikramaurahospitals.com";
 const OG_IMAGE = "https://website-va.s3.ap-south-1.amazonaws.com/VAH+Logo+Symbol+final+(1)_page-0001.jpg";
 
 const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const allDoctors = Object.values(doctorsBySpecialty).flat();
 
   const handleBookAppointment = () => {
     setIsModalOpen(true);
@@ -173,7 +173,7 @@ const Home: React.FC = () => {
       <BookAppointmentModal
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        doctorList={allDoctors.map(doctor => doctor.name)}
+        doctorSchedules={doctorSchedules}
       />
     </div>
     </>

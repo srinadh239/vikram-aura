@@ -5,6 +5,7 @@ import { getDetails } from "../constants/surgeryData";
 import FooterImage from "../components/FooterImage";
 import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
+import { doctorSchedules } from "../constants/doctorSchedules";
 
 const SITE_URL = "https://vikramaurahospitals.com";
 const HOSPITAL_NAME = "Vikram Aura Hospital";
@@ -158,7 +159,7 @@ const SurgeryDetailPage: React.FC = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const details = getDetails(id);
-  const allDoctorNames = Object.values(doctorsBySpecialty).flat().map((d) => d.name);
+  
   const specialty = id ? SURGERY_SPECIALTY[id] : null;
 
   // Scroll-spy: track which section is in view
@@ -436,7 +437,7 @@ const SurgeryDetailPage: React.FC = () => {
         <BookAppointmentModal
           open={modalOpen}
           onClose={() => setModalOpen(false)}
-          doctorList={allDoctorNames}
+          doctorSchedules={doctorSchedules}
         />
       </main>
     </>

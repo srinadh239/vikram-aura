@@ -6,11 +6,12 @@ import SpecialtiesSection from "../components/SpecialtiesSection";
 import DoctorSection from "../components/DoctorSection";
 import { doctorsBySpecialty, specialties } from "../constants/medicalData";
 import BookAppointmentModal from "../components/BookAppointmentModal";
+import { doctorSchedules } from "../constants/doctorSchedules";
 import FooterImage from "../components/FooterImage";
 
 function DoctorList() {
   // Gather all doctor names from all specialties
-  const allDoctorNames = Object.values(doctorsBySpecialty).flat().map(doc => doc.name);
+  
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<string | undefined>(undefined);
 
@@ -60,7 +61,7 @@ function DoctorList() {
       <BookAppointmentModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        doctorList={allDoctorNames}
+        doctorSchedules={doctorSchedules}
         defaultDoctor={selectedDoctor}
       />
     </main>

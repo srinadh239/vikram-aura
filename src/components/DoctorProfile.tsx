@@ -4,6 +4,7 @@ import ActionButton from "./ActionButton";
 import DoctorImage from "./DoctorImage";
 import { Doctor } from "./types";
 import { useNavigate, Link } from "react-router-dom";
+import { getScheduleByName, formatOpdSummary } from "../constants/doctorSchedules";
 
 interface DoctorProfileProps {
   doctor: Doctor;
@@ -21,15 +22,14 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = React.useState(false);
   const profileRef = React.useRef<HTMLDivElement>(null);
-  const [animationClass, setAnimationClass] = React.useState('');
+  const [animationClass, setAnimationClass] = React.useState("");
 
   React.useEffect(() => {
-    // Randomly select an animation direction
     const animations = [
-      'translate-y-10 opacity-0', // from bottom
-      '-translate-y-10 opacity-0', // from top
-      'translate-x-10 opacity-0', // from right
-      '-translate-x-10 opacity-0', // from left
+      "translate-y-10 opacity-0",
+      "-translate-y-10 opacity-0",
+      "translate-x-10 opacity-0",
+      "-translate-x-10 opacity-0",
     ];
     setAnimationClass(animations[Math.floor(Math.random() * animations.length)]);
 
@@ -40,9 +40,7 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
           observer.disconnect();
         }
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     if (profileRef.current) {
@@ -61,7 +59,8 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
     titleWithDoctor,
   } = doctor;
 
-  // Determine where to place the section title
+  const schedule = getScheduleByName(name);
+
   const renderSectionTitle = () => {
     if (!showTitle) return null;
 
@@ -76,7 +75,6 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
     return null;
   };
 
-  // Mobile Image Component
   const MobileImage = () => (
     <div className="hidden max-md:flex justify-center items-center mb-8 max-md:mb-0">
       <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px] max-md:w-[300px] max-md:h-[300px] max-md:min-w-[300px] max-md:min-h-[300px]">
@@ -89,7 +87,6 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
     </div>
   );
 
-  // Desktop Image Component
   const DesktopImage = () => (
     <div className="hidden md:flex justify-center items-center">
       <div className="flex items-center justify-center aspect-square rounded-full overflow-hidden border-[16px] border-[#FED8C6] group-hover:border-[#F26522] transition-colors duration-300 w-[320px] h-[320px] min-w-[320px] min-h-[320px]">
@@ -102,7 +99,6 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
     </div>
   );
 
-  // Content Component
   const Content = () => (
     <div className="flex flex-col w-full">
       <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
@@ -118,8 +114,36 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
         <p className="self-stretch mt-5 text-base font-light leading-6 text-zinc-600 max-md:max-w-full">
           {description}
         </p>
+
+        {schedule && (
+          <div className="mt-5 w-full rounded-xl border border-orange-100 bg-orange-50/80 px-4 py-3">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-orange-500 mb-1.5">
+                  OPD Schedule
+                </p>
+                <ul className="space-y-1">
+                  {formatOpdSummary(schedule).map((line) => (
+                    <li key={line} className="text-sm text-zinc-700 font-medium">
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-right shrink-0">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-orange-500 mb-1">
+                  Fee
+                </p>
+                <p className="text-base font-bold text-orange-600">
+                  {schedule.fee !== null
+                    ? `₹${schedule.fee.toLocaleString("en-IN")}`
+                    : "On request"}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-      {/* Book Appointment and Learn More buttons below content, inline with image */}
       <div className="flex gap-4 mt-8 text-base leading-8">
         <ActionButton
           text="LEARN MORE"
@@ -136,13 +160,12 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({
   );
 
   return (
-    <div 
+    <div
       ref={profileRef}
       className={`flex gap-16 max-md:gap-0 max-md:flex-col items-center transition-all duration-700 transform ${
-        isVisible ? 'translate-x-0 translate-y-0 opacity-100' : animationClass
+        isVisible ? "translate-x-0 translate-y-0 opacity-100" : animationClass
       }`}
     >
-      {/* Mobile image always on top in mobile view */}
       <Link to={`/doctor/${doctor.id}`} className="md:hidden w-full group focus:outline-none">
         <MobileImage />
       </Link>

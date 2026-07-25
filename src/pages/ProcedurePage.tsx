@@ -5,6 +5,7 @@ import { specialtyProcedures } from "../constants/specialtyData";
 import FooterImage from "../components/FooterImage";
 import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorsBySpecialty } from "../constants/medicalData";
+import { doctorSchedules } from "../constants/doctorSchedules";
 
 const HOSPITAL_NAME = "Vikram Aura Hospital";
 const HOSPITAL_CITY = "Bangalore";
@@ -46,7 +47,7 @@ const ProcedurePage: React.FC = () => {
   const specialtyData = specialtySlug ? specialtyProcedures[specialtySlug] : null;
   const procedure = specialtyData?.procedures.find((p) => p.slug === procedureSlug) ?? null;
 
-  const allDoctorNames = Object.values(doctorsBySpecialty).flat().map((d) => d.name);
+  
 
   if (!specialtyData || !procedure) {
     return (
@@ -389,7 +390,7 @@ const ProcedurePage: React.FC = () => {
         <BookAppointmentModal
           open={modalOpen}
           onClose={() => setModalOpen(false)}
-          doctorList={allDoctorNames}
+          doctorSchedules={doctorSchedules}
         />
       </main>
     </>

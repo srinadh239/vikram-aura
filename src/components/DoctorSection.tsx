@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DoctorProfile from "./DoctorProfile";
 import { Doctor } from "./types";
 import BookAppointmentModal from "./BookAppointmentModal";
+import { schedulesForDoctorNames } from "../constants/doctorSchedules";
 
 interface DoctorSectionProps {
   title: string;
@@ -23,7 +24,6 @@ const DoctorSection: React.FC<DoctorSectionProps> = ({
   const [selectedDoctor, setSelectedDoctor] = useState<string | undefined>(undefined);
 
   const doctorNames = doctors.map((doc) => doc.name);
-
   const handleBookClick = (doctorName?: string) => {
     if (onBookAppointment) {
       onBookAppointment(doctorName);
@@ -60,7 +60,7 @@ const DoctorSection: React.FC<DoctorSectionProps> = ({
         <BookAppointmentModal
           open={modalOpen}
           onClose={() => setModalOpen(false)}
-          doctorList={doctorNames}
+          doctorSchedules={schedulesForDoctorNames(doctorNames)}
           defaultDoctor={selectedDoctor}
         />
       )}
