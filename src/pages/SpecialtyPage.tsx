@@ -91,7 +91,7 @@ const SpecialtyPage: React.FC = () => {
         >
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="text-sm mb-6 opacity-70" aria-label="Breadcrumb">
+            {/* <nav className="text-sm mb-6 opacity-70" aria-label="Breadcrumb">
               <ol className="flex items-center gap-2 flex-wrap">
                 <li><Link to="/" className="hover:text-orange-400 transition">Home</Link></li>
                 <li className="opacity-50">/</li>
@@ -99,7 +99,7 @@ const SpecialtyPage: React.FC = () => {
                 <li className="opacity-50">/</li>
                 <li className="text-orange-400">{specialtyData.name}</li>
               </ol>
-            </nav>
+            </nav> */}
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               {specialtyData.name}

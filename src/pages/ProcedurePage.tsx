@@ -155,7 +155,7 @@ const ProcedurePage: React.FC = () => {
         >
           <div className="max-w-5xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="text-xs mb-5 opacity-60" aria-label="Breadcrumb">
+            {/* <nav className="text-xs mb-5 opacity-60" aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 flex-wrap">
                 <li><Link to="/" className="hover:text-orange-400 transition">Home</Link></li>
                 <li>/</li>
@@ -169,7 +169,7 @@ const ProcedurePage: React.FC = () => {
                 <li>/</li>
                 <li className="text-orange-400 truncate max-w-[200px]">{procedure.medicalName}</li>
               </ol>
-            </nav>
+            </nav> */}
 
             {/* Specialty badge */}
             <span
@@ -312,7 +312,7 @@ const ProcedurePage: React.FC = () => {
           )}
 
           {/* Prev / Next navigation */}
-          <nav className="flex flex-col sm:flex-row justify-between gap-4 border-t border-gray-100 pt-8">
+          {/* <nav className="flex flex-col sm:flex-row justify-between gap-4 border-t border-gray-100 pt-8">
             {prevProc ? (
               <Link
                 to={`/specialties/${specialtyData.slug}/${prevProc.slug}`}
@@ -343,7 +343,7 @@ const ProcedurePage: React.FC = () => {
                 </svg>
               </Link>
             )}
-          </nav>
+          </nav> */}
 
           {/* Back to specialty */}
           <div className="mt-6 text-center">

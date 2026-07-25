@@ -187,7 +187,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
     (selectedSchedule?.oncall || (!!date && !!selectedSlot));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 px-4">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-40 px-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md relative max-h-[95vh] overflow-y-auto">
         <div className="sticky top-0 bg-white rounded-t-2xl px-6 pt-6 pb-4 border-b border-gray-100 z-10">
           <button
