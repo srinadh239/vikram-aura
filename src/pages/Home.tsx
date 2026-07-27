@@ -39,7 +39,7 @@ const animateScrollTo = (targetY: number, duration = 750) => {
 const SPECIALTY_BLURBS: Record<string, string> = {
   cardiology: "Cath lab · Angiography · Heart failure",
   orthopaedics: "Joint replacement · Sports injury · Spine",
-  "gynaecology-obstetrics": "High-risk pregnancy",
+  "gynaecology-obstetrics": "High-risk Pregnancy · Laparoscopic Gynaecology · Hysterectomy",
   neurology: "Stroke care · Epilepsy · Neurological disorders",
   pulmonology: "Lung health · Sleep apnoea · COPD",
   "urology-nephrology": "Kidney stones · Prostate · Minimally invasive",
