@@ -1,13 +1,13 @@
 import type { Doctor } from '../components/types';
 // Specialties list
 export const specialties = [
-  {
-    name: "Diabetology & Endocrinology",
-    iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics-1.svg",
-    highlighted: false,
-    sectionId: "diabetology-endocrinology",
-    procedurePageSlug: null,
-  },
+  // {
+  //   name: "Diabetology & Endocrinology",
+  //   iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Gynaecology+%26+Obstetrics-1.svg",
+  //   highlighted: false,
+  //   sectionId: "diabetology-endocrinology",
+  //   procedurePageSlug: null,
+  // },
   { name: "Dermatology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Dermatology.svg", highlighted: false, sectionId: "dermatology", procedurePageSlug: null },
   {
     name: "General Surgery",
@@ -32,13 +32,13 @@ export const specialties = [
   },
   { name: "Oncology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Oncology.svg", highlighted: false, sectionId: "oncology", procedurePageSlug: "oncology" },
   { name: "Orthopaedics", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Orthopaedics.svg", highlighted: false, sectionId: "orthopaedics", procedurePageSlug: "orthopaedics" },
-  {
-    name: "Paediatrics & Neonatology",
-    iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Paediatrics+%26+Neonatology.svg",
-    highlighted: false,
-    sectionId: "paediatrics-neonatology",
-    procedurePageSlug: null,
-  },
+  // {
+  //   name: "Paediatrics & Neonatology",
+  //   iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Paediatrics+%26+Neonatology.svg",
+  //   highlighted: false,
+  //   sectionId: "paediatrics-neonatology",
+  //   procedurePageSlug: null,
+  // },
   { name: "Pulmonology", iconSrc: "https://website-va.s3.ap-south-1.amazonaws.com/Pulmonology.svg", highlighted: false, sectionId: "pulmonology", procedurePageSlug: "pulmonology" },
   {
     name: "Urology-Nephrology",
@@ -122,34 +122,34 @@ const defaultReviews = [
 
 // Doctors data for each section
 export const doctorsBySpecialty = {
- "diabetology-endocrinology": [
-   {
-     "id": "dr-k-v-harish",
-     "name": "DR K V HARISH",
-     "credentials": "MD, DM, MRCP (SCE – Gastroenterology & Hepatology)",
-     "description": "Dr K V Harish is a highly experienced Internal Medicine specialist with over 29 years of clinical expertise, including 22 years as a specialist. He holds an MBBS, MD in Internal Medicine, and is a Fellow of the Cardiological Society of India (FCSI). His key areas of focus include preventive medicine, diabetes and endocrinology, hypertension, cardiac care, lifestyle disorders, and general internal medicine.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1yeUIFKCigJbMs0fwfjDJEDRc_Q7qUowz&sz=w1000",
-     "imageRight": true,
-     "awards": [
-       "Conducted numerous CME programs",
-       "Participated in state and national medical conferences, as well as international seminars",
-       "Presented papers and written research articles including international journal publications",
-       "Dissertation on \"Relevance of Upper GI Endoscopy in Patients with Diabetes Mellitus\" accepted by Rajiv Gandhi University of Health Sciences",
-       "Worked in key academic roles -- Registrar, Assistant Professor, Associate Professor, and Professor -- in top medical colleges across Karnataka",
-       "Conducted workshops and clinical teaching sessions for both undergraduate and postgraduate students",
-       "Organized webinars for corporate companies and healthcare awareness camps for social causes",
-       "Served on advisory boards for pharmaceutical companies and contributed to clinical strategy and healthcare innovation"
-     ],
-     "areas_of_expertise": [
-       "Preventive Medicine",
-       "Diabetes & Endocrinology",
-       "Hypertension & Cardiac Care",
-       "Lifestyle Disorders",
-       "General Internal Medicine"
-     ],
-     "reviews": defaultReviews
-   }
- ],
+//  "diabetology-endocrinology": [
+  //  {
+  //    "id": "dr-k-v-harish",
+  //    "name": "DR K V HARISH",
+  //    "credentials": "MD, DM, MRCP (SCE – Gastroenterology & Hepatology)",
+  //    "description": "Dr K V Harish is a highly experienced Internal Medicine specialist with over 29 years of clinical expertise, including 22 years as a specialist. He holds an MBBS, MD in Internal Medicine, and is a Fellow of the Cardiological Society of India (FCSI). His key areas of focus include preventive medicine, diabetes and endocrinology, hypertension, cardiac care, lifestyle disorders, and general internal medicine.",
+  //    "imageSrc": "https://drive.google.com/thumbnail?id=1yeUIFKCigJbMs0fwfjDJEDRc_Q7qUowz&sz=w1000",
+  //    "imageRight": true,
+  //    "awards": [
+  //      "Conducted numerous CME programs",
+  //      "Participated in state and national medical conferences, as well as international seminars",
+  //      "Presented papers and written research articles including international journal publications",
+  //      "Dissertation on \"Relevance of Upper GI Endoscopy in Patients with Diabetes Mellitus\" accepted by Rajiv Gandhi University of Health Sciences",
+  //      "Worked in key academic roles -- Registrar, Assistant Professor, Associate Professor, and Professor -- in top medical colleges across Karnataka",
+  //      "Conducted workshops and clinical teaching sessions for both undergraduate and postgraduate students",
+  //      "Organized webinars for corporate companies and healthcare awareness camps for social causes",
+  //      "Served on advisory boards for pharmaceutical companies and contributed to clinical strategy and healthcare innovation"
+  //    ],
+  //    "areas_of_expertise": [
+  //      "Preventive Medicine",
+  //      "Diabetes & Endocrinology",
+  //      "Hypertension & Cardiac Care",
+  //      "Lifestyle Disorders",
+  //      "General Internal Medicine"
+  //    ],
+  //    "reviews": defaultReviews
+  //  }
+//  ],
 
 
  "dermatology": [
@@ -488,8 +488,8 @@ export const doctorsBySpecialty = {
  ],
 
 
- "paediatrics-neonatology": [
- ],
+//  "paediatrics-neonatology": [
+//  ],
 
 
  "pulmonology": [

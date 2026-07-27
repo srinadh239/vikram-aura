@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
 import SpecialtiesSection from "../components/SpecialtiesSection";
 import DoctorSection from "../components/DoctorSection";
@@ -9,11 +10,42 @@ import BookAppointmentModal from "../components/BookAppointmentModal";
 import { doctorSchedules } from "../constants/doctorSchedules";
 import FooterImage from "../components/FooterImage";
 
+const getNavOffset = () => (window.innerWidth <= 900 ? 120 : 80);
+
 function DoctorList() {
-  // Gather all doctor names from all specialties
-  
+  const { hash } = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<string | undefined>(undefined);
+
+  // Scroll to specialty section when arriving via /doctors#sectionId
+  useEffect(() => {
+    const id = hash.replace("#", "");
+    if (!id) return;
+
+    let cancelled = false;
+    let attempts = 0;
+
+    const scrollToHash = () => {
+      if (cancelled) return;
+      const el = document.getElementById(id);
+      if (!el) {
+        // Section may not be painted yet on first paint
+        if (attempts++ < 20) {
+          window.setTimeout(scrollToHash, 50);
+        }
+        return;
+      }
+      const top = el.getBoundingClientRect().top + window.scrollY - getNavOffset();
+      window.scrollTo({ top, behavior: "smooth" });
+    };
+
+    // Wait a tick so ScrollToTop / layout settle first
+    const t = window.setTimeout(scrollToHash, 100);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(t);
+    };
+  }, [hash]);
 
   // Handler for top button
   const handleTopBookClick = () => {

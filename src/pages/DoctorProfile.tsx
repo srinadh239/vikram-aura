@@ -22,7 +22,7 @@ const specialtyDisplayName: Record<string, string> = {
   "internal-medicine": "Internal Medicine",
   "oncology": "Oncology",
   "orthopaedics": "Orthopaedics",
-  "paediatrics-neonatology": "Paediatrics & Neonatology",
+  // "paediatrics-neonatology": "Paediatrics & Neonatology",
   "pulmonology": "Pulmonology",
   "urology-nephrology": "Urology & Nephrology",
   "gastroenterology": "Gastroenterology",
@@ -33,7 +33,7 @@ const specialtyDisplayName: Record<string, string> = {
   "radiology": "Radiology",
   "psychology": "Psychology",
   "dental": "Dental",
-  "diabetology-endocrinology": "Diabetology & Endocrinology",
+  // "diabetology-endocrinology": "Diabetology & Endocrinology",
 };
 
 const DoctorProfile: React.FC = () => {

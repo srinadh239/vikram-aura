@@ -39,20 +39,19 @@ const animateScrollTo = (targetY: number, duration = 750) => {
 const SPECIALTY_BLURBS: Record<string, string> = {
   cardiology: "Cath lab · Angiography · Heart failure",
   orthopaedics: "Joint replacement · Sports injury · Spine",
-  "gynaecology-obstetrics": "Painless labour · IVF · High-risk pregnancy",
+  "gynaecology-obstetrics": "High-risk pregnancy",
   neurology: "Stroke care · Epilepsy · Neurological disorders",
   pulmonology: "Lung health · Sleep apnoea · COPD",
   "urology-nephrology": "Kidney stones · Prostate · Minimally invasive",
   oncology: "Cancer diagnosis · Chemo · Surgical oncology",
   "general-surgery": "Laparoscopic · Bariatric · Day-care",
   dermatology: "Skin conditions · Cosmetology · Aesthetics",
-  "paediatrics-neonatology": "Child healthcare · Neonatology · Development",
+  // "paediatrics-neonatology": "Child healthcare · Neonatology · Development",
   ent: "Ear, nose, throat · Eye care · Microsurgery",
   gastroenterology: "Endoscopy · ERCP · Digestive disorders",
   neurosurgery: "Brain & spine surgery · Neurointervention",
   "plastic-surgery": "Reconstructive · Cosmetic · Trauma",
-  "diabetology-endocrinology": "Diabetes · Thyroid · Hormone care",
-  "internal-medicine": "Fever · Infections · Chronic disease",
+  "internal-medicine": "Fever · Infections · Chronic disease . Diabetes · Thyroid · Hormone care",
   radiology: "Imaging · Interventional radiology",
   psychology: "Counselling · Behaviour therapy · Stress care",
   dental: "Oral care · Dental surgery",
@@ -106,14 +105,14 @@ const DESIGN_REVIEWS = [
 const SEO_KEYWORDS = [
   { label: "Best hospital in Bangalore", to: "/about" },
   { label: "Multispeciality hospital Richmond Town", to: "/" },
-  { label: "IVF hospital Bangalore", to: "/specialties/obg-gynaecology" },
+  { label: "Gynaecologist hospital Bangalore", to: "/specialties/obg-gynaecology" },
   { label: "Painless labour Bangalore", to: "/specialties/obg-gynaecology" },
   { label: "Knee replacement surgery Bangalore", to: "/blog/knee-replacement-surgery-bangalore" },
   { label: "24/7 emergency hospital Bangalore", to: "/" },
   { label: "NABH hospital Bangalore", to: "/about" },
   { label: "Gynaecologist Richmond Town", to: "/specialties/obg-gynaecology" },
   { label: "Coronary angiography Bangalore", to: "/specialties/cardiology" },
-  { label: "Level III NICU Bangalore", to: "/doctors#paediatrics-neonatology" },
+  // { label: "Level III NICU Bangalore", to: "/doctors#paediatrics-neonatology" },
   { label: "Transparent pricing hospital", to: "/#equal-card" },
   { label: "Laparoscopic surgery Bangalore", to: "/specialties/general-surgery" },
   { label: "High-risk pregnancy specialist", to: "/specialties/obg-gynaecology" },
@@ -891,7 +890,7 @@ const Home: React.FC = () => {
           </div>
         </footer>
 
-        {/* Mobile sticky CTAs */}
+        {/* Mobile sticky book CTA (call uses the floating FAB) */}
         <div className="mobile-sticky">
           <button
             type="button"
@@ -900,21 +899,6 @@ const Home: React.FC = () => {
           >
             Book Appointment
           </button>
-          <a
-            href={BOOK_PHONE}
-            style={{
-              flex: 1,
-              padding: "14px",
-              background: "#fff",
-              color: "#F26522",
-              borderTop: "1px solid #F26522",
-              fontWeight: 700,
-              fontSize: 14,
-              textAlign: "center",
-            }}
-          >
-            +91 7022 400 800
-          </a>
         </div>
 
         <BookAppointmentModal

@@ -12,6 +12,7 @@ import SurgeryDetailPage from "./pages/SurgeryDetailPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import ScrollToTop from "./components/ScrollToTop";
+import MobileCallButton from "./components/MobileCallButton";
 
 const AppShell = () => {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ const AppShell = () => {
       <ScrollToTop />
       <Header />
       {!isHome && <div className="site-header-spacer" aria-hidden="true" />}
+      <MobileCallButton raised={isHome} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<DoctorList />} />
