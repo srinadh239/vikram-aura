@@ -960,7 +960,7 @@
     width: 100%;
     aspect-ratio: 3 / 4;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center top;
     display: block;
     background: linear-gradient(135deg, #e8eaf6, #c5cae9);
