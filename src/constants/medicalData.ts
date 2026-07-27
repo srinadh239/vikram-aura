@@ -237,7 +237,7 @@ export const doctorsBySpecialty = {
      "name": "DR SUNITA DSOUZA LOBO",
      "credentials": "MBBS, DGO - Gynecologist, Obstetrician, Laparoscopic Surgeon (Obs & Gyn)",
      "description": "Dr Sunita is a highly experienced OB-GYN specialist with 33 years of medical expertise, including 29 years as a specialist. She specializes in prenatal care, pregnancy management, and the treatment of reproductive disorders, along with preventive care, Pap test screenings, and STD detection, ensuring comprehensive women's health care.",
-     "imageSrc": "https://website-va.s3.ap-south-1.amazonaws.com/doctors/doctors/DrSunita-Dsouza-Lobo.jpg",
+     "imageSrc": "https://drive.google.com/thumbnail?id=108-EpQhRjG9AcMAqWZhUmNYOUeAQmGUk&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [
@@ -624,7 +624,7 @@ export const doctorsBySpecialty = {
      "name": "DR CHANDRAKANT K",
      "credentials": "MBBS, MD – General Medicine, DNB – Medical Gastroenterology",
      "description": "Dr Chandrakant K is a Medical Gastroenterologist specializing in Advanced Endoscopy with 15 years of experience. He provides expert care in medical gastroenterology and performs advanced endoscopic procedures for diagnosis and treatment of gastrointestinal conditions.",
-     "imageSrc": "https://drive.google.com/thumbnail?id=1WZgfbY_rmxprrA9-oBvyrsEeBKvRBbBy&sz=w1000",
+     "imageSrc": "https://drive.google.com/thumbnail?id=11UZlMDMtJaDRxUG31hOHfc_9vbhRLBYr&sz=w1000",
      "imageRight": true,
      "awards": [],
      "areas_of_expertise": [

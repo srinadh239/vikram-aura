@@ -81,9 +81,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-07-18",
     readTime: 7,
     coverImage:
-      "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1746842419697-03234f5ff03e?auto=format&fit=crop&w=1200&q=80",
     coverImageAlt:
-      "Orthopaedic surgeon examining a patient's knee at Vikram Aura Hospital, Bangalore",
+      "Orthopaedic specialist examining and marking a patient's knee before surgery",
     featured: false,
     author: {
       name: "Dr. Suresh Babu",
