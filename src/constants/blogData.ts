@@ -36,6 +36,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  metaTitle?: string; // if omitted, `${title} | Vikram Aura Hospital Blog`
   metaDescription?: string; // if omitted, excerpt is used for SEO
   content: BlogBlock[];
   author: BlogAuthor;
@@ -67,6 +68,329 @@ export const BLOG_CATEGORIES = [
 // BLOG POSTS — add / edit posts here
 // ─────────────────────────────────────────────────────────────────────────────
 export const blogPosts: BlogPost[] = [
+  // ── POST 7 ──────────────────────────────────────────────────────────────────
+  {
+    id: "7",
+    slug: "can-partial-acl-tear-heal-without-surgery",
+    title: "Can a Partial ACL Tear Heal Without Surgery?",
+    excerpt:
+      "Wondering if a partial ACL tear can heal without surgery? Learn about symptoms, treatment options, recovery, and when surgery may be needed.",
+    metaTitle: "Can a Partial ACL Tear Heal Without Surgery? | Vikram Aura Hospital Bangalore",
+    metaDescription:
+      "Wondering if a partial ACL tear can heal without surgery? Learn about symptoms, treatment options, recovery, and when surgery may be needed from the Orthopaedics team at Vikram Aura Hospital, Bangalore.",
+    category: "Orthopaedics",
+    tags: [
+      "ACL tear",
+      "partial ACL tear",
+      "ACL rehabilitation",
+      "sports injury",
+      "orthopaedics",
+      "bangalore",
+    ],
+    publishedAt: "2026-08-19",
+    readTime: 8,
+    coverImage:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    coverImageAlt:
+      "Orthopaedic doctor discussing a knee MRI with a patient after a sports injury",
+    featured: true,
+    author: {
+      name: "Dr. Sai Krishna B Naidu",
+      role: "Senior Consultant – Orthopaedics & Sports Injuries, Vikram Aura Hospital",
+    },
+    faq: [
+      {
+        q: "Can a Grade 2 ACL tear heal without surgery?",
+        a: "Many Grade 2 (partial) ACL tears can be managed without surgery if the knee remains stable and responds well to physiotherapy. Your orthopaedic specialist will recommend the most appropriate treatment based on your condition.",
+      },
+      {
+        q: "How do I know if my ACL tear is partial or complete?",
+        a: "A physical examination along with imaging studies, such as an MRI, helps determine the extent of the injury. Your doctor will also assess knee stability and associated injuries.",
+      },
+      {
+        q: "Is physiotherapy enough for a partial ACL tear?",
+        a: "For many patients, physiotherapy plays a central role in recovery. A structured rehabilitation programme can improve strength, stability, and function, although outcomes vary depending on the severity of the injury and activity level.",
+      },
+      {
+        q: "How long should I wait before returning to sports?",
+        a: "Returning to sports depends on your recovery progress, knee stability, muscle strength, and your doctor's assessment. Returning too early may increase the risk of re-injury.",
+      },
+      {
+        q: "Can a partial ACL tear become a complete tear?",
+        a: "Yes. Continuing high-impact activities or returning to sports before adequate recovery may increase the risk of further injury. Following your rehabilitation plan and medical advice is important.",
+      },
+    ],
+    followUpTopics: [
+      "Complete Guide to Sports Injuries: Diagnosis, Treatment and Recovery (sports injury treatment Bangalore)",
+      "ACL vs PCL Injury: How to Tell the Difference (ACL vs PCL injury)",
+      "What Happens During ACL Reconstruction Surgery? (ACL reconstruction surgery procedure)",
+      "How Long Does It Take to Return to Sports After ACL Surgery? (return to sports after ACL surgery)",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "A sudden twist of the knee while playing cricket, football, badminton, or even during a workout can lead to an ACL injury. One of the first questions many patients ask is, \"**Can a partial ACL tear heal without surgery?**\"",
+      },
+      {
+        type: "paragraph",
+        text: "The answer depends on the severity of the tear, your activity level, knee stability, and overall health. In many cases, a **partial ACL tear** can be managed without surgery through a structured rehabilitation program, physiotherapy, and lifestyle modifications. However, some patients may eventually require surgical reconstruction if the knee remains unstable or they wish to return to high-impact sports.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're looking for expert evaluation and **sports injury treatment in Bangalore**, an early diagnosis by an orthopaedic specialist is essential to determine the most appropriate treatment plan.",
+      },
+      { type: "heading", level: 2, text: "What Is the ACL?" },
+      {
+        type: "paragraph",
+        text: "The Anterior Cruciate Ligament (ACL) is one of the four major ligaments of the knee. It connects the thigh bone (femur) to the shin bone (tibia) and plays an important role in keeping the knee stable during movement.",
+      },
+      { type: "paragraph", text: "The ACL helps control:" },
+      {
+        type: "bullets",
+        items: [
+          "Sudden changes in direction",
+          "Jumping and landing",
+          "Pivoting movements",
+          "Running and sprinting",
+          "Knee rotation",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Sports such as football, basketball, badminton, tennis, and skiing place significant stress on the ACL, making it one of the most commonly injured knee ligaments.",
+      },
+      { type: "heading", level: 2, text: "What Is a Partial ACL Tear?" },
+      {
+        type: "paragraph",
+        text: "A **partial ACL tear** means that only some of the ligament fibres are damaged, while the remaining fibres continue to provide some stability to the knee.",
+      },
+      { type: "paragraph", text: "Doctors generally classify ACL injuries into three grades:" },
+      {
+        type: "bullets",
+        items: [
+          "**Grade 1:** The ligament is stretched but remains intact.",
+          "**Grade 2:** The ligament is partially torn.",
+          "**Grade 3:** The ligament is completely torn.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A Grade 2 injury is commonly referred to as a partial ACL tear.",
+      },
+      { type: "heading", level: 2, text: "How Does a Partial ACL Tear Occur?" },
+      { type: "paragraph", text: "Common causes include:" },
+      {
+        type: "bullets",
+        items: [
+          "Sudden twisting while running",
+          "Landing awkwardly after a jump",
+          "Rapid changes in direction",
+          "Direct impact to the knee",
+          "Road traffic accidents",
+          "Sports-related collisions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Many patients report hearing or feeling a \"pop\" at the time of injury, although this is more common with complete tears.",
+      },
+      { type: "heading", level: 2, text: "Symptoms of a Partial ACL Tear" },
+      {
+        type: "paragraph",
+        text: "Symptoms can vary depending on the extent of the injury.",
+      },
+      { type: "paragraph", text: "Common signs include:" },
+      {
+        type: "bullets",
+        items: [
+          "Knee pain",
+          "Swelling within a few hours",
+          "Difficulty walking",
+          "Feeling that the knee may \"give way\"",
+          "Reduced range of motion",
+          "Pain while climbing stairs",
+          "Difficulty squatting",
+          "Instability during sports activities",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Some people notice improvement after a few weeks, while others continue to experience instability that interferes with daily activities.",
+      },
+      { type: "heading", level: 2, text: "Can a Partial ACL Tear Heal Without Surgery?" },
+      {
+        type: "paragraph",
+        text: "In many cases, yes—but the ligament itself does not completely regenerate to its original condition.",
+      },
+      {
+        type: "paragraph",
+        text: "Instead, the surrounding muscles, particularly the quadriceps and hamstrings, can be strengthened through rehabilitation to compensate for the injured ligament and improve knee stability.",
+      },
+      { type: "paragraph", text: "Non-surgical treatment may be appropriate when:" },
+      {
+        type: "bullets",
+        items: [
+          "The tear is small",
+          "The knee remains stable",
+          "Daily activities are not significantly affected",
+          "The patient is not involved in competitive sports",
+          "There are no associated injuries, such as meniscus tears or other ligament injuries",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Treatment decisions should always be individualised after assessment by an orthopaedic specialist.",
+      },
+      { type: "heading", level: 2, text: "When Is Surgery More Likely to Be Recommended?" },
+      { type: "paragraph", text: "Surgery may be considered if:" },
+      {
+        type: "bullets",
+        items: [
+          "The knee repeatedly gives way",
+          "There is a complete ACL tear",
+          "Multiple ligaments are injured",
+          "A meniscus tear is present",
+          "Conservative treatment has not improved stability",
+          "The patient wants to return to competitive sports or high-demand activities",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "[ACL reconstruction](https://vikramaurahospitals.com/specialties/orthopaedics/anterior-cruciate-ligament-reconstruction) is a commonly performed procedure that aims to restore knee stability using a graft rather than repairing the torn ligament directly.",
+      },
+      { type: "heading", level: 2, text: "Non-Surgical Treatment Options" },
+      {
+        type: "paragraph",
+        text: "Many patients recover well with a comprehensive rehabilitation plan.",
+      },
+      { type: "heading", level: 3, text: "Rest and Activity Modification" },
+      {
+        type: "paragraph",
+        text: "Avoid activities that place excessive stress on the injured knee during the initial healing phase.",
+      },
+      { type: "heading", level: 3, text: "Ice Therapy" },
+      {
+        type: "paragraph",
+        text: "Applying ice packs for 15–20 minutes several times a day during the first 48 hours may help reduce swelling and discomfort.",
+      },
+      { type: "heading", level: 3, text: "Compression" },
+      {
+        type: "paragraph",
+        text: "A knee brace or compression bandage can provide support and help manage swelling, depending on your doctor's advice.",
+      },
+      { type: "heading", level: 3, text: "Elevation" },
+      {
+        type: "paragraph",
+        text: "Keeping the leg elevated while resting can reduce swelling.",
+      },
+      { type: "heading", level: 3, text: "Medications" },
+      {
+        type: "paragraph",
+        text: "Your doctor may recommend pain-relieving or anti-inflammatory medications when appropriate.",
+      },
+      { type: "heading", level: 3, text: "Physiotherapy" },
+      {
+        type: "paragraph",
+        text: "Physiotherapy is one of the most important components of recovery.",
+      },
+      { type: "paragraph", text: "A rehabilitation programme may include:" },
+      {
+        type: "bullets",
+        items: [
+          "Range-of-motion exercises",
+          "Muscle strengthening",
+          "Balance training",
+          "Gait correction",
+          "Functional exercises",
+          "Sport-specific rehabilitation when appropriate",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Consistent physiotherapy helps improve strength, stability, and confidence in the injured knee.",
+      },
+      { type: "heading", level: 2, text: "Recovery Timeline" },
+      {
+        type: "paragraph",
+        text: "Recovery varies from person to person and depends on:",
+      },
+      {
+        type: "bullets",
+        items: [
+          "Severity of the tear",
+          "Age",
+          "Overall fitness",
+          "Adherence to physiotherapy",
+          "Presence of other knee injuries",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "While some individuals return to routine activities within weeks, returning to sports should only happen after medical clearance and completion of a structured rehabilitation programme.",
+      },
+      { type: "heading", level: 2, text: "Can You Play Sports Again?" },
+      {
+        type: "paragraph",
+        text: "Many people return to recreational activities after successful non-surgical treatment. However, athletes participating in sports involving frequent pivoting, cutting, or jumping may have a higher risk of recurrent instability if the ACL remains insufficient.",
+      },
+      {
+        type: "paragraph",
+        text: "A sports medicine or orthopaedic specialist can assess your readiness to return safely.",
+      },
+      { type: "heading", level: 2, text: "How Can You Prevent Further Knee Injury?" },
+      {
+        type: "paragraph",
+        text: "Whether you're recovering from a partial ACL tear or looking to reduce the risk of future injuries, these measures can help:",
+      },
+      {
+        type: "bullets",
+        items: [
+          "Warm up before exercise",
+          "Strengthen the muscles around the knee",
+          "Improve balance and coordination",
+          "Wear appropriate footwear",
+          "Use proper sports techniques",
+          "Avoid sudden increases in training intensity",
+          "Follow your physiotherapist's guidance before returning to sports",
+        ],
+      },
+      { type: "heading", level: 2, text: "When Should You See an Orthopaedic Specialist?" },
+      {
+        type: "paragraph",
+        text: "Consult an orthopaedic specialist if you experience:",
+      },
+      {
+        type: "bullets",
+        items: [
+          "Persistent knee pain",
+          "Recurrent swelling",
+          "Difficulty bearing weight",
+          "A feeling that the knee is unstable",
+          "Limited movement",
+          "Inability to return to normal activities despite rehabilitation",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Early assessment can help identify associated injuries and guide appropriate treatment.",
+      },
+      { type: "heading", level: 2, text: "Why Choose Vikram Aura Hospital for ACL Care?" },
+      {
+        type: "paragraph",
+        text: "At Vikram Aura Hospital, Richmond Road, Bangalore, our Orthopaedics team provides comprehensive care for ligament injuries—from clinical evaluation and imaging to personalised treatment plans and rehabilitation guidance.",
+      },
+      {
+        type: "paragraph",
+        text: "Whether your injury can be managed conservatively or requires surgical intervention, our specialists focus on helping you regain mobility safely and return to your daily activities with confidence.",
+      },
+      {
+        type: "callout",
+        variant: "info",
+        text: "Learn more about our [Orthopaedics Department](https://vikramaurahospitals.com/specialties/orthopaedics), meet [Dr. Sai Krishna B Naidu](https://vikramaurahospitals.com/doctor/dr-sai-krishna-b-naidu), or [book a consultation](https://vikramaurahospitals.com/doctors).",
+      },
+    ],
+  },
+
   // ── POST 6 ──────────────────────────────────────────────────────────────────
   {
     id: "6",
@@ -253,3 +577,27 @@ export const getRelatedPosts = (currentSlug: string, category: string, count = 3
   blogPosts
     .filter((p) => p.slug !== currentSlug && p.category === category)
     .slice(0, count);
+
+const topicTitle = (topic: string) => topic.replace(/\s*\([^)]*\)\s*$/, "").trim();
+
+// Helper — follow-up topics that already exist as published posts with body content
+export const getFollowUpPosts = (topics: string[], currentSlug: string): BlogPost[] => {
+  const seen = new Set<string>();
+  const matches: BlogPost[] = [];
+
+  for (const topic of topics) {
+    const name = topicTitle(topic).toLowerCase();
+    const post = blogPosts.find(
+      (p) =>
+        p.slug !== currentSlug &&
+        p.content.length > 0 &&
+        (p.title.toLowerCase() === name || topic.toLowerCase().startsWith(p.title.toLowerCase()))
+    );
+    if (post && !seen.has(post.slug)) {
+      seen.add(post.slug);
+      matches.push(post);
+    }
+  }
+
+  return matches;
+};

@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   getBlogPostBySlug,
+  getFollowUpPosts,
   getRelatedPosts,
   type BlogBlock,
   type BlogPost,
 } from "../constants/blogData";
 
 const SITE_URL = "https://vikramaurahospitals.com";
+const getNavOffset = () => (window.innerWidth <= 900 ? 128 : 88);
+
+const toHeadingId = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
 // ─── Inline Markdown ──────────────────────────────────────────────────────────
 // Supports **bold** and [link text](url) inside paragraph/bullet text.
@@ -63,7 +71,11 @@ const renderBlock = (block: BlogBlock, idx: number): React.ReactNode => {
 
     case "heading":
       return block.level === 2 ? (
-        <h2 key={idx} className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+        <h2
+          key={idx}
+          id={toHeadingId(block.text)}
+          className="text-2xl font-bold text-gray-900 mt-10 mb-4"
+        >
           {block.text}
         </h2>
       ) : (
@@ -151,7 +163,7 @@ const renderBlock = (block: BlogBlock, idx: number): React.ReactNode => {
           className={`my-6 rounded-xl border-l-4 px-5 py-4 ${s.bg} ${s.border}`}
         >
           <p className={`text-sm font-medium leading-relaxed ${s.text}`}>
-            {s.icon} {block.text}
+            {s.icon} {renderInline(block.text, `c${idx}`)}
           </p>
         </div>
       );
@@ -201,27 +213,44 @@ const FaqAccordion: React.FC<{ faq: Array<{ q: string; a: string }> }> = ({ faq 
 
 // ─── Follow-up Topics ─────────────────────────────────────────────────────────
 
-const FollowUpTopics: React.FC<{ topics: string[] }> = ({ topics }) => (
-  <section className="mt-8 bg-gray-50 rounded-2xl p-6 border border-gray-100">
-    <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
-      You might also want to read
-    </h3>
-    <ul className="space-y-2">
-      {topics.map((t, i) => (
-        <li key={i} className="flex gap-2 items-start text-sm text-gray-700">
-          <span className="mt-1 w-4 h-4 shrink-0 rounded-full bg-orange-100 flex items-center justify-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 block" />
-          </span>
-          {t}
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+const FollowUpTopics: React.FC<{ topics: string[]; currentSlug: string }> = ({
+  topics,
+  currentSlug,
+}) => {
+  const posts = getFollowUpPosts(topics, currentSlug);
+  if (posts.length === 0) return null;
+
+  return (
+    <section className="mt-8 bg-gray-50 rounded-2xl p-6 border border-gray-100">
+      <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
+        You might also want to read
+      </h3>
+      <ul className="space-y-2">
+        {posts.map((p) => (
+          <li key={p.slug}>
+            <Link
+              to={`/blog/${p.slug}`}
+              className="flex gap-2 items-start text-sm text-gray-700 hover:text-orange-600 transition-colors"
+            >
+              <span className="mt-1 w-4 h-4 shrink-0 rounded-full bg-orange-100 flex items-center justify-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500 block" />
+              </span>
+              {p.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 // ─── Sidebar TOC ──────────────────────────────────────────────────────────────
 
-const TableOfContents: React.FC<{ post: BlogPost }> = ({ post }) => {
+const TableOfContents: React.FC<{
+  post: BlogPost;
+  activeId?: string;
+  onSelect: (id: string) => void;
+}> = ({ post, activeId, onSelect }) => {
   const headings = post.content.filter((b) => b.type === "heading" && b.level === 2) as Extract<
     BlogBlock,
     { type: "heading" }
@@ -229,16 +258,39 @@ const TableOfContents: React.FC<{ post: BlogPost }> = ({ post }) => {
   if (headings.length < 2) return null;
 
   return (
-    <nav className="bg-gray-50 rounded-xl p-5 mb-6 border border-gray-100">
-      <p className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">In this article</p>
-      <ol className="space-y-1.5">
-        {headings.map((h, i) => (
-          <li key={i} className="text-sm text-gray-600 hover:text-orange-600 transition-colors">
-            {i + 1}. {h.text}
-          </li>
-        ))}
+    <div className="bg-gray-50 p-4">
+      <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
+        In this article
+      </p>
+      <ol>
+        {headings.map((h, i) => {
+          const id = toHeadingId(h.text);
+          const active = activeId === id;
+          return (
+            <li key={id}>
+              <button
+                type="button"
+                onClick={() => onSelect(id)}
+                className={`w-full flex gap-3 items-start py-1 px-1.5 rounded-md text-left text-sm transition-colors ${
+                  active
+                    ? "bg-orange-100 text-orange-700 font-semibold"
+                    : "text-gray-600 hover:bg-gray-100 hover:text-orange-600"
+                }`}
+              >
+                <span
+                  className={`w-5 shrink-0 text-right tabular-nums text-xs font-semibold leading-5 pt-px ${
+                    active ? "text-orange-600" : "text-orange-500"
+                  }`}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex-1 min-w-0 leading-5">{h.text}</span>
+              </button>
+            </li>
+          );
+        })}
       </ol>
-    </nav>
+    </div>
   );
 };
 
@@ -247,11 +299,54 @@ const TableOfContents: React.FC<{ post: BlogPost }> = ({ post }) => {
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getBlogPostBySlug(slug ?? "");
+  const [activeId, setActiveId] = useState("");
+  const scrollingRef = useRef(false);
+
+  const headingIds = post
+    ? post.content
+        .filter((b): b is Extract<BlogBlock, { type: "heading" }> => b.type === "heading" && b.level === 2)
+        .map((h) => toHeadingId(h.text))
+    : [];
+
+  const scrollToHeading = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    scrollingRef.current = true;
+    setActiveId(id);
+    const top = el.getBoundingClientRect().top + window.scrollY - getNavOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    window.setTimeout(() => {
+      scrollingRef.current = false;
+    }, 700);
+  }, []);
+
+  useEffect(() => {
+    if (headingIds.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (scrollingRef.current) return;
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]?.target.id) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+
+    headingIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [post?.slug]);
 
   if (!post) return <Navigate to="/blog" replace />;
 
   const related = getRelatedPosts(post.slug, post.category, 3);
   const metaDesc = post.metaDescription ?? post.excerpt;
+  const pageTitle = post.metaTitle ?? `${post.title} | Vikram Aura Hospital Blog`;
   const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
 
   const articleSchema = {
@@ -299,12 +394,12 @@ const BlogPostPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Vikram Aura Hospital Blog</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={metaDesc} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={post.title} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:image" content={post.coverImage} />
         <meta property="article:published_time" content={post.publishedAt} />
@@ -339,62 +434,61 @@ const BlogPostPage: React.FC = () => {
         </div>
 
         <article className="max-w-6xl mx-auto px-4 py-10">
-          <div className="flex flex-col lg:flex-row gap-12">
+          {/* Full-width header so the title isn't squeezed beside the TOC */}
+          <header className="max-w-3xl mb-8">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <Link
+                to="/blog"
+                className="px-3 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors"
+              >
+                {post.category}
+              </Link>
+              <span className="text-gray-400 text-xs">{post.readTime} min read</span>
+              <span className="text-gray-300 text-xs">·</span>
+              <time className="text-gray-400 text-xs" dateTime={post.publishedAt}>
+                {new Date(post.publishedAt).toLocaleDateString("en-IN", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </time>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-5">
+              {post.title}
+            </h1>
+
+            <div className="flex items-center gap-3 pb-6 border-b border-gray-100">
+              {post.author.avatar ? (
+                <img
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  className="w-10 h-10 rounded-full object-cover border border-gray-200"
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-sm">
+                  {post.author.name.charAt(0)}
+                </div>
+              )}
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-gray-900">{post.author.name}</p>
+                <p className="text-xs text-gray-500 leading-snug">{post.author.role}</p>
+              </div>
+            </div>
+          </header>
+
+          <img
+            src={post.coverImage}
+            alt={post.coverImageAlt}
+            className="w-full rounded-2xl object-cover max-h-[420px] mb-10"
+          />
+
+          <div className="flex flex-col lg:flex-row lg:items-start gap-12">
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              {/* Category + meta */}
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <Link
-                  to={`/blog`}
-                  className="px-3 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors"
-                >
-                  {post.category}
-                </Link>
-                <span className="text-gray-400 text-xs">{post.readTime} min read</span>
-                <span className="text-gray-300 text-xs">·</span>
-                <time className="text-gray-400 text-xs" dateTime={post.publishedAt}>
-                  {new Date(post.publishedAt).toLocaleDateString("en-IN", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </time>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-5">
-                {post.title}
-              </h1>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pb-6 mb-6 border-b border-gray-100">
-                {post.author.avatar ? (
-                  <img
-                    src={post.author.avatar}
-                    alt={post.author.name}
-                    className="w-10 h-10 rounded-full object-cover border border-gray-200"
-                  />
-                ) : (
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-sm">
-                    {post.author.name.charAt(0)}
-                  </div>
-                )}
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">{post.author.name}</p>
-                  <p className="text-xs text-gray-500">{post.author.role}</p>
-                </div>
-              </div>
-
-              {/* Cover Image */}
-              <img
-                src={post.coverImage}
-                alt={post.coverImageAlt}
-                className="w-full rounded-2xl object-cover max-h-[420px] mb-8"
-              />
-
               {/* Table of Contents (mobile) */}
               <div className="lg:hidden mb-8">
-                <TableOfContents post={post} />
+                <TableOfContents post={post} activeId={activeId} onSelect={scrollToHeading} />
               </div>
 
               {/* Article Body */}
@@ -405,7 +499,37 @@ const BlogPostPage: React.FC = () => {
 
               {/* Follow-up Topics */}
               {post.followUpTopics && post.followUpTopics.length > 0 && (
-                <FollowUpTopics topics={post.followUpTopics} />
+                <FollowUpTopics topics={post.followUpTopics} currentSlug={post.slug} />
+              )}
+
+              {related.length > 0 && (
+                <section className="mt-10">
+                  <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
+                    Related Articles
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {related.map((r) => (
+                      <Link
+                        key={r.id}
+                        to={`/blog/${r.slug}`}
+                        className="flex gap-3 group p-3 rounded-xl border border-gray-100 hover:border-orange-200 hover:bg-orange-50/40 transition-colors"
+                      >
+                        <img
+                          src={r.coverImage}
+                          alt={r.coverImageAlt}
+                          className="w-16 h-16 rounded-lg object-cover shrink-0"
+                          loading="lazy"
+                        />
+                        <div className="min-w-0">
+                          <p className="text-sm font-medium text-gray-800 group-hover:text-orange-600 transition-colors leading-snug line-clamp-2">
+                            {r.title}
+                          </p>
+                          <p className="text-xs text-gray-400 mt-1">{r.readTime} min read</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
               )}
 
               {/* Tags */}
@@ -440,7 +564,7 @@ const BlogPostPage: React.FC = () => {
                     {post.author.name.charAt(0)}
                   </div>
                 )}
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-gray-900">{post.author.name}</p>
                   <p className="text-sm text-gray-600 mb-2">{post.author.role}</p>
                   <p className="text-sm text-gray-500">
@@ -448,76 +572,59 @@ const BlogPostPage: React.FC = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="lg:hidden mt-8 bg-gray-900 rounded-2xl p-5 text-center">
+                <h3 className="text-white font-bold text-lg mb-1">Get Expert Advice</h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  Speak with a specialist at Vikram Aura Hospital.
+                </p>
+                <a
+                  href="tel:+917022400800"
+                  className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+                >
+                  Call +91 7022 400 800
+                </a>
+                <Link
+                  to="/"
+                  className="block w-full mt-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+                >
+                  Book Appointment
+                </Link>
+              </div>
             </div>
 
-            {/* Sidebar */}
-            <aside className="lg:w-72 shrink-0">
-              <div className="sticky top-6 space-y-6">
-                {/* Desktop TOC */}
-                <div className="hidden lg:block">
-                  <TableOfContents post={post} />
-                </div>
-
-                {/* Book Appointment CTA */}
-                <div className="bg-gray-900 rounded-2xl p-6 text-center">
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-white font-bold text-lg mb-1">Get Expert Advice</h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Speak directly with a specialist at Vikram Aura Hospital.
-                  </p>
-                  <a
-                    href="tel:+917022400800"
-                    className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+            {/* Sidebar: TOC and CTA share one aligned card */}
+            <aside className="hidden lg:block w-80 shrink-0 self-start">
+              <div className="sticky w-full" style={{ top: 80 }}>
+                <div className="w-full rounded-xl overflow-hidden border border-gray-200">
+                  <div
+                    className="overflow-y-auto overscroll-contain"
+                    style={{ maxHeight: "calc(100vh - 80px - 200px)" }}
                   >
-                    Call +91 7022 400 800
-                  </a>
-                  <Link
-                    to="/"
-                    className="block w-full mt-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
-                  >
-                    Book Appointment
-                  </Link>
-                </div>
-
-                {/* Related Posts */}
-                {related.length > 0 && (
-                  <div>
-                    <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
-                      Related Articles
-                    </h3>
-                    <div className="space-y-4">
-                      {related.map((r) => (
-                        <Link
-                          key={r.id}
-                          to={`/blog/${r.slug}`}
-                          className="flex gap-3 group"
-                        >
-                          <img
-                            src={r.coverImage}
-                            alt={r.coverImageAlt}
-                            className="w-16 h-16 rounded-lg object-cover shrink-0"
-                            loading="lazy"
-                          />
-                          <div>
-                            <p className="text-sm font-medium text-gray-800 group-hover:text-orange-600 transition-colors leading-snug line-clamp-2">
-                              {r.title}
-                            </p>
-                            <p className="text-xs text-gray-400 mt-1">{r.readTime} min read</p>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+                    <TableOfContents post={post} activeId={activeId} onSelect={scrollToHeading} />
                   </div>
-                )}
-
-                {/* All articles link */}
+                  <div className="bg-gray-900 p-4 text-center">
+                    <h3 className="text-white font-bold text-base mb-1">Get Expert Advice</h3>
+                    <p className="text-gray-400 text-xs mb-3">
+                      Speak with a specialist at Vikram Aura Hospital.
+                    </p>
+                    <a
+                      href="tel:+917022400800"
+                      className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-xl transition-colors text-sm"
+                    >
+                      Call +91 7022 400 800
+                    </a>
+                    <Link
+                      to="/"
+                      className="block w-full mt-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-2 rounded-xl transition-colors text-sm"
+                    >
+                      Book Appointment
+                    </Link>
+                  </div>
+                </div>
                 <Link
                   to="/blog"
-                  className="flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors"
+                  className="mt-3 flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors"
                 >
                   ← All health articles
                 </Link>

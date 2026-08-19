@@ -251,8 +251,8 @@
 
   
 
-  /* ─── NAV ─────────────────────────────────────────── */
-  nav {
+  /* Homepage-only leftover; do not apply to <nav> on other pages (blog TOC, breadcrumbs). */
+  .vah-home nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(255,255,255,0.97);
     backdrop-filter: blur(12px);

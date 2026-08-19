@@ -10,24 +10,30 @@ const OG_IMAGE = "https://website-va.s3.ap-south-1.amazonaws.com/VAH+Logo+Symbol
 const BlogCard: React.FC<{ post: BlogPost; featured?: boolean }> = ({ post, featured }) => (
   <article
     className={`bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col ${
-      featured ? "md:flex-row" : ""
+      featured ? "md:flex-row md:items-stretch" : ""
     }`}
   >
     <Link
       to={`/blog/${post.slug}`}
-      className={`block overflow-hidden shrink-0 ${featured ? "md:w-96" : "aspect-[16/9]"}`}
+      className={`block overflow-hidden shrink-0 ${
+        featured ? "md:w-[42%] md:min-h-[280px]" : "aspect-[16/9]"
+      }`}
       aria-label={post.title}
     >
       <img
         src={post.coverImage}
         alt={post.coverImageAlt}
         className={`w-full object-cover transition-transform duration-300 hover:scale-105 ${
-          featured ? "h-64 md:h-full" : "h-full"
+          featured ? "h-56 sm:h-64 md:h-full" : "h-full"
         }`}
         loading="lazy"
       />
     </Link>
-    <div className="flex flex-col flex-1 p-6">
+    <div
+      className={`flex flex-col flex-1 p-6 min-w-0 ${
+        featured ? "md:p-8 md:justify-center" : ""
+      }`}
+    >
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-700">
           {post.category}
